@@ -1,0 +1,35 @@
+@import url('_commons.css');
+@import url('_typo.css');
+@import url('_spaces.css');
+@import url('_effects.css');
+@import url('_header.css');
+@import url('_page.css');
+
+/*Milon*/
+@import url('_an-our-project-details.css');
+@import url('_participate-with-us.css');
+@import url('_practice-areas.css');
+
+
+
+/*Rannojit*/
+@import url('_home.css');
+@import url('_managements.css');
+@import url('_event.css');
+
+
+/*Shoriful*/
+@import url('_advisor.css');
+@import url('_blog-details.css');
+@import url('_blog.css');
+@import url('_about.css');
+@import url('_contact.css');
+@import url('_footer.css');
+@import url('_tools-products.css');
+
+/*noyon*/
+@import url('_home-client.css');
+@import url('_publications.css');
+
+@import url('_success-stories.css');
+

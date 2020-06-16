@@ -1,0 +1,179 @@
+.recent-publicatons{
+	background: #F5F7F7;
+    margin-bottom: 88px;
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+}
+.publicatons-page-top-sec-innr{
+    display: flex;
+    align-items: center;
+    padding-bottom: 23px;
+}
+.publicatons-page-top-sec-des{
+	max-width: 74.2%;
+	width: 100%;
+	text-align: right;
+	padding-right: 37px;
+}
+.publicatons-page-top-sec-des span{
+    width: 94%;
+    padding-bottom: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #88BE43;
+    display: inline-block;
+    margin-bottom: 27px;
+}
+.publicatons-page-top-sec-des a:hover{
+	color: #006838;
+}
+.publicatons-page-top-sec-des p{
+	padding-left: 188px;
+	font-size: 18px;
+	line-height: 30px;
+}
+.publicatons-page-top-sec-des a{
+	color: #88BE43;
+}
+.publicatons-top-title{
+	text-align: left;
+}
+.publicatons-top-title p{
+	font-weight: 700;
+	line-height: 13px;
+	color: #606060;
+	padding-left: 0;
+	position: relative;
+}
+.publicatons-top-title:after{
+	position: absolute;
+	content: "";
+	height: 0.5px;
+	width: 197px;
+	background: #606060;
+	left: 0;
+}
+.publicatons-sec-one-title{
+	margin-bottom: 0;
+	padding-top: 18px;
+}
+.publicatons-sec-one-title a{
+    display: block;
+    font-size: 27.7px;
+    line-height: 1.3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #88BE43;
+}
+.publicatons-page-top-sec-img{
+	max-width: 25.8%;
+	width: 100%;
+	padding-top: 29px;
+	position: relative;
+}
+
+.filter-result-sec-four{
+	background: #F5F7F7;
+	padding-top: 50px;
+	margin-bottom: 80px;
+}
+.filter-result-items{
+	display: flex;
+    align-items: center;
+}
+.filter-result-items-des{
+	max-width: 70%;
+	width: 100%;
+	text-align: right;
+	padding-right: 37px;
+}
+.filter-result-items-des span{
+    width: 100%;
+    padding-bottom: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #88BE43;
+    display: inline-block;
+    margin-bottom: 27px;
+}
+.filter-result-items-des a:hover{
+	color: #006838;
+}
+.filter-result-items-des p{
+	padding-left: 188px;
+	font-size: 18px;
+	line-height: 30px;
+}
+.filter-result-items-des a{
+	color: #88BE43;
+}
+.publicatons-sec-one-title a{
+	display: block;
+    font-size: 27px;
+    line-height: 1.3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #88BE43;
+}
+.filter-result-items-img{
+	max-width: 30%;
+	width: 100%;
+}
+.rp-desc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    z-index: 3;
+}
+.rp-desc h4 {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    line-height: 18px;
+}
+.rp-desc span {
+    font-size: 8px;
+    color: #9FDD47;
+    display: block;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.publicatons-page-top-sec-img:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+20,0.65+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+.publicationsFilter h2,
+.filter-result-hedding h2{
+	font-size: 40px;
+
+}.filter-result-hedding h2{
+	text-align: center;
+}
+.filter-result-items-wrap{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+ul.publicatinList li{
+	margin-bottom: 50px;
+}
+
+ul.publicatinList li:nth-child(2n+2) .filter-result-items-des{
+	order: 2;
+	padding-right: 0;
+	padding-left: 37px;
+	text-align: left;
+}
+ul.publicatinList li:nth-child(2n+2) .filter-result-items-des p{
+	padding-left: 0;
+	padding-right: 188px;
+}

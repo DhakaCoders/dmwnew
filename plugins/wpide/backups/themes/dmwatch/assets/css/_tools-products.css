@@ -1,0 +1,269 @@
+
+.tp-banner{
+	margin-bottom: 0;
+	position: relative;
+}
+
+.tp-banner .page-banner-des{
+	padding-top: 380px;
+	align-items: normal;
+}
+.tp-banner-title{
+	display: block;
+	font-size: 60px;
+	line-height: 1;
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+}
+.tp-banner-des p{
+	font-size: 22px;
+	line-height: 35px;
+	padding-top: 0;
+	text-align: center;
+}
+
+.tp-bmp-wash{
+	position: absolute;
+	top: 72%;
+    left: 20%;
+	transform: translate(-50%,-50%);
+	z-index: 33;
+}
+.tp-bmp-udm{
+	position: absolute;
+	top: 72%;
+	left: 81%;
+	transform: translate(-50%,-50%);
+	z-index: 33;
+}
+.tp-bmp-environment{
+	position: absolute;
+	top: 45%;
+    left: 37%;
+	transform: translate(-50%,-50%);
+	z-index: 33;
+}
+.tp-bmp-anr{
+	position: absolute;
+	top: 45%;
+    left: 64%;
+	transform: translate(-50%,-50%);
+	z-index: 33;
+}
+.tp-bmp-ph{
+	position: absolute;
+	top: 17%;
+    left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 33;
+}
+
+.dm-tp-entry-hdr{
+	padding: 80px 0 50px;
+}
+
+.dm-tp-entry-hdr-inr p{
+	text-align: center;
+	font-size: 23px;
+	color: #606060;
+	line-height: 34px;
+}
+.dm-tp-focus-area-sec{
+	padding: 55px 0 30px;
+	margin-bottom: 90px;
+	background: #F5F7F7;
+}
+
+.dm-tp-fa-title{
+	display: block;
+	font-size: 49px;
+	line-height: 1;
+	margin-bottom: 55px;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: #606060;
+	text-align: center;
+}
+
+.dm-tp-fa-grd-item-wrap ul{
+	margin-left: -50px;
+	margin-right: -50px;
+}
+.dm-tp-fa-grd-item-wrap ul li{
+	float: left;
+	width: 20%;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.dm-tp-fa-grd-item-wrap ul li:nth-child(5n+1){
+	clear: left;
+}
+
+.dm-tp-fa-grd-item{
+	text-align: center;
+}
+.dm-tp-fa-grd-item-img{
+	height: 116px;
+	margin-bottom: 20px;
+}
+.dm-tp-fa-grd-item-title{
+	display: block;
+	font-size: 18px;
+	line-height: 1;
+	margin-bottom: 28px;
+	font-weight: 700;
+	text-transform: capitalize;
+	font-family: 'Montserrat', sans-serif;
+}
+.public-health{
+	color: #ED1C24;
+}
+.governance{
+	color: #03AED9;
+}
+.environment{
+	color: #006838;
+}
+.hazard{
+	color: #FC8300;
+}
+.agriculture{
+	color: #3D5680;
+}
+.dm-tp-fa-grd-item p{
+	font-size: 12px;
+	color: #606060;
+	line-height: 21px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.dm-tp-fancybox-sec{
+	padding: 60px 0 85px;
+	background: #F5F7F7;
+	margin-bottom: 90px;
+}
+.dm-tp-fancybox-title{
+	display: block;
+	font-size: 49px;
+	line-height: 1;
+	font-weight: 700;
+	margin-bottom: 40px;
+	text-transform: capitalize;
+	color: #606060;
+	text-align: center;
+}
+.dm-tp-fancybox-sec-inr ul{
+	margin-left: -23px;
+	margin-right: -23px;
+}
+.dm-tp-fancybox-sec-inr ul li{
+	float: left;
+	width: 50%;
+	padding-left: 23px;
+	padding-right: 23px;
+}
+
+.dm-tp-fancybox{
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(112,112,112,1);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(112,112,112,1);
+	box-shadow: 1px 1px 5px 0px rgba(112,112,112,1);
+}
+
+.dm-tp-report-sec{
+	padding: 60px 0 30px;
+	background: #F5F7F7;
+	margin-bottom: 105px;
+}
+.dm-tp-report-title{
+	display: block;
+	font-size: 49px;
+	line-height: 1;
+	margin-bottom: 48px;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: #606060;
+	text-align: center;
+}
+
+.dm-tp-report-des-left{
+	float: left;
+	width:  62.3931%;
+	padding-right: 85px;
+}
+.dm-tp-report-des-img{
+	float: left;
+	width:  37.6068%;
+}
+
+.dm-tp-report-des-left p{
+	font-size: 20px;
+	line-height: 32px;
+}
+
+
+.dm-tp-useful-sec{
+	padding: 50px 0 50px;
+	background: #93C64A;
+}
+.dm-tp-useful-sec-inr > ul{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.dm-tp-useful-sec-inr > ul > li{
+	float: left;
+	width: 50%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.dm-tp-useful-grd-item{
+	text-align: center;
+}
+.dm-tp-useful-grd-item-title{
+	display: block;
+	font-size: 24px;
+	line-height: 1;
+	margin-bottom: 35px;
+	font-weight: 600;
+	color: #fff;
+}
+.dm-tp-useful-grd-item ul li{
+	display: inline-block;
+	color: #fff;
+	line-height: 28px;
+	font-family: 'Montserrat', sans-serif;
+	padding-left: 15px;
+	position: relative;
+}
+.dm-tp-useful-grd-item ul li:after{
+	content: "*";
+	height: 7px;
+	width: 7px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.dm-tp-des-sec{
+	padding: 60px 0 45px;
+}
+
+.dm-tp-des-title{
+	display: block;
+	font-size: 49px;
+	line-height: 1;
+	margin-bottom: 35px;
+	font-weight: 700;
+	text-align: center;
+	color: #606060;
+}
+.dm-tp-des-sec-inr p{
+	font-size: 23px;
+	line-height: 35px;
+	color: #606060;
+	text-align: center;
+}

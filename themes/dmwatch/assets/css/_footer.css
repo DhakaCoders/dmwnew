@@ -1,0 +1,389 @@
+.footer-wrp{
+	padding-top: 100px;
+	position: relative;
+	font-family: 'FranklinGothic-Book';
+}
+.footer-inner{
+	padding-bottom: 20px;
+}
+.ftr-logo{
+	float: left;
+	width: 33.7606%;
+	padding-right: 72px;
+	margin-top: -5px;
+}
+.ftr-menu{
+	float: left;
+	width:  16.6666%;
+}
+.ftr-cnt-menu{
+	float: left;
+	width: 26.0683%;
+	padding-right: 50px;
+}
+.ftr-facebook{
+	float: left;
+	width: 23.5042%;
+}
+.ftr-logo a{
+	display: block;
+	margin-bottom: 27px;
+	max-width: 275px;
+}
+.ftr-des p{
+	font-size: 16px;
+	color: #575656;
+	line-height: 24px;
+}
+.ftr-menu-title,
+.ftr-cnt-menu-title,
+.ftr-facebook-title{
+	display: block;
+	font-size: 22px;
+	line-height: 1;
+	margin-bottom: 40px;
+	font-weight: 400;
+	color: #2a2828;
+}
+.ftr-menu ul{
+	padding: 0;
+	padding-right: 10px;
+}
+.ftr-menu ul li{
+	padding-bottom: 14px;
+	text-transform: uppercase;
+	line-height: 1;
+}
+.ftr-menu ul li a{
+	font-size: 15px;
+	color: #2a2828;
+}
+.ftr-cnt-menu ul li:first-child{
+	padding-bottom: 20px;
+}
+.ftr-cnt-menu ul li a{
+	font-size: 16px;
+	color: #2a2828;
+	line-height: 22px;
+}
+.ftr-cnt-socials-media{
+	padding-bottom: 25px;
+}
+
+.ftr-cnt-socials-media ul li{
+	display: inline-block;
+	padding-left: 5px;
+	padding-bottom: 10px;
+}
+.ftr-cnt-socials-media ul li a{
+	display: inline-block;
+	vertical-align: baseline;
+}
+.ftr-cnt-socials-media ul li a:hover{
+	opacity: .7;
+}
+.ftr-cnt-socials-media ul li:first-child{
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+.ftr-cnt-socials-media ul li:last-child{
+	padding-right: 0;
+}
+
+.ftr-menu ul li a:hover,
+.ftr-cnt-menu ul li a:hover,
+.ftr-cpwrt-menu ul li a:hover{
+	color: #71a033;
+}
+
+
+.ftr-copywrite-sec{
+	padding: 45px 0;
+}
+.ftr-cpwrt-menu{
+	float: left;
+}
+.ftr-cpwrt{
+	float: right;
+}
+.ftr-cpwrt-menu ul li{
+	display: inline-block;
+	padding-right: 15px;
+}
+.ftr-cpwrt-menu ul li a{
+	font-size: 15px;
+	color: #2a2828;
+}
+
+.ftr-cpwrt span{
+	display: block;
+	font-size: 15px;
+	color: #2a2828;
+	text-transform: capitalize;
+}
+
+
+.footer-top-section{
+	background: url(../images/footer-top-sec-bg.jpg);
+	background-repeat: no-repeat!important;
+	background-position: center!important;
+	background-size: cover!important;
+	padding-top: 68px;
+	padding-bottom: 58px;
+	font-family: 'FranklinGothic-Book';
+}
+.ftr-top-sec-title{
+	
+}
+.ftr-top-sec-link{
+	margin-left: auto;
+}
+.ftr-top-sec-inr{
+	display: flex;
+	align-items: center;
+}
+
+.ftr-top-title{
+	font-size: 50px;
+	line-height: 1;
+	display: block;
+	font-weight: normal;
+	color: #fff;
+	margin-bottom: 0;
+	padding-right: 20px;
+	font-family: 'FranklinGothic-Book';
+}
+
+.ftr-top-sec-link a{
+	display: block;
+	/*padding: 22px 14px 22px 17px;*/
+	padding: 5px 10px;
+	width: 220px;
+	height: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	border: 2px solid #fff;
+	border-radius: 8px;
+	font-size: 34px;
+	color: #88bc41;
+	font-family: 'Franklin-Gothic-Regular';
+	-webkit-box-shadow: 6px 8px 8px 0px rgba(66,93,28,0.75);
+	-moz-box-shadow: 6px 8px 8px 0px rgba(66,93,28,0.75);
+	box-shadow: 6px 8px 8px 0px rgba(66,93,28,0.75);
+}
+.ftr-top-sec-link a:hover{
+	background: #88bc41;
+	color: #fff;
+}
+
+.ftr-msg-icon{
+	position: fixed;
+	bottom: 35px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.ftr-cpwrt span p {
+    margin: 0;
+}
+
+
+
+@media(max-width: 1199px){
+	.footer-top-section {
+	    padding-top: 60px;
+	    padding-bottom: 50px;
+	}
+	.ftr-top-title {
+	    font-size: 45px;
+	}
+	.footer-wrp {
+	    padding-top: 90px;
+	}
+	.ftr-logo {
+	    padding-right: 55px;
+	}
+	.ftr-menu-title, 
+	.ftr-cnt-menu-title, 
+	.ftr-facebook-title {
+	    margin-bottom: 35px;
+	}
+	.ftr-menu ul li {
+	    padding-bottom: 10px;
+	}
+	.ftr-cnt-socials-media {
+	    padding-bottom: 20px;
+	}
+	.ftr-copywrite-sec {
+	    padding: 40px 0;
+	}
+
+}
+
+@media(max-width: 991px){
+	.ftr-top-title {
+	    font-size: 32px;
+	}
+	.footer-wrp {
+	    padding-top: 80px;
+	}
+	.ftr-logo{
+		width: 100%;
+		padding-right: 0;
+		text-align: center;
+	}
+	.ftr-logo a{
+		max-width: 100%;
+		margin-bottom: 50px;
+	}
+	.ftr-des{
+		display: none;
+	}
+	.ftr-menu,
+	.ftr-cnt-menu,
+	.ftr-facebook{
+		width: 33.3333%;
+	}
+	.ftr-cnt-menu {
+	    padding-right: 15px;
+	}
+	.ftr-menu-title, 
+	.ftr-cnt-menu-title{
+	    margin-bottom: 28px;
+	}
+	.ftr-cnt-socials-media {
+	    padding-bottom: 15px;
+	}
+	.ftr-copywrite-sec {
+	    padding: 35px 0;
+	}
+	.ftr-top-sec-link a{
+		width: 207px;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 27px;
+	}
+}
+
+@media(max-width: 767px){
+	.footer-top-section {
+	    padding-top: 50px;
+	    padding-bottom: 50px;
+	}
+	.ftr-top-title {
+	    font-size: 35px;
+	}
+	.ftr-top-sec-link a {
+	    width: 200px;
+	    height: 60px;
+	    font-size: 26px;
+	}
+	.ftr-menu, 
+	.ftr-cnt-menu, 
+	.ftr-facebook {
+	    width: 100%;
+	    padding-bottom: 25px;
+	}
+	.ftr-menu-inr,
+	.ftr-cnt-menu-inr,
+	.ftr-facebook-inr{
+		max-width: 300px;
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.ftr-menu ul,
+	.ftr-cnt-menu ul{
+		display: none;
+	}
+	.ftr-cnt-menu-title,
+	.ftr-menu-title{
+		display: inline-block;
+		vertical-align: baseline;
+		padding-right: 20px;
+		cursor: pointer;
+		margin-bottom: 20px;
+		position: relative;
+	}
+	.ftr-cnt-menu-title:before,
+	.ftr-menu-title:before{
+		position: absolute;
+	    right: 0;
+	    top: 0;
+	    font-family: "Font Awesome 5 Free"; 
+	    font-weight: 900; 
+	    content: "\f107";
+	    color: #2a2828;
+	    font-size: 22px;
+	    -webkit-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	    transition: all .5s ease;
+	}
+	.ftr-cnt-menu-title.active:before,
+	.ftr-menu-title.active:before{
+		content: "\f106";
+    	color: #7FB23B;
+	}
+	.ftr-cnt-menu-title.active,
+	.ftr-menu-title.active{
+		color: #7FB23B;
+	}
+	.ftr-cnt-menu-inr ul li,
+	.ftr-cnt-menu-inr ul li:first-child{
+		padding-bottom: 10px;
+	}
+	.ftr-cnt-menu-inr ul li a br{
+		display: none;
+	}
+	.ftr-cpwrt {
+	    float: none;
+	    text-align: center;
+	}
+	.ftr-copywrite-sec {
+	    padding: 30px 0;
+	}
+	.ftr-cnt-menu {
+	    padding-right: 0px;
+	}
+	.ftr-top-sec-inr {
+	    display: block;
+	}
+	.ftr-top-title {
+	    padding-right: 0;
+	    margin-bottom: 20px;
+	    text-align: center;
+	}
+	.ftr-top-sec-link a{
+		margin: 0 auto;
+	}
+
+	
+}
+
+@media(max-width: 575px){
+	.ftr-top-title {
+	    font-size: 33px;
+	}
+	.ftr-top-sec-link a {
+	    width: 180px;
+	    height: 55px;
+	    font-size: 23px;
+	}	
+	.ftr-copywrite-sec{
+		padding-top: 0;
+	}
+	
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}

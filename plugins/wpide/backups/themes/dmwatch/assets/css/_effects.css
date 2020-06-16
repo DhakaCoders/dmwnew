@@ -1,0 +1,38 @@
+/**
+All Transitions
+*/
+.dm-pa-grid-innr:hover .dm-pa-grid-img img,
+.dm-vacancy-grid-inr:hover .dm-vacancy-grid-img,
+a,input,img,textarea,button,svg,
+.slick-slider .slick-dots li,
+.hmProTabSlideItemCon,
+.filter-results-grd-item,
+.filter-results-img-hover strong i,
+.dm-advisor-grd-item-des a i{
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.dm-pa-grid-innr:hover .dm-pa-grid-img img,
+.dm-vacancy-grid-inr:hover .dm-vacancy-grid-img,
+.scale{
+	transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+
+/**
+All Hovers
+*/
+a:focus,button:focus,input:focus,textarea:focus{
+	outline: none;
+}
+a:hover{
+	text-decoration: none;
+}
+nav.main-nav ul li:hover > a,
+nav.main-nav ul li.current-menu-item a{
+	color: #53bc20;
+}
+

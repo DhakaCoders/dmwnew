@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: url('FranklinGothic.eot');
+    src: url('FranklinGothic.eot?#iefix') format('embedded-opentype'),
+        url('FranklinGothic.woff2') format('woff2'),
+        url('FranklinGothic.woff') format('woff'),
+        url('FranklinGothic.ttf') format('truetype'),
+        url('FranklinGothic.svg#FranklinGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

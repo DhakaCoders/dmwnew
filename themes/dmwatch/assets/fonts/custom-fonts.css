@@ -1,0 +1,63 @@
+
+@font-face {
+    font-family: 'FranklinGothic';
+    src: url('FranklinGothic/FranklinGothic.eot');
+    src: url('FranklinGothic/FranklinGothic.eot?#iefix') format('embedded-opentype'),
+        url('FranklinGothic/FranklinGothic.woff2') format('woff2'),
+        url('FranklinGothic/FranklinGothic.woff') format('woff'),
+        url('FranklinGothic/FranklinGothic.ttf') format('truetype'),
+        url('FranklinGothic/FranklinGothic.svg#FranklinGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'FranklinGothic-Book';
+    src: url('FranklinGothic-Book/FranklinGothic-Book.eot');
+    src: url('FranklinGothic-Book/FranklinGothic-Book.eot?#iefix') format('embedded-opentype'),
+        url('FranklinGothic-Book/FranklinGothic-Book.woff2') format('woff2'),
+        url('FranklinGothic-Book/FranklinGothic-Book.woff') format('woff'),
+        url('FranklinGothic-Book/FranklinGothic-Book.ttf') format('truetype'),
+        url('FranklinGothic-Book/FranklinGothic-Book.svg#FranklinGothic-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Franklin-Gothic-Regular';
+    src: url('Franklin-Gothic-Regular/Franklin-Gothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('PoppinsRegular/PoppinsRegular.eot');
+    src: url('PoppinsRegular/PoppinsRegular.eot') format('embedded-opentype'),
+         url('PoppinsRegular/PoppinsRegular.woff2') format('woff2'),
+         url('PoppinsRegular/PoppinsRegular.woff') format('woff'),
+         url('PoppinsRegular/PoppinsRegular.ttf') format('truetype'),
+         url('PoppinsRegular/PoppinsRegular.svg#PoppinsRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('PoppinsMedium/PoppinsMedium.eot');
+    src: url('PoppinsMedium/PoppinsMedium.eot') format('embedded-opentype'),
+         url('PoppinsMedium/PoppinsMedium.woff2') format('woff2'),
+         url('PoppinsMedium/PoppinsMedium.woff') format('woff'),
+         url('PoppinsMedium/PoppinsMedium.ttf') format('truetype'),
+         url('PoppinsMedium/PoppinsMedium.svg#PoppinsMedium') format('svg');
+}
+
+
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('MontserratBold/MontserratBold.eot');
+    src: url('MontserratBold/MontserratBold.eot') format('embedded-opentype'),
+         url('MontserratBold/MontserratBold.woff2') format('woff2'),
+         url('MontserratBold/MontserratBold.woff') format('woff'),
+         url('MontserratBold/MontserratBold.ttf') format('truetype'),
+         url('MontserratBold/MontserratBold.svg#MontserratBold') format('svg');
+}

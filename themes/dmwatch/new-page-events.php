@@ -45,15 +45,42 @@ get_header();
           <button class="tab-link" data-tab="tab-2"><span>Past Event</span></button>
         </div>
       </div>
+
       <div class="col-md-12">
         <div class="event-page-sec-tab-con">
            <div id="tab-1" class="fl-tab-content current">
+              <?php 
+                $ucquery = new WP_Query(array( 
+                    'post_type'=> 'event',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'event_cat',
+                          'field'    => 'slug',
+                          'terms'    => 'upcoming',
+                          ),
+                    ),
+                  ) 
+                );
+                if($ucquery->have_posts()):
+              ?>
               <div class="upcoming-event-con clearfix">
+                <?php 
+                 while($ucquery->have_posts()): $ucquery->the_post();
+                 $attach_id = get_post_thumbnail_id(get_the_ID());
+                  if( !empty($attach_id) )
+                    $event_src = cbv_get_image_src($attach_id,'bloggrid');
+                  else
+                    $event_src = '';   
+                ?>
                 <div class="upcoming-event-con-lft">
-                  <div class="upcoming-event-fea-img inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/upcoming-event-fea-img.jpg);">
+                  <div class="upcoming-event-fea-img inline-bg" style="background: url(<?php echo $event_src; ?>);">
                     <div class="upcoming-event-fea-img-hover-con">
-                      <strong>JUNE  27, 2020</strong> 
-                      <p>Lorem Ipsum is simply dummy text</p>
+                      <strong><?php echo get_the_date('M d, Y'); ?></strong> 
+                      <p><?php the_title(); ?></p>
                       <div class="timer">
                         <img src="<?php echo THEME_URI; ?>/assets/images/timer.png">
                       </div>
@@ -61,63 +88,16 @@ get_header();
                   </div>
                 </div>
                 <div class="upcoming-event-con-rgt">
-                  <strong>January 27, 2020</strong>
-                  <h3 class="uec-title">Lorem Ipsum is simply dummy text</h3>
-                  <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
+                  <strong><?php echo get_the_date('M d, Y'); ?></strong>
+                  <h3 class="uec-title"><?php the_title(); ?></h3>
+                  <?php echo wpautop(cbv_get_excerpt()); ?>
                 </div>
+                <?php endwhile; ?>
               </div>
+              <?php endif;  wp_reset_postdata(); ?>
            </div>
           <div id="tab-2" class="fl-tab-content">
-            <div class="past-event-con">
-              <div class="past-event-item-row">
-                <div class="past-event-date">
-                  <strong>25</strong>
-                  <span>MAY 20</span>
-                </div>
-                <div class="past-event-item-row-des">
-                  <h3 class="peird-title"><a href="#">Lorem Ipsum is simply dummy text</a></h3>
-                  <span>2020 | Policy Brief</span>
-                  <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the  to is crucial for survival of people anitation and hygiene  <a href="#">Continue Reading.</a> </p>
-                </div>
-              </div>
-              <div class="past-event-item-row">
-                <div class="past-event-date">
-                  <strong>20</strong>
-                  <span>feb 20</span>
-                </div>
-                <div class="past-event-item-row-des">
-                  <h3 class="peird-title"><a href="#">Lorem Ipsum is simply dummy text</a></h3>
-                  <span>2020 | Policy Brief</span>
-                  <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the  to is crucial for survival of people anitation and hygiene  <a href="#">Continue Reading.</a> </p>
-                </div>
-              </div>
-              <div class="past-event-item-row">
-                <div class="past-event-date">
-                  <strong>02</strong>
-                  <span>dec 19</span>
-                </div>
-                <div class="past-event-item-row-des">
-                  <h3 class="peird-title"><a href="#">Lorem Ipsum is simply dummy text</a></h3>
-                  <span>2020 | Policy Brief</span>
-                  <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the  to is crucial for survival of people anitation and hygiene  <a href="#">Continue Reading.</a> </p>
-                </div>
-              </div>
-              <div class="past-event-item-row">
-                <div class="past-event-date">
-                  <strong>02</strong>
-                  <span>nov 19</span>
-                </div>
-                <div class="past-event-item-row-des">
-                  <h3 class="peird-title"><a href="#">Lorem Ipsum is simply dummy text</a></h3>
-                  <span>2020 | Policy Brief</span>
-                  <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the  to is crucial for survival of people anitation and hygiene  <a href="#">Continue Reading.</a> </p>
-                </div>
-              </div>
-
-              <div class="fl-see-all-btn">
-                <a href="#">SEE ALL</a>
-              </div>
-            </div>
+            <?php echo do_shortcode( '[ajax_event_posts]' ); ?>
           </div>
         </div>
       </div>

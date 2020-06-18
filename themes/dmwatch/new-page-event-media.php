@@ -41,8 +41,8 @@ get_header();
     <div class="row">
       <div class="col-md-12">
         <div class="fl-tabs clearfix fl-tabs-2">
-          <button class="tab-link current" data-tab="tab-1"><span>News </span></button>
-          <button class="tab-link" data-tab="tab-2"><span>Oped (media)</span></button>
+            <button class="tab-link current" data-tab="tab-1">News</button>
+            <button class="tab-link" data-tab="tab-2">Oped (media)</button>
         </div>
       </div>
     </div>
@@ -52,98 +52,20 @@ get_header();
   <div class="container">
     <div class="row">
       <div class="col-md-12">
+
         <div class="event-media-page-tab-con-inr">
           <div id="tab-1" class="fl-tab-content current">
             <div class="event-media-page-tab-con-cntlr emptc-tab-1-cntlr">
-              <ul class="clearfix reset-list">
-                <li>
-                  <div class="event-media-page-tab-con-row clearfix">
-                    <div class="event-media-page-tab-con-fea-img">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/event-media-page-tab-con-fea-img-01.jpg">
-                    </div>
-                    <div class="event-media-page-tab-con-des">
-                      <h3 class="emptcd-title"><a href="#">Lorem Ipsum is simply dummy text</a></h3>
-                      <span>Reporter | 2020 | The Daily Star</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
-                    </div>
-                  </div>
-                </li>
-                 <li>
-                  <div class="event-media-page-tab-con-row clearfix">
-                    <div class="event-media-page-tab-con-fea-img">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/event-media-page-tab-con-fea-img-02.jpg">
-                    </div>
-                    <div class="event-media-page-tab-con-des">
-                      <h3 class="emptcd-title"><a href="#">বাংলাদেশের উন্নয়ন</a></h3>
-                      <span>Reporter | 2020 | The Daily Star</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
-                    </div>
-                  </div>
-                </li>
-                 <li>
-                  <div class="event-media-page-tab-con-row clearfix">
-                    <div class="event-media-page-tab-con-fea-img">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/event-media-page-tab-con-fea-img-01.jpg">
-                    </div>
-                    <div class="event-media-page-tab-con-des">
-                      <h3 class="emptcd-title"><a href="#">Lorem Ipsum is simply dummy text</a></h3>
-                      <span>Reporter | 2020 | The Daily Star</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <div class="fl-see-all-btn">
-                <a href="#">SEE ALL</a>
-              </div>
+              <?php echo do_shortcode( '[ajax_news_posts]' ); ?>
             </div>
           </div>
-           <div id="tab-2" class="fl-tab-content">
+          <div id="tab-2" class="fl-tab-content">
             <div class="event-media-page-tab-con-cntlr emptc-tab-2-cntlr">
-              <ul class="clearfix reset-list">
-                <li>
-                  <div class="event-media-page-tab-con-row clearfix">
-                    <div class="event-media-page-tab-con-fea-img">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/event-media-page-tab-con-fea-img-01.jpg">
-                    </div>
-                    <div class="event-media-page-tab-con-des">
-                      <h3 class="emptcd-title"><a href="#">Lorem Ipsum is simply dummy text</a></h3>
-                      <span>Reporter | 2020 | The Daily Star</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
-                    </div>
-                  </div>
-                </li>
-                 <li>
-                  <div class="event-media-page-tab-con-row clearfix">
-                    <div class="event-media-page-tab-con-fea-img">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/event-media-page-tab-con-fea-img-02.jpg">
-                    </div>
-                    <div class="event-media-page-tab-con-des">
-                      <h3 class="emptcd-title"><a href="#">বাংলাদেশের উন্নয়ন</a></h3>
-                      <span>Reporter | 2020 | The Daily Star</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
-                    </div>
-                  </div>
-                </li>
-                 <li>
-                  <div class="event-media-page-tab-con-row clearfix">
-                    <div class="event-media-page-tab-con-fea-img">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/event-media-page-tab-con-fea-img-01.jpg">
-                    </div>
-                    <div class="event-media-page-tab-con-des">
-                      <h3 class="emptcd-title"><a href="#">Lorem Ipsum is simply dummy text</a></h3>
-                      <span>Reporter | 2020 | The Daily Star</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <div class="fl-see-all-btn">
-                <a href="#">SEE ALL</a>
-              </div>
+              <?php echo do_shortcode( '[ajax_media_posts]' ); ?>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>

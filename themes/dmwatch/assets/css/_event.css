@@ -533,3 +533,10 @@ box-shadow: 0px 0px 5px 0px rgba(213,213,213,1);
 	color: #53bc20;
 }
 .singleEvent .dm-bd-grd-sec{ background: #fff; padding-top: 100px; }
+.fl-see-all-btn div.ajaxloading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    margin-left: auto;
+}

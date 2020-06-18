@@ -86,6 +86,31 @@ return 50;
 }
 add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 
+function cbv_get_excerpt(){
+  global $post;
+  $link = ' <a href="'. get_permalink($post->ID) . '">Continue Reading.</a>';
+  $excerpt = explode(' ', get_the_excerpt());
+  array_pop($excerpt);
+  $excerpt = implode(" ",$excerpt);
+
+  $excerpt .= $link;
+  return $excerpt;
+}
+
+function cbv_limit_excerpt( $limit = 52 ){
+   global $post;
+  $link = ' <a href="'. get_permalink($post->ID) . '">Continue Reading.</a>';
+
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt);
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  } 
+  $excerpt .= $link;
+  return $excerpt;
+}
 
 function cbv_table( $table){
   if ( ! empty ( $table ) ) {

@@ -152,9 +152,6 @@ position: relative;
     justify-content: center;
     position: relative;
 }
-.itm-grd-img-bx img{
-	max-height: 285px;
-}
 .itm-grd-img-bx-hover{
 	position: absolute;
     top: 4px;

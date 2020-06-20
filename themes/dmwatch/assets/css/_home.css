@@ -325,7 +325,7 @@
 	height: 100%;
 }
 .hmProTabSlideItemCon-hover-inr strong{
-	color: #94ce44;
+	color: #fff;
 	padding: 0 10px 30px;
 	display: block;
 	position: absolute;
@@ -333,8 +333,9 @@
 	right: 0;
 	bottom: 0;
 	text-align: center;
-	font-size: 21px;
+	font-size: 18px;
 	line-height: 1.2;
+	text-shadow: 1px 1px 1px #000;
 }
 .hmProTabSlideItemCon-hover{
 	position: absolute;
@@ -413,15 +414,14 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 .hm-clients-partners-sec-hdr p {
     font-size: 19px;
 }
-.clientsPartnersLogosSlider{
+/*.clientsPartnersLogosSlider{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+}*/
 
 .clientsPartnersLogosSlideItem{
 	padding: 0 30px 40px;
-	width: 20%;
 	position: relative;
 }
 .clientsPartnersLogosSlideItem > div{

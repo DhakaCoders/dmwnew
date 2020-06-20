@@ -27,7 +27,7 @@
 }
 .dm-about-sec-inr p a{
 	color: #2f760c;
-	margin-left: 30px;
+	margin-left: 5px;
 	text-transform: capitalize;
 }
 .dm-about-sec-inr p a:hover{
@@ -68,14 +68,14 @@
 .dm-vision-mision-grd-sec-inr ul li{
 	float: left;
 	width: 50%;
-	padding-right: 75px;
-	padding-left: 75px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 
 .dm-vm-grd-item{
 	background: #F5F7F7;
-	padding: 115px 80px 40px 40px;
+	padding: 115px 40px 40px 40px;
 	position: relative;
 }
 .dm-vm-grd-item:before{
@@ -92,7 +92,7 @@
 
 .dm-vm-grd-item-title{
 	display: block;
-	font-size: 41px;
+	font-size: 34px;
 	line-height: 1;
 	margin-bottom: 10px;
 	font-weight: 700;
@@ -100,7 +100,7 @@
 	text-transform: uppercase;
 }
 .dm-vm-grd-item p{
-	font-size: 22px;
+	font-size: 20px;
 	line-height: 33px;
 	color: #606060;
 	font-family: 'Montserrat', sans-serif;
@@ -131,24 +131,33 @@
 	float: left;
 	width: 50%;
 	padding: 0 10px 25px 30px;
-	font-size: 30px;
-	color: #606060;
-	font-family: 'Montserrat', sans-serif;
 	position: relative;
 }
-.dm-about-value-sec-inr ul li:after{
-	content: "";
-	height: 18px;
-	width: 16px;
-	position: absolute;
-	top: 10px;
-	left: 0;
-	background: url('../images/dm-about-value-star.png');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+.dm-about-value-sec-inr ul li:after {
+    content: "";
+    height: 14px;
+    width: 14px;
+    background: #7FB23B;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+.dm-about-value-sec-inr ul li strong {
+    font-size: 30px;
+    color: #606060;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+    font-weight: normal;
+    display: block;
+}
+.dm-about-value-sec-inr ul li:nth-child(2n+1){
+	clear: left;
 }
 .dm-about-value-sec-inr ul li p{
 	font-size: 16px;
+}
+.continue-reading-desc{
+	display: none;
 }
 @media(max-width: 1399px){
 	.dm-vision-mision-grd-sec-inr ul {
@@ -394,9 +403,6 @@
 	}
 	.dm-about-sec-inr p {
 	    font-size: 17px;
-	}
-	.dm-about-sec-inr p a{
-		margin-left: 15px;
 	}
 	.dm-vm-title {
 	    font-size: 27px;

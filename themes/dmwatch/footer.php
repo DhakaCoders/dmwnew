@@ -63,16 +63,22 @@
                 <?php if( !empty($sinfo) ): ?>
                 <ul class="reset-list">
                   <?php if( !empty($sinfo['linkedin_url']) ): ?>
-                  <li><a href="<?php echo $sinfo['linkedin_url']; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/instagram.png"></a></li>
+                  <li class="linkedin"><a title="LinkedIn" href="<?php echo $sinfo['linkedin_url']; ?>"><i class="fab fa-linkedin"></i></a></li>
                   <?php endif; ?>
                   <?php if( !empty($sinfo['facebook_url']) ): ?>
-                  <li><a href="<?php echo $sinfo['facebook_url']; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/facebook.png"></a></li>
+                  <li class="facebook"><a title="Facebook" href="<?php echo $sinfo['facebook_url']; ?>"><i class="fab fa-facebook"></i></a></li>
                   <?php endif; ?>
                   <?php if( !empty($sinfo['twitter_url']) ): ?>
-                  <li><a href="<?php echo $sinfo['twitter_url']; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/twitter.png"></a></li>
+                  <li class="twitter"><a title="Twitter" href="<?php echo $sinfo['twitter_url']; ?>"><i class="fab fa-twitter"></i></a></li>
                   <?php endif; ?>
                   <?php if( !empty($sinfo['instagram_url']) ): ?>
-                  <li><a href="<?php echo $sinfo['instagram_url']; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/linkedin.png"></a></li>
+                  <li class="instagram"><a title="Instagram" href="<?php echo $sinfo['instagram_url']; ?>"><i class="fab fa-instagram"></i></a></li>
+                  <?php endif; ?>
+                  <?php if( !empty($sinfo['instagram_url']) ): ?>
+                  <li class="youtube"><a title="Youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+                  <?php endif; ?>
+                  <?php if( !empty($sinfo['instagram_url']) ): ?>
+                  <li class="email"><a title="E-Mail" href="#"><i class="fas fa-envelope"></i></a></li>
                   <?php endif; ?>
                 </ul>
                 <?php endif; ?>

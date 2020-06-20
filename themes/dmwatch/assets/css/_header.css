@@ -20,7 +20,7 @@ header.header{
 }
 .quick-dropdown-menu{
 	position: absolute;
-	right: 0px;
+	right: -140px;
 	top: 100%;
 	width: 300px;
     text-align: center;
@@ -293,6 +293,7 @@ nav.main-nav ul.sub-menu li:hover:after {
 .hdr-topbar-grd{
 	position: relative;
 	margin-top: -1px;
+	cursor: pointer;
 }
 
 
@@ -372,16 +373,22 @@ body.hasSticky .hdr-topbar{
 	z-index: -9;
 	right: 0;
 }
-@media(max-width: 1499px){
-
+@media(max-width: 1519px){
+	.quick-dropdown-menu{
+		right: -90px;
+	}
 }
 
-@media(max-width: 1399px){
-
+@media(max-width: 1499px){
+	.quick-dropdown-menu {
+	    right: -40px;
+	}
 }
 
 @media(max-width: 1299px){
-
+	.quick-dropdown-menu {
+	    right: 0;
+	}
 }
 
 @media(max-width: 1199px){

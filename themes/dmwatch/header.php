@@ -43,10 +43,47 @@
                         <button><i class="fas fa-search"></i></button>
                     </form>
                   </div>
-                  <div class="hdr-topbar-grd">
+                  <div class="hdr-topbar-grd quick-icon-dropdown">
                     <img src="<?php echo THEME_URI; ?>/assets/images/hdr-topbar-grd-img.png">
+                    <div class="quick-dropdown-menu">
+                      <ul class="reset-list clearfix">
+                        <li>
+                          <div class="quick-dropdown-menu-item">
+                            <a href="#">
+                              <img src="<?php echo THEME_URI; ?>/assets/images/web-mail-icon.png">
+                              <span>Web mail</span>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="quick-dropdown-menu-item">
+                            <a href="#">
+                              <img src="<?php echo THEME_URI; ?>/assets/images/web-mail-icon.png">
+                              <span>Web mail</span>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="quick-dropdown-menu-item">
+                            <a href="#">
+                              <img src="<?php echo THEME_URI; ?>/assets/images/web-mail-icon.png">
+                              <span>Web mail</span>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="quick-dropdown-menu-item">
+                            <a href="#">
+                              <img src="<?php echo THEME_URI; ?>/assets/images/web-mail-icon.png">
+                              <span>Web mail</span>
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
+                
               </div>
               <div class="main-nav-cntlr">
                 <div class="main-nav-menu-bar-xs">
@@ -94,6 +131,7 @@
                   </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>

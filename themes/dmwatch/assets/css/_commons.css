@@ -350,16 +350,19 @@ form .dropdown-menu li a{
 
 /* slider break*/
 .mainSlider .mainSLideItem,
-.hmProTabSlider .hmProTabSlideItem{
+.hmProTabSlider .hmProTabSlideItem,
+.participateBnrSlider .participateBnrSlideItem{
 	display: none;
 }
 .mainSlider .mainSLideItem:first-child,
-.hmProTabSlider .hmProTabSlideItem:first-child{
+.hmProTabSlider .hmProTabSlideItem:first-child,
+.participateBnrSlider .participateBnrSlideItem:first-child{
 	display: block;
 }
 
 .mainSlider.slick-initialized .mainSLideItem,
-.hmProTabSlider.slick-initialized .hmProTabSlideItem{
+.hmProTabSlider.slick-initialized .hmProTabSlideItem,
+.participateBnrSlider.slick-initialized .participateBnrSlideItem{
 	display: block;
 }
 .slick-dots > li {

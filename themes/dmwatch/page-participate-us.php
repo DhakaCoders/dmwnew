@@ -15,15 +15,55 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
 
 $bcontent = get_field('bcontent', $thisID);
 ?>
-<section class="page-banner page-bnr-lft-con page-bnr-participate-with-us" style="overflow: hidden;">
-  <div class="page-banner-controller">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/page-bnr-participate-with-us.jpg);">
-    </div>
-    <div class="page-banner-des">
-      <div class="page-banner-inr">
+<section class="participate-bnr-slider-sec" style="overflow: hidden;">
+  <div class="participateBnrSlider">
+    <div class="participateBnrSlideItem">
+      <div class="participate-bnr-slider-bg inline-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/participate-bnr-slider-bg-01.jpg);">
+      </div>
+      <div class="participateBnrSlideItem-des">
         <div>
-          <h1 class="page-banner-title">PARTICIPATE WITH US</h1>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          <h1 class="pcbsd-title">PARTNERSHIP</h1>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+        </div>
+      </div>
+    </div>
+    <div class="participateBnrSlideItem">
+      <div class="participate-bnr-slider-bg inline-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/participate-bnr-slider-bg-02.jpg);">
+      </div>
+      <div class="participateBnrSlideItem-des">
+        <div>
+          <h1 class="pcbsd-title">CONSULTANCY </h1>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+        </div>
+      </div>
+    </div>
+    <div class="participateBnrSlideItem">
+      <div class="participate-bnr-slider-bg inline-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/participate-bnr-slider-bg-03.jpg);">
+      </div>
+      <div class="participateBnrSlideItem-des">
+        <div>
+          <h1 class="pcbsd-title">FELLOWSHIP</h1>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+        </div>
+      </div>
+    </div>
+    <div class="participateBnrSlideItem">
+      <div class="participate-bnr-slider-bg inline-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/participate-bnr-slider-bg-04.jpg);">
+      </div>
+      <div class="participateBnrSlideItem-des">
+        <div>
+          <h1 class="pcbsd-title">INTERNSHIP</h1>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+        </div>
+      </div>
+    </div>
+    <div class="participateBnrSlideItem">
+      <div class="participate-bnr-slider-bg inline-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/participate-bnr-slider-bg-05.jpg);">
+      </div>
+      <div class="participateBnrSlideItem-des">
+        <div>
+          <h1 class="pcbsd-title">VOLUNTEER</h1>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
         </div>
       </div>
     </div>

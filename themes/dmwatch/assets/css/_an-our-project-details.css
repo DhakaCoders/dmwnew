@@ -9,15 +9,10 @@ dm-project-info-sec-wrp
 	margin: 120px 0;
 	padding-bottom: 60px;
 }
-.dm-project-info-inr{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 .dm-project-info-lft{
 	width: 57%;
 	float: left;
-	padding-right: 15px;
+	padding-right: 35px;
 }
 
 .dm-project-info-rgt-dsc{
@@ -46,9 +41,8 @@ dm-project-info-sec-wrp
 }
 .dm-project-info-rgt-dsc p {
     margin-bottom: 48px;
-    line-height: 48px;
+    line-height: 40px;
     font-size: 22px;
-    text-transform: uppercase;
     margin-top: -10px;
 }
 .dm-project-info-rgt-dsc span{
@@ -62,9 +56,6 @@ dm-project-info-sec-wrp
 .dm-project-info-logo {
     width: 230px;
     height: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .dm-project-info-logo img{
 	max-height: 100%;
@@ -74,7 +65,7 @@ dm-project-info-sec-wrp
     padding-right: 15px;
 }
 .dm-project-info-btm-dsc a{
-	font-size: 22px;
+	font-size: 16px;
 	line-height: 24px;
 	color:#88BE43;
 	font-weight: 700;
@@ -87,9 +78,8 @@ dm-project-info-sec-wrp
 }
 .dm-project-info-btm-dsc p{
 	font-size: 22px;
-	line-height: 48px;
+	line-height: 40px;
 	margin-bottom: 45px;
-	text-transform: uppercase;
 }
 .dm-project-info-btm-dsc-title{
 	color: #88be44;

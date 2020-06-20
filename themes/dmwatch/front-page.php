@@ -400,9 +400,6 @@
         <?php $i = 1; foreach ( $terms as $term ) { ?>
         <div id="tab-<?php echo $i; ?>" class="fl-tab-content<?php echo ($i == 1)? ' current': ''; ?>">
           <div class="hm-projects-tab-con">
-            <div class="hm-project-tab-short-des">
-              <?php if( !empty($term->description) ) echo wpautop($term->description); ?>
-            </div>
             <?php 
               $query = new WP_Query(array( 
                   'post_type'=> 'project',
@@ -419,8 +416,16 @@
                   )
                 ) 
               );
-              if($query->have_posts()):
             ?>
+            <div class="hm-project-tab-short-des">
+              <?php 
+              if( !empty($term->description) && $query->have_posts() ) 
+                echo wpautop($term->description); 
+              else
+                echo '<p>Nothing to show here for now. Please check back soon!<p>';
+              ?>
+            </div>
+            <?php if( $query->have_posts()): ?>
             <div class="hm-project-tab-slider hmProTabSlider">
               <?php 
                 while($query->have_posts()): $query->the_post();

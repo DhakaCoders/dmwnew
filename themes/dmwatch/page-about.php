@@ -125,7 +125,7 @@ $mission = $vmsec['mission'];
         <ul class="reset-list clearfix">
           <?php foreach( $values as $value ): ?>
            <li>
-            <?php if( !empty($value['title']) ) printf('%s', $value['title']); ?>
+            <strong><?php if( !empty($value['title']) ) printf('%s', $value['title']); ?></strong>
             <?php if( !empty($value['subtitle']) ) printf('<p>%s</p>', $value['subtitle']); ?>
            </li>
          <?php endforeach; ?>

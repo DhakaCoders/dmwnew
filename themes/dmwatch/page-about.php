@@ -39,6 +39,11 @@ $intro = get_field('introsec', $thisID);
           if( !empty($intro['title']) ) printf('<h2 class="dm-about-sec-title">%s</h2>', $intro['title'] );
           if(!empty($intro['description'])) echo wpautop( $intro['description'] ); 
           ?>
+          <?php if(!empty($intro['readmore_description'])): ?>
+            <div class="continue-reading-desc">
+              <?php echo wpautop( $intro['readmore_description'] ); ?>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>

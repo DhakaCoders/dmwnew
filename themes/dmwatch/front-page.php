@@ -137,34 +137,63 @@
       </div>
     </div>
     <?php 
-      $services = $service['fservices']; 
-      if( $services ):
+      $serviceIDs = $service['select_services']; 
     ?>
+
     <div class="row">
       <div class="col-md-12">
         <div class="hm-fea-services-cntlr">
+          <?php 
+           if( $serviceIDs ):
+            $squery = new WP_Query(array( 
+                'post_type'=> 'services',
+                'post_status' => 'publish',
+                'posts_per_page' => count($serviceIDs),
+                'orderby' => 'date',
+                'order'=> 'ASC',
+                'post__in' => $serviceIDs
+              ) 
+            );
+          else: 
+            $squery = new WP_Query(array( 
+                'post_type'=> 'services',
+                'post_status' => 'publish',
+                'posts_per_page' => 5,
+                'orderby' => 'date',
+                'order'=> 'ASC'
+              ) 
+            );
+          endif;
+            if($squery->have_posts()):
+          ?>
           <div class="hm-fea-services hmFeaServicesSlider">
-            <?php foreach( $services as $serv ): ?>
+            <?php 
+             while($squery->have_posts()): $squery->the_post();
+             $serv = get_field('intro');
+                $servIcon = $serv['icon'];
+            ?>
             <div class="hmFeaServicesSlideItem">
               <div class="hm-fea-service-item">
               
                 <div class="hm-fea-service-item-img">
                 <?php 
-                  if( !empty($serv['icon']) ):
-                    echo cbv_get_image_tag($serv['icon']);
-                  endif;
+                  if( is_array($servIcon) ){
+                    echo '<img src="'.$servIcon['url'].'" alt="'.$servIcon['alt'].'" title="'.$servIcon['title'].'">';
+                  }
                 ?>
                 </div>
                 <div class="hm-fea-service-item-des">
                 <?php 
-                  if( !empty($serv['title']) ) printf('<h5 class="hmfsid-title mHc">%s</h5>', $serv['title']);
+                  if( !empty(get_the_title()) ) printf('<h5 class="hmfsid-title mHc">%s</h5>', get_the_title());
                   if( !empty($serv['description']) ) echo wpautop( $serv['description'] );
                 ?>
                 </div>
               </div>
             </div>
-            <?php endforeach; ?>
+            <?php endwhile; ?>
+
           </div>
+          <?php endif;  wp_reset_postdata(); ?>
           <div class="fl-see-all-btn">
             <a href="#" data-toggle="modal" data-target="#hmFeaServices_modal" href="#">SEE ALL</a>
           </div>
@@ -178,30 +207,45 @@
 
       <div class="info-popup-container">
         <div class="info-popup-cntlr-inr clearfix">
-          <h3 class="hmFeaServicesModal-hdr">FEATURED SERVICES</h3>
+          <?php if( !empty($service['title']) ) printf('<h3 class="hmFeaServicesModal-hdr">%s</h3>', $service['title']); ?>
+          <?php 
+          $squery = new WP_Query(array( 
+              'post_type'=> 'services',
+              'post_status' => 'publish',
+              'posts_per_page' => -1,
+              'orderby' => 'date',
+              'order'=> 'ASC'
+            ) 
+          );
+          if($squery->have_posts()):
+          ?>
           <div class="hm-fea-services hmFeaServicesSlider">
-            <?php foreach( $services as $serv ): ?>
+            <?php 
+             while($squery->have_posts()): $squery->the_post();
+             $serv = get_field('intro');
+                $servIcon = $serv['icon'];
+            ?>
             <div class="hmFeaServicesSlideItem">
               <div class="hm-fea-service-item">
               
                 <div class="hm-fea-service-item-img">
                 <?php 
-                  if( !empty($serv['icon']) ):
-                    echo cbv_get_image_tag($serv['icon']);
-                  endif;
+                  if( is_array($servIcon) ){
+                    echo '<img src="'.$servIcon['url'].'" alt="'.$servIcon['alt'].'" title="'.$servIcon['title'].'">';
+                  }
                 ?>
                 </div>
                 <div class="hm-fea-service-item-des">
                 <?php 
-                  if( !empty($serv['title']) ) printf('<h5 class="hmfsid-title mHc">%s</h5>', $serv['title']);
+                  if( !empty(get_the_title()) ) printf('<h5 class="hmfsid-title mHc">%s</h5>', get_the_title());
                   if( !empty($serv['description']) ) echo wpautop( $serv['description'] );
                 ?>
                 </div>
               </div>
             </div>
-            <?php endforeach; ?>
+            <?php endwhile; ?>
           </div>
-          
+          <?php endif;  wp_reset_postdata(); ?>
         </div>
 
       </div>
@@ -214,7 +258,7 @@
         </div>
       </div>
     </div>
-    <?php endif; ?>
+
   </div>    
 </section>
 <?php endif; ?>
@@ -239,32 +283,59 @@
       </div>
     </div>
     <?php 
-      $logos = $client['logos']; 
-      if( $logos ):
-    ?>
+       $logoIDs = $client['select_clients'];  
+       if( $logoIDs ):
+        $clquery = new WP_Query(array( 
+            'post_type'=> 'client',
+            'post_status' => 'publish',
+            'posts_per_page' => count($logoIDs),
+            'orderby' => 'date',
+            'order'=> 'ASC',
+            'post__in' => $logoIDs
+          ) 
+        );
+      else: 
+        $clquery = new WP_Query(array( 
+            'post_type'=> 'client',
+            'post_status' => 'publish',
+            'posts_per_page' => 10,
+            'orderby' => 'date',
+            'order'=> 'ASC'
+          ) 
+        );
+      endif;
+        if($clquery->have_posts()):
+      ?>
     <div class="row">
       <div class="col-md-12">
         <div class="clients-partners-logos-cntlr">
           <div class="clients-partners-logos clientsPartnersLogosSlider">
-            <?php foreach( $logos as $logo ): ?>
+            <?php 
+             while($clquery->have_posts()): $clquery->the_post();
+                $logos = get_field('intro');
+                $logIcon = $logos['icon'];
+            ?>
             <div class="clientsPartnersLogosSlideItem">
+              <?php if( !empty($logos['link']) ): ?>
+                <a href="<?php echo $logos['link']; ?>" class="overlay-link"></a>
+              <?php endif; ?>
               <div>
                 <?php 
-                  if( !empty($logo['icon']) ):
-                    echo cbv_get_image_tag($logo['icon']);
-                  endif;
+                  if( is_array($logIcon) ){
+                    echo '<img src="'.$logIcon['url'].'" alt="'.$logIcon['alt'].'" title="'.$logIcon['title'].'">';
+                  }
                 ?>
               </div>
             </div>
-            <?php endforeach; ?>
+            <?php endwhile; ?>
           </div>
           <div class="fl-see-all-btn">
-            <a href="/our-clients/">SEE ALL</a>
+            <a href="<?php echo esc_url( home_url('our-clients') ); ?>">SEE ALL</a>
           </div>
         </div>
       </div>
     </div>
-    <?php endif; ?>
+    <?php endif;  wp_reset_postdata(); ?>
   </div>
 </section>
 <?php endif; ?>

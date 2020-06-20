@@ -37,17 +37,33 @@ $intro = get_field('introsec', $thisID);
     </div>
   </div>
 </section><!-- end of page-banner -->
-<?php if( $intro ): ?>
+<?php 
+if( $intro ): 
+$bgcolor = $intro['bg_color'];
+$textcolor = $intro['text_color'];
+if( !empty($textcolor) ):
+?>
+<style type="text/css">
+  .dm-we-do-dsc p, .dm-we-do-dsc h2{
+    color:<?php echo $textcolor?> !important;
+  }
+</style>
+<?php endif; ?>
 <section class="dm-we-do-content-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="dm-we-do-dsc-wrp">
+        <div class="dm-we-do-dsc-wrp" style="<?php echo (!empty($bgcolor))? 'background:'.$bgcolor: ''; ?>">
           <div class="dm-we-do-dsc">
           <?php 
             if( !empty($intro['title']) ) printf('<h2 class="dm-we-do-dsc-title">%s</h2>', $intro['title'] );
             if(!empty($intro['description'])) echo wpautop( $intro['description'] ); 
           ?>
+          <?php if(!empty($intro['readmore_description'])): ?>
+            <div class="continue-reading-desc">
+              <?php echo wpautop( $intro['readmore_description'] ); ?>
+            </div>
+          <?php endif; ?>
           </div>
         </div>
       </div>

@@ -282,7 +282,7 @@ if( $('.participateBnrSlider').length ){
     $('.participateBnrSlider').slick({
       pauseOnHover: false,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 4000,
       dots: true,
       infinite: true,
       arrows:false,

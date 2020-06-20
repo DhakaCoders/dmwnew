@@ -274,6 +274,7 @@ if( $('.clientsPartnersLogosSlider').length ){
             slidesToShow: 2,
           }
         }
+      ]
     });
 }
 

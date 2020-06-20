@@ -1,9 +1,6 @@
 <?php
-/*
-  Template Name: Team Members
-*/
 get_header(); 
-$thisID = get_the_ID();
+$thisID = 62;
 
 $pageTitle = get_the_title($thisID);
 $custom_page_title = get_field('custom_page_title', $thisID);

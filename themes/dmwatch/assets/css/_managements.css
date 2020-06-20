@@ -599,7 +599,7 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
 }
 .our-management-bio-sec-cntlr p{
 	font-size: 20px;
-	line-height: 1.2;
+	line-height: 1.4;
 	margin-bottom: 42px;
 }
 
@@ -608,14 +608,14 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
 	color: #fff;
 }
 .our-management-bio-name-title{
-	font-size: 58px;
+	font-size: 46px;
 	line-height: 1;
 	display: block;
 	padding-bottom: 8px;
 	margin: 0;
 }
 .our-management-bio-name span{
-	font-size: 40px;
+	font-size: 32px;
 	line-height: 1;
 	display: block;
 	text-transform: capitalize;
@@ -633,10 +633,10 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
 
 .our-management-bio-pro-img{
 	margin-bottom: 70px;
-	background: #fff;
+	text-align: center;
 }
 .our-management-bio-pro-img span{
-	display: block;
+display: inline-block;
 -webkit-box-shadow: 6px 4px 11px -5px rgba(32,43,37,1);
 -moz-box-shadow: 6px 4px 11px -5px rgba(32,43,37,1);
 box-shadow: 6px 4px 11px -5px rgba(32,43,37,1);
@@ -942,7 +942,7 @@ body{
 		margin-top: -245px;
 	}
 	.our-management-bio-name-title{
-		font-size: 48px;
+		font-size: 40px;
 	}
 	.our-management-bio-name span{
 		font-size: 31px;
@@ -1131,7 +1131,7 @@ body{
 		margin-bottom: 60px;
 	}
 	.our-management-bio-name-title {
-	    font-size: 41px;
+	    font-size: 38px;
 	}
 	.our-management-bio-name span {
 	    font-size: 27px;
@@ -1220,7 +1220,7 @@ body{
 		margin-bottom: 50px;
 	}
 	.our-management-bio-name-title {
-	    font-size: 35px;
+	    font-size: 34px;
 	}
 	.our-management-bio-name span {
 	    font-size: 25px;
@@ -1338,7 +1338,7 @@ body{
 		padding-left: 0;
 	}*/
 	.our-management-bio-name-title {
-	    font-size: 32px;
+	    font-size: 34px;
 	}
 	.our-management-bio-name span {
 	    font-size: 23px;

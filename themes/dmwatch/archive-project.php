@@ -93,7 +93,7 @@ $bcontent = get_field('bcontent', $thisID);
                     <div class="filter-check-row clearfix">
                       <input type="checkbox" id="pa<?php echo $i; ?>" <?php echo ( $pstatus == $aarea->slug )? 'checked': ''; ?> name="status" value="<?php echo $aarea->slug; ?>">
                       <span class="checkmark"></span> 
-                      <label for="pa<?php echo $i; ?>"> SHOW <?php echo $aarea->name; ?></label> 
+                      <label for="pa<?php echo $i; ?>"><?php echo $aarea->name; ?></label> 
                     </div>
                   </div>
                   <?php $i++; } ?>
@@ -118,7 +118,7 @@ $bcontent = get_field('bcontent', $thisID);
                     <div class="filter-check-row clearfix">
                       <input type="checkbox" id="pa<?php echo $i; ?>" <?php echo ( $pclient == $client->slug )? 'checked': ''; ?> name="client" value="<?php echo $client->slug; ?>">
                       <span class="checkmark"></span> 
-                      <label for="pa<?php echo $i; ?>"> SHOW <?php echo $client->name; ?></label> 
+                      <label for="pa<?php echo $i; ?>"><?php echo $client->name; ?></label> 
                     </div>
                   </div>
                   <?php $i++; } ?>
@@ -143,7 +143,7 @@ $bcontent = get_field('bcontent', $thisID);
                     <div class="filter-check-row clearfix">
                       <input type="checkbox" id="pa<?php echo $i; ?>" <?php echo ( $pregion == $region->slug )? 'checked': ''; ?> name="region" value="<?php echo $region->slug; ?>">
                       <span class="checkmark"></span> 
-                      <label for="pa<?php echo $i; ?>"> SHOW <?php echo $region->name; ?></label> 
+                      <label for="pa<?php echo $i; ?>"><?php echo $region->name; ?></label> 
                     </div>
                   </div>
                   <?php $i++; } ?>

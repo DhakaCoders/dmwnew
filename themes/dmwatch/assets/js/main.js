@@ -368,9 +368,9 @@ $('.popup-close').on('click', function(e){
 });
 */
 
-$('.dm-about-sec-inr p a').on('click', function(e){
+$('.dm-about-sec-inr p a, .dm-we-do-dsc p a').on('click', function(e){
   e.preventDefault();
-  $('.dm-about-sec-inr .continue-reading-desc').slideDown();
+  $('.dm-about-sec-inr .continue-reading-desc, .dm-we-do-dsc .continue-reading-desc').slideDown();
   $(this).hide();
 });
 

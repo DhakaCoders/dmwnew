@@ -17,13 +17,13 @@ $bcontent = get_field('bcontent', $thisID);
 ?>
 <section class="page-banner page-bnr-lft-con page-bnr-participate-with-us" style="overflow: hidden;">
   <div class="page-banner-controller">
-    <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
+    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/page-bnr-participate-with-us.jpg);">
     </div>
     <div class="page-banner-des">
       <div class="page-banner-inr">
         <div>
-          <h1 class="page-banner-title"><?php echo $pageTitle; ?></h1>
-          <?php if( !empty($bcontent) ): if( !empty($bcontent['description']) ) echo wpautop( $bcontent['description'] ); endif; ?>
+          <h1 class="page-banner-title">PARTICIPATE WITH US</h1>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
         </div>
       </div>
     </div>

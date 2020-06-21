@@ -257,7 +257,13 @@ dm-pa-service-sec-wrp
 .dm-featured-project-tabs-con-cntlr{
 	padding: 75px 0 100px;
 }
-
+.our-project-filter-btns .search-filter-btn button{
+	display: inline-block;
+	margin-right: 10px;
+}
+.our-project-filter-btns .search-filter-btn .clearnow{
+	display: none;
+}
 /*
 ----------------------
  Responsive Css

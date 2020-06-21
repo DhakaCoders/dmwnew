@@ -27,8 +27,8 @@ get_header();
         <div class="eventLinksstep1">
           <ul>
             <li class="active"><a href="#">Events</a></li>
-            <li><a href="/events/media/">Media</a></li>
-            <li><a href="/events/press/">Press</a></li>
+            <li><a href="<?php echo home_url(''); ?>/events/media/">Media</a></li>
+            <li><a href="<?php echo home_url(''); ?>/events/press/">Press</a></li>
           </ul>
         </div>
       </div>

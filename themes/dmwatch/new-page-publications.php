@@ -157,7 +157,11 @@ get_header();
                       <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <a href="#">Continue Reading.</a> </p>
                   </div>
                   <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-01.jpg">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/recent-pub.png">
+                    <div class="rp-desc">
+                      <h4>Livelihoods, Coping and Support During COVID-19 Crisis</h4>
+                      <span>Publication 2020 | Policy Brief</span>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -169,7 +173,11 @@ get_header();
                       <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <a href="#">Continue Reading.</a> </p>
                   </div>
                   <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-02.jpg">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/recent-pub.png">
+                    <div class="rp-desc">
+                      <h4>Livelihoods, Coping and Support During COVID-19 Crisis</h4>
+                      <span>Publication 2020 | Policy Brief</span>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -181,7 +189,11 @@ get_header();
                       <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <a href="#">Continue Reading.</a> </p>
                   </div>
                   <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-03.jpg">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/recent-pub.png">
+                    <div class="rp-desc">
+                      <h4>Livelihoods, Coping and Support During COVID-19 Crisis</h4>
+                      <span>Publication 2020 | Policy Brief</span>
+                    </div>
                   </div>
                 </div>
               </li>

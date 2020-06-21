@@ -340,6 +340,10 @@ ol li::before {
 .searchBanner.page-banner.page-bnr-lft-con .page-banner-title{
 	font-size: 50px;
 }
+.tp-banner-des{
+	position: relative;
+	z-index: 35;
+}
 @media(max-width: 1499px){
 
 }

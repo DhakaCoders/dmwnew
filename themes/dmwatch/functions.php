@@ -28,6 +28,7 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'projectgrid', 384, 380, true );
         add_image_size( 'projectsingle', 664, 510, true );
         add_image_size( 'projectthumb', 122, 92, true );
+        add_image_size( 'publicationgird', 308, 398, true );
 
 		
 		// add size to media uploader
@@ -80,6 +81,7 @@ include_once(THEME_DIR .'/inc/cbv-functions.php');
 include_once(THEME_DIR .'/inc/post-loadmore.php');
 include_once(THEME_DIR .'/inc/loadmore-event.php');
 include_once(THEME_DIR .'/inc/loadmore-media.php');
+include_once(THEME_DIR .'/inc/loadmore-publications.php');
 include_once(THEME_DIR .'/inc/wc-functions.php');
 /**
 ACF Option pages->>

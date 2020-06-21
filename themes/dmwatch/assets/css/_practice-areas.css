@@ -222,6 +222,7 @@ dm-pa-service-sec-wrp
 }
 .dm-pa-service-wrp ul li .dm-pa-service-innr{
     text-align: center;
+    position: relative;
 }
 .dm-pa-service-wrp ul li:nth-child(7n+1){
 	clear: left;

@@ -94,12 +94,7 @@ $bcontent = get_field('description', $thisID);
                       <strong><?php echo get_the_date('M d, Y'); ?></strong> 
                       <p><?php the_title(); ?></p>
                       <div class="timer">
-                        <div id="timer">
-                          <div id="days"></div>
-                          <div id="hours"></div>
-                          <div id="minutes"></div>
-                          <div id="seconds"></div>
-                        </div>
+                        <img src="<?php echo THEME_URI; ?>/assets/images/timer.png">
                       </div>
                     </div>
                   </div>

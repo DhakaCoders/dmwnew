@@ -20,3 +20,13 @@ Text Domain: dmwatch
 body.media{
     display: block;
 }
+.management-sec-hdr a{
+	color: #575656;
+}
+.management-sec-hdr a.active,
+.management-sec-hdr a:hover{
+	color: #53bc20;
+}
+.individual-team-mambers-grd-cntlr{
+    padding-bottom: 80px;	
+}

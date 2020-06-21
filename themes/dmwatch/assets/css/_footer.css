@@ -75,9 +75,13 @@
 	padding-left: 5px;
 	padding-bottom: 10px;
 }
-.ftr-cnt-socials-media ul li a{
-	display: inline-block;
-	vertical-align: baseline;
+.ftr-cnt-socials-media ul li a {
+    display: inline-block;
+    vertical-align: top;
+    color: #88bc41;
+    font-size: 28px;
+    line-height: 1;
+    margin: 0 2px;
 }
 .ftr-cnt-socials-media ul li a:hover{
 	opacity: .7;

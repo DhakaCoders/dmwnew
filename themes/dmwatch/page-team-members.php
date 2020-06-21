@@ -31,17 +31,11 @@ $description = get_field('description', $thisID);
   </div>
 </section><!-- end of page-banner -->
 
-
-<section class="rs-mangmnt-tm-sec sec-bg-gray team-mambers-page-sec">
+<section class="rs-mangmnt-tm-sec sec-bg-gray individual-team-mambers-page-sec">
   <div class="container">
     <div class="row">
-      <?php if( !empty($description) ): ?>
       <div class="col-md-12">
         <div class="management-sec-hdr">
-          <?php echo wpautop( $description ); ?>
-        </div>
-      </div>
-      <?php endif; ?>
       <?php 
         $terms = get_terms( array(
           'taxonomy' => 'team_department',
@@ -49,37 +43,57 @@ $description = get_field('description', $thisID);
           'parent' => 0
       ) );
       ?>
-      <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){ ?>
-      <div class="col-md-12">
-        <div class="crkmts-grd-cntlr">
-          <ul class="reset-list">
+          <p><a class="active" href="#">All</a>
             <?php foreach ( $terms as $term ) { ?>
-            <li>
-              <div class="crkmts-grd-item">
-                <div class="crkmts-grd-img-bx">
-                  <?php 
-                    $image_id = get_field('logo', $term, false); 
-                    if( !empty($image_id) ):
-                      echo cbv_get_image_tag( $image_id );
-                    else:
-                  ?>
-                  <img src="<?php echo THEME_URI; ?>/assets/images/crkmts-logo-01.jpg">
-                  <?php endif; ?>
-                  <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="overlay-link"></a>
-                  <div class="crkmts-grd-img-bx-hover">
-                    <div>
-                    <?php printf('<strong>%s</strong>', $term->name); ?>
-                    </div>
-                  </div>
-                </div>
-                <?php printf('<strong class="crkmts-grd-item-title mHc">%s</strong>', $term->name); ?>
-              </div>
-            </li>
+            / <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo $term->name; ?></a> 
             <?php } ?>
-          </ul>
+            </p>
         </div>
       </div>
-    <?php } ?>
+      <div class="col-md-12">
+<?php 
+$tmQuery = new WP_Query(array(
+  'post_type' => 'teams',
+  'posts_per_page' => 9,
+));
+if( $tmQuery->have_posts() ): 
+?>
+        <div class="individual-team-mambers-grd-cntlr">
+          <ul class="reset-list clearfix">
+<?php 
+while( $tmQuery->have_posts() ): $tmQuery->the_post();
+  $profile_image = get_field('profile_image');
+  $full_name = get_field('full_name');
+  $position = get_field('position');
+?>
+            <li>
+              <div class="crkmts-grd-item">
+                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                <div class="itm-grd-img-bx">
+                  <?php  
+                    if( !empty($profile_image) ):
+                      echo cbv_get_image_tag( $profile_image );
+                    else:
+                  ?>
+                  <img src="<?php echo THEME_URI; ?>/assets/images/our-management-grd-img-bx-02.jpg">
+                  <?php endif; ?>
+                </div>
+                <div class="itm-short-des mHc">
+                <?php 
+                  if( !empty($fullname) ) 
+                    printf('<strong>%s</strong>', $fullname);
+                  else
+                    printf('<strong>%s</strong>', get_the_title(get_the_ID()));
+                ?>
+                  <span><?php echo $position; ?></span>
+                </div>
+              </div>
+            </li>
+<?php endwhile; ?>            
+          </ul>
+        </div>
+<?php endif; ?>
+      </div>
     </div>
   </div>
 </section>

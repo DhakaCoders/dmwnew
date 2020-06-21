@@ -252,7 +252,7 @@ if( !empty($textcolor) ):
                       <a href="#" class="overlay-link"></a>
                       <div class="filter-results-img-cntlr">
                         <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-04.jpg);">
-                          <img src="assets/images/filter-results-img-04.jpg">
+                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-04.jpg">
                         </div>
                       </div>
                       <div class="filter-results-img-hover">
@@ -269,7 +269,7 @@ if( !empty($textcolor) ):
                       <a href="#" class="overlay-link"></a>
                       <div class="filter-results-img-cntlr">
                         <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-05.jpg);">
-                          <img src="assets/images/filter-results-img-05.jpg">
+                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-05.jpg">
                         </div>
                       </div>
                       <div class="filter-results-img-hover">
@@ -286,7 +286,7 @@ if( !empty($textcolor) ):
                       <a href="#" class="overlay-link"></a>
                       <div class="filter-results-img-cntlr">
                         <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-06.jpg);">
-                          <img src="assets/images/filter-results-img-06.jpg">
+                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-06.jpg">
                         </div>
                       </div>
                       <div class="filter-results-img-hover">

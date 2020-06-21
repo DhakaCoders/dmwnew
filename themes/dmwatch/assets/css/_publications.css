@@ -68,8 +68,8 @@
 	width: 100%;
 	padding-top: 29px;
 	position: relative;
+	overflow: hidden;
 }
-
 .filter-result-sec-four{
 	background: #F5F7F7;
 	padding-top: 50px;
@@ -80,7 +80,7 @@
     align-items: center;
 }
 .filter-result-items-des{
-	max-width: 70%;
+	max-width: 74%;
 	width: 100%;
 	text-align: right;
 	padding-right: 37px;
@@ -113,16 +113,20 @@
     color: #88BE43;
 }
 .filter-result-items-img{
-	max-width: 30%;
+	max-width: 26%;
 	width: 100%;
+	position: relative;
+	overflow: hidden;
 }
 .rp-desc {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 100%;
     padding: 20px;
     z-index: 3;
+    transition: all 0.5s;
+    opacity: 0;
 }
 .rp-desc h4 {
     font-size: 14px;
@@ -137,10 +141,13 @@
     font-weight: 600;
     margin-top: 5px;
 }
-.publicatons-page-top-sec-img .rp-img-wrap{
+.publicatons-page-top-sec-img .rp-img-wrap,
+.publicatons-page-top-sec-img .rp-img{
     position: relative;
 }
-.publicatons-page-top-sec-img .rp-img-wrap:after{
+.publicatons-page-top-sec-img .rp-img-wrap:after,
+.publicatons-page-top-sec-img .rp-img:after,
+.filter-result-items .filter-result-items-img:after{
 	content: "";
 	position: absolute;
 	top: 0;
@@ -152,6 +159,11 @@ background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba
 background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+transition: all 0.5s;
+}
+.publicatons-page-top-sec-img .rp-img:after,
+.filter-result-items .filter-result-items-img:after{
+	opacity: 0;
 }
 .reprotDownload h5{
     font-size: 14px;
@@ -194,4 +206,21 @@ ul.publicatinList li:nth-child(2n+2) .filter-result-items-des{
 ul.publicatinList li:nth-child(2n+2) .filter-result-items-des p{
 	padding-left: 0;
 	padding-right: 188px;
+}
+.publicatons-page-top-sec-img .rp-img-wrap:after{
+	opacity: 0;
+}
+.publicatons-page-top-sec-img:hover .rp-desc,
+.filter-result-items-img:hover .rp-desc{
+	top: auto;
+	bottom: 0;
+	opacity: 1;
+}
+.publicatons-page-top-sec-img:hover .rp-img:after,
+.filter-result-items .filter-result-items-img:hover:after,
+.publicatons-page-top-sec-img:hover .rp-img-wrap:after{
+	opacity: 1;
+}
+.event-media-page-tab-con .filter-result-items-img:after{
+	display: none;
 }

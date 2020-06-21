@@ -91,7 +91,7 @@ $bcontent = get_field('bcontent', $thisID);
                   <?php $i = 1; foreach ( $aareas as $aarea ) { ?>
                   <div class="filter-btn-dorpdown-item">
                     <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa<?php echo $i; ?>" <?php echo ( $pstatus == $aarea->slug )? 'checked': ''; ?> name="status" value="<?php echo $aarea->slug; ?>">
+                      <input type="radio" id="pa<?php echo $i; ?>" <?php echo ( $pstatus == $aarea->slug )? 'checked': ''; ?> name="status" value="<?php echo $aarea->slug; ?>">
                       <span class="checkmark"></span> 
                       <label for="pa<?php echo $i; ?>"><?php echo $aarea->name; ?></label> 
                     </div>
@@ -116,7 +116,7 @@ $bcontent = get_field('bcontent', $thisID);
                   <?php $i = 10; foreach ( $clients as $client ) { ?>
                   <div class="filter-btn-dorpdown-item">
                     <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa<?php echo $i; ?>" <?php echo ( $pclient == $client->slug )? 'checked': ''; ?> name="client" value="<?php echo $client->slug; ?>">
+                      <input type="radio" id="pa<?php echo $i; ?>" <?php echo ( $pclient == $client->slug )? 'checked': ''; ?> name="client" value="<?php echo $client->slug; ?>">
                       <span class="checkmark"></span> 
                       <label for="pa<?php echo $i; ?>"><?php echo $client->name; ?></label> 
                     </div>
@@ -141,7 +141,7 @@ $bcontent = get_field('bcontent', $thisID);
                   <?php $i = 20; foreach ( $regions as $region ) { ?>
                   <div class="filter-btn-dorpdown-item">
                     <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa<?php echo $i; ?>" <?php echo ( $pregion == $region->slug )? 'checked': ''; ?> name="region" value="<?php echo $region->slug; ?>">
+                      <input type="radio" id="pa<?php echo $i; ?>" <?php echo ( $pregion == $region->slug )? 'checked': ''; ?> name="region" value="<?php echo $region->slug; ?>">
                       <span class="checkmark"></span> 
                       <label for="pa<?php echo $i; ?>"><?php echo $region->name; ?></label> 
                     </div>
@@ -166,7 +166,7 @@ $bcontent = get_field('bcontent', $thisID);
                   <?php $i = 40; foreach ( $years as $year ) { ?>
                   <div class="filter-btn-dorpdown-item">
                     <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa<?php echo $i; ?>" <?php echo ( $pyears == $year->slug )? 'checked': ''; ?> name="years" value="<?php echo $year->slug; ?>">
+                      <input type="radio" id="pa<?php echo $i; ?>" <?php echo ( $pyears == $year->slug )? 'checked': ''; ?> name="years" value="<?php echo $year->slug; ?>">
                       <span class="checkmark"></span> 
                       <label for="pa<?php echo $i; ?>"><?php echo $year->name; ?></label> 
                     </div>
@@ -179,6 +179,7 @@ $bcontent = get_field('bcontent', $thisID);
           </ul>
           <div class="search-filter-btn">
             <button type="submit">FILTER NOW</button>
+            <button class="clearnow" type="reset">RESET</button>
           </div>
         </form>
         </div>
@@ -203,7 +204,7 @@ if( $taxs ){
 $query = new WP_Query(array( 
     'post_type'=> 'project',
     'post_status' => 'publish',
-    'posts_per_page' => 3,
+    'posts_per_page' => 9,
     'paged' => $paged,
     'orderby' => 'date',
     'order'=> 'ASC',

@@ -91,7 +91,10 @@ $banner = get_field('bannercont', $thisID);
             <div class="dm-project-info-btm-dsc">
               <h4 class="dm-project-info-btm-dsc-title">PROJECT DESCRIPTION:</h4>
               <?php if( !empty($details) ) echo wpautop($details); ?>
-              <a href="<?php echo esc_url( home_url('project') );?>" >BACK TO THE PROJECT</a>
+              <div class="backLinks">
+                <a href="<?php echo esc_url( home_url('/') );?>" ><i class="fas fa-arrow-left"></i> BACK TO THE HOME</a><br/>
+                <a href="<?php echo esc_url( home_url('project') );?>" ><i class="fas fa-arrow-left"></i> BACK TO THE PROJECT</a>
+              </div>
             </div>
           </div>
         </div>

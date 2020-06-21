@@ -168,9 +168,13 @@
 	.dm-advisor-grd-item-wrap ul li:nth-child(3n+1) {
 	    clear: left;
 	}
+	.dm-advisor-grd-item-wrap ul{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
 	.dm-advisor-grd-item-wrap ul li{
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	
 }

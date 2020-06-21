@@ -1102,6 +1102,9 @@ body{
 	.team-single-avater{
 		max-width: 200px;
 	}
+	.our-project-filter-results-sec{
+		margin-bottom: 80px;
+	}
 }
 
 @media(max-width: 767px){
@@ -1199,6 +1202,9 @@ body{
 	}
 	.team-single-btm-con-sec{
 		margin-bottom: 80px;
+	}
+	.our-project-filter-results-sec{
+		margin-bottom: 70px;
 	}
 }	
 
@@ -1316,6 +1322,9 @@ body{
 	.team-single-btm-con-sec{
 		margin-bottom: 70px;
 	}
+	/*.our-project-filter-results-sec{
+		margin-bottom: 50px;
+	}*/
 }
 
 @media(max-width: 479px){

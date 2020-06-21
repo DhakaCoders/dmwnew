@@ -55,54 +55,65 @@ get_header();
       <div class="col-md-12">
         <div class="dm-tp-fa-sec-inr">
           <h1 class="dm-tp-fa-title">Focus Areas</h1>
-          <div class="dm-tp-fa-grd-item-wrap">
-            <ul class="reset-list clearfix">
-              <li>
-                <div class="dm-tp-fa-grd-item">
-                  <div class="dm-tp-fa-grd-item-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/dm-tp-fa-grd-item-1.png">
+          <div class="hm-fea-services-cntlr">
+            <div class="hm-fea-services hmFeaServicesSlider">
+              <div class="hmFeaServicesSlideItem">
+                <div class="hm-fea-service-item">
+                  <div class="hm-fea-service-item-img mHc1">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-001.png">
                   </div>
-                  <h5 class="dm-tp-fa-grd-item-title public-health mHc">Public Health</h5>
-                  <p class="mHc1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
-                </div>
-              </li>
-              <li>
-                <div class="dm-tp-fa-grd-item">
-                  <div class="dm-tp-fa-grd-item-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/dm-tp-fa-grd-item-2.png">
+                  <div class="hm-fea-service-item-des">
+                    <h5 class="hmfsid-title mHc" style="color: #ED1C24">Public Health</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
                   </div>
-                  <h5 class="dm-tp-fa-grd-item-title governance mHc">Governance</h5>
-                  <p class="mHc1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
                 </div>
-              </li>
-              <li>
-                <div class="dm-tp-fa-grd-item">
-                  <div class="dm-tp-fa-grd-item-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/dm-tp-fa-grd-item-3.png">
+              </div>
+              <div class="hmFeaServicesSlideItem">
+                <div class="hm-fea-service-item">
+                  <div class="hm-fea-service-item-img mHc1">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-002.png">
                   </div>
-                  <h5 class="dm-tp-fa-grd-item-title environment mHc">Environment</h5>
-                  <p class="mHc1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
-                </div>
-              </li>
-              <li>
-                <div class="dm-tp-fa-grd-item">
-                  <div class="dm-tp-fa-grd-item-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/dm-tp-fa-grd-item-4.png">
+                  <div class="hm-fea-service-item-des">
+                    <h5 class="hmfsid-title mHc" style="color: #03AED9">Governance</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
                   </div>
-                  <h5 class="dm-tp-fa-grd-item-title hazard mHc">Hazard</h5>
-                  <p class="mHc1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
                 </div>
-              </li>
-              <li>
-                <div class="dm-tp-fa-grd-item">
-                  <div class="dm-tp-fa-grd-item-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/dm-tp-fa-grd-item-5.png">
+              </div>
+              <div class="hmFeaServicesSlideItem">
+                <div class="hm-fea-service-item">
+                  <div class="hm-fea-service-item-img mHc1">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-003.png">
                   </div>
-                  <h5 class="dm-tp-fa-grd-item-title agriculture mHc">Agriculture</h5>
-                  <p class="mHc1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                  <div class="hm-fea-service-item-des">
+                    <h5 class="hmfsid-title mHc" style="color: #006838">Environment</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                  </div>
                 </div>
-              </li>
-            </ul>
+              </div>
+              <div class="hmFeaServicesSlideItem">
+                <div class="hm-fea-service-item">
+                  <div class="hm-fea-service-item-img mHc1">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-004.png">
+                  </div>
+                  <div class="hm-fea-service-item-des">
+                    <h5 class="hmfsid-title mHc" style="color: #FC8300">Hazard</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                  </div>
+                </div>
+              </div>
+              <div class="hmFeaServicesSlideItem">
+                <div class="hm-fea-service-item">
+                  <div class="hm-fea-service-item-img mHc1">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-005.png">
+                  </div>
+                  <div class="hm-fea-service-item-des">
+                    <h5 class="hmfsid-title mHc" style="color: #3D5680">Agriculture</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
           </div>
         </div>
       </div>

@@ -118,13 +118,9 @@ get_header();
         <ul class="clearfix reset-list">
           <li>
             <div class="publicatons-page-top-sec-innr clearfix">
-              <div class="publicatons-page-top-sec-des">
-                <h3 class="publicatons-sec-one-title"><a href="#">Livelihoods, Coping and Support During COVID-19 Crisis</a></h3>
-                <span>2020 | Policy Brief</span>
-                <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <br><a href="#">Continue Reading.</a> </p>
-              </div>
               <div class="publicatons-page-top-sec-img">
                 <div class="rp-img-wrap">
+                  <a href="#" class="overlay-link"></a>
                     <div class="rp-img">
                         <img src="<?php echo THEME_URI; ?>/assets/images/recent-pub.png">
                     </div>
@@ -138,6 +134,12 @@ get_header();
                     <span>English</span>
                 </div>
               </div>
+              <div class="publicatons-page-top-sec-des">
+                <h3 class="publicatons-sec-one-title"><a href="#">Livelihoods, Coping and Support During COVID-19 Crisis</a></h3>
+                <span>2020 | Policy Brief</span>
+                <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <br><a href="#">Continue Reading.</a> </p>
+              </div>
+              
             </div>
           </li>
         </ul>

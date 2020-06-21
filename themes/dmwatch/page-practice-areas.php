@@ -112,82 +112,61 @@ if( !empty($textcolor) ):
 <?php endif; ?>
 
 
-
+<?php
+  $showhideservices = get_field('showhideservices', $thisID);
+  if( $showhideservices ):
+    $fservices = get_field('featuredservices', $thisID);
+    if( $fservices ):
+     $services = $fservices['services'];
+?>
 <section class="hm-fea-services-sec hm-fea-services-sec-2">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="hm-fea-services-sec-hdr">
-          <h2 class="hmfsshdr-title">Featured Service</h2>
+          <?php if( !empty($fservices['title']) ) printf('<h2 class="hmfsshdr-title">%s</h2>', $fservices['title'] ); ?>
         </div>
       </div>
     </div>
+    <?php if( $services ): ?>
     <div class="row">
       <div class="col-md-12">
         <div class="hm-fea-services-cntlr">
           <div class="hm-fea-services hmFeaServicesSlider">
+            <?php 
+            $tcolor = '';
+            foreach( $services as $service ): 
+              $servIcon = $service['icon'];
+              if( !empty($service['title_text_color']) ){
+                $tcolor = $service['title_text_color'];
+              }
+            ?>
             <div class="hmFeaServicesSlideItem">
               <div class="hm-fea-service-item">
                 <div class="hm-fea-service-item-img mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-001.png">
+                  <?php 
+                  if( is_array($servIcon) ){
+                    echo '<img src="'.$servIcon['url'].'" alt="'.$servIcon['alt'].'" title="'.$servIcon['title'].'">';
+                  }
+                ?>
                 </div>
                 <div class="hm-fea-service-item-des">
-                  <h5 class="hmfsid-title mHc" style="color: #ED1C24">Public Health</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                  <?php if( !empty($service['title']) ) printf('<h5 class="hmfsid-title mHc" style="color: %s">%s</h5>', $tcolor, $service['title'] ); ?>
+                  <?php if( !empty($service['description']) ) echo wpautop( $service['description'] ); ?>
                 </div>
               </div>
             </div>
-            <div class="hmFeaServicesSlideItem">
-              <div class="hm-fea-service-item">
-                <div class="hm-fea-service-item-img mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-002.png">
-                </div>
-                <div class="hm-fea-service-item-des">
-                  <h5 class="hmfsid-title mHc" style="color: #03AED9">Governance</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
-                </div>
-              </div>
-            </div>
-            <div class="hmFeaServicesSlideItem">
-              <div class="hm-fea-service-item">
-                <div class="hm-fea-service-item-img mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-003.png">
-                </div>
-                <div class="hm-fea-service-item-des">
-                  <h5 class="hmfsid-title mHc" style="color: #006838">Environment</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
-                </div>
-              </div>
-            </div>
-            <div class="hmFeaServicesSlideItem">
-              <div class="hm-fea-service-item">
-                <div class="hm-fea-service-item-img mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-004.png">
-                </div>
-                <div class="hm-fea-service-item-des">
-                  <h5 class="hmfsid-title mHc" style="color: #FC8300">Hazard</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
-                </div>
-              </div>
-            </div>
-            <div class="hmFeaServicesSlideItem">
-              <div class="hm-fea-service-item">
-                <div class="hm-fea-service-item-img mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/fea-services-icon-005.png">
-                </div>
-                <div class="hm-fea-service-item-des">
-                  <h5 class="hmfsid-title mHc" style="color: #3D5680">Agriculture</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
-                </div>
-              </div>
-            </div>
+            <?php endforeach; ?>
           </div>
           
         </div>
       </div>
     </div>
+    <?php endif; ?>
   </div>    
 </section>
+<?php endif; ?>
+<?php endif; ?>
 
 <section class="dm-featured-project-sec">
   <div class="container">

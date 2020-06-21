@@ -259,14 +259,15 @@ get_header();
                     $event_src = '';   
                 ?>
               <div class="upcoming-event-con clearfix">
-                <div class="upcoming-event-con-rgt">
-                  <h3 class="uec-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                  <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a> </p>
-                </div>
                 <div class="upcoming-event-con-lft">
                   <div class="upcoming-event-fea-img inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/ss-advocacy.png);">
                   </div>
                 </div>
+                <div class="upcoming-event-con-rgt">
+                  <h3 class="uec-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                  <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a> </p>
+                </div>
+                
               </div>
               <?php endwhile; ?>
             </div>

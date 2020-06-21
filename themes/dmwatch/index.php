@@ -27,80 +27,94 @@ $bcontent = get_field('bcontent', $thisID);
   </div>
 </section><!-- end of page-banner -->
 
-<section class="dm-blog-grd-sec">
+<?php 
+$rblogP = new WP_Query(array(
+  'post_type' => 'post',
+  'posts_per_page' => 1,
+));
+if( $rblogP->have_posts() ):
+?>
+<section class="Blogs-page-content-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="dm-blog-grd-sec-inr">
-        <?php 
-          if( have_posts() ):
-        ?>
-          <ul class="reset-list">
-          <?php 
-            while(have_posts()): the_post();
-              $categories = get_the_terms( get_the_ID(), 'category' );
-              $term_name = '';
-              if ( ! empty( $categories ) ) {
-                  foreach( $categories as $category ) {
-                     $term_name = ' | '.$category->name; 
-                  }
-              } 
-          ?>
-            <li>
-              <div class="dm-blog-grd-item">
-                <div>
-                  <h2 class="dm-blog-grd-item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                  <strong><?php echo get_the_date('M d, Y'); ?><?php echo $term_name; ?></strong>
-                  <?php the_excerpt(); ?>
-                </div>
-                <span></span>
-              </div>
-            </li>
-            <?php endwhile; ?>
-          </ul>
-          <div class="dm-blog-srch-pagi-sec clearfix">
-            <div class="dm-blog-srch-pagi-sec-inr">
-              <div class="dm-blog-secr">
-                <span>Search</span>
-                <div class="hdr-search">
-                  <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
-                        <input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="Enter Search Keyword...">
-                      <button><i class="fas fa-search"></i></button>
-                  </form>
-                </div>
-              </div>
-              <div class="dm-blog-pagi-ctlr">
-                <?php
-                global $wp_query;
-
-                $big = 999999999; // need an unlikely integer
-                $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
-
-                echo paginate_links( array(
-                  'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                  'type'      => 'list',
-                  'prev_text' => __('Prev'),
-                  'next_text' => __('Next'),
-                  'format'    => '?paged=%#%',
-                  'show_all'  => false,
-                  'end_size'  => 1,
-                  'mid_size'  => 5,
-                  'current'   => $current,
-                  'total'     => $wp_query->max_num_pages
-                ) );
-              ?>
-              </div>
-              
-            </div>
+        <div class="main-Blogs-sec-innr">
+          <div class="main-Blogs-sec-hedding">
+            <h2>Blogs</h2>
           </div>
-          <?php else: ?>
-            <div class="notfound">No result!</div>
-          <?php endif; ?>
+          <div class="main-Blogs-cntlr">
+<?php 
+while( $rblogP->have_posts() ): $rblogP->the_post();
+?>
+            <div class="main-Blogs-content">
+              <div class="main-Blogs-content-img">
+                <?php if( has_post_thumbnail() ): the_post_thumbnail(); else: ?>
+                <img src="<?php echo THEME_URI; ?>/assets/images/blog-page-main-img-001.jpg" alt="">
+                <?php endif; ?>
+              </div>
+              <div class="main-Blogs-content-desc">
+                <div class="main-Blogs-content-title">
+                  <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                </div>
+                <ul class="reset-list main-Blogs-content-aurther">
+                  <li><?php the_author(); ?></li>
+                  <li><?php echo get_the_date('m d, Y'); ?></li>
+                </ul>
+                <p><?php the_excerpt(); ?></p>
+                <div class="main-Blogs-content-btn">
+                  <a class="main-Blogs-content-btn-arrow" href="<?php the_permalink(); ?>">Read More</a>
+                </div>
+              </div>
+            </div>
+<?php endwhile; ?>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php endif; ?>
+
+<?php 
+$rblogP1 = new WP_Query(array(
+  'post_type' => 'post',
+  'posts_per_page' => 9,
+  'offset' => 1
+));
+if( $rblogP1->have_posts() ):
+?>
+
+<section class="blog-page-all-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="blog-page-all-blog-innr">
+          <div class="blog-page-all-blog-hedding">
+            <h3>All Blogs</h3>
+          </div>
+          <div class="blog-page-all-blog-cntlr">
+            <ul class="reset-list">
+<?php 
+while( $rblogP1->have_posts() ): $rblogP1->the_post();
+  $imgID = get_post_thumbnail_id();
+  if( !empty( $imgID ) ) $useImg = cbv_get_image_src($imgID); else $useImg = THEME_URI . '/assets/images/dm-pa-grid-img.png';
+?>
+              <li>
+                <div class="blog-page-all-blog-items inline-bg" style="background: url('<?php echo $useImg; ?>');">
+                 <div class="blog-page-all-blog-items-sub-title">
+                   <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                 </div>
+                </div>
+              </li>
+<?php endwhile; ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 <?php 
 get_template_part('templates/footer', 'top');
 get_footer(); 

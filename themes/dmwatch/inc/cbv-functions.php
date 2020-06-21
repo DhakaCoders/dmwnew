@@ -150,3 +150,15 @@ function cbv_table( $table){
     echo '</div>';
   }  
 }
+
+
+function hex_to_rgb( $hex ){
+  if( !empty($hex) ){
+    $hex = str_replace('#', '', $hex);
+    if(strlen($hex) > 3) $color = str_split($hex, 2);
+    else $color = str_split($hex);
+    return [hexdec($color[0]), hexdec($color[1]), hexdec($color[2])];
+  }else{
+    return false;
+  }
+}

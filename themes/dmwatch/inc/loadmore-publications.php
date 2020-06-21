@@ -60,7 +60,7 @@ function ajax_public_script_load_more($args, $recentID = '') {
       'paged'=>$paged,
       'orderby' => 'date',
       'order'=> 'DESC',
-      'post__in' => array($recentID)
+      'post__not_in' => array($recentID)
       ) 
     );
     if($query->have_posts()){

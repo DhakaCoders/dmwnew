@@ -85,21 +85,22 @@ get_header();
     </div>
   </div>
 </section>
+<?php if( !empty($ptype) OR !empty($pyears) ): ?>
 <section class="recent-publicatons exAnnualReports">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <?php if( !empty($ptype) OR !empty($pyears) ): ?>
         <div class="filter-result-hedding">
             <h2 class="opfhdr-title">FILTER RESULT</h2>
         </div>
         <span id="filter" data-type="<?php echo $ptype; ?>" data-year="<?php echo $pyears; ?>" style="display: none;"></span>
-        <?php endif; ?>
         <?php echo do_shortcode('[ajax_search_posts]'); ?>
       </div>
     </div>
   </div>
 </section>
+<?php endif; ?>
+
 <?php 
 $thisID = get_the_ID();
 $bcontent = get_field('description', $thisID);

@@ -38,6 +38,10 @@
 	line-height: 1.2;
 	font-weight: 500;
 }
+.participateBnrSlider .participateBnrSlideItem{
+	padding-left: 15px;
+	padding-right: 15px;
+}
 .participateBnrSlider.slick-slider{
 	margin: 0;
 	overflow: hidden;
@@ -414,6 +418,15 @@ dm-us-contact-form-sec
 ----------------------
 */
 
+@media(max-width: 1399px){
+	.pcbsd-title{
+		font-size: 65px;
+	}
+	.participateBnrSlideItem-des p{
+		font-size: 23px;
+	}
+}
+
 @media(max-width: 1199px){
 	.dm-us-contact-form-sec {
 	    margin-bottom: 90px;
@@ -425,7 +438,15 @@ dm-us-contact-form-sec
 	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field {
 	    padding: 0 20px;
 	}
-
+	.pcbsd-title{
+		margin-bottom: 15px;
+	}
+	.participateBnrSlideItem-des p {
+	    font-size: 20px;
+	}
+	.participateBnrSlideItem-des{
+		min-height: 550px;
+	}
 }
 
 @media(max-width: 991px){
@@ -467,6 +488,12 @@ dm-us-contact-form-sec
 	}
 	.wpforms-container select.wpforms-payment-price{
 		font-size: 20px!important;
+	}
+	.participateBnrSlideItem-des{
+		min-height: 450px;
+	}
+	.pcbsd-title {
+	    font-size: 60px;
 	}
 }
 

@@ -118,6 +118,18 @@ $("#mediaLoadMore").on('click', function(e) {
 
 $("#publicloadMore").on('click', function(e) {
     e.preventDefault();
+    var recentID = '';
+    var cType = '';
+    var cYear = '';
+    if($('#recentID').length){
+        recentID = $('#recentID').data('postid');
+    }
+    if($('#filter').length){
+        cType = $('#filter').data('type');
+        cYear = $('#filter').data('year');
+    }
+    console.log(cType);
+    console.log(cYear);
     //init
     var that = $(this);
     var page = $(this).data('page');
@@ -129,6 +141,9 @@ $("#publicloadMore").on('click', function(e) {
         type: 'post',
         data: {
             page: page,
+            post_id: recentID,
+            type: cType,
+            year: cYear,
             el_li: 'not',
             action: 'ajax_public_script_load_more'
         },

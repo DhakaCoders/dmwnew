@@ -59,7 +59,16 @@ get_header();
 </section>
 <?php endif; wp_reset_postdata(); ?>
 <span id="recentID" data-postid="<?php echo $recentID; ?>" style="display: none;"></span>
+<?php 
+  $pyears = $ptype = ''; 
+  if ( isset($_GET['type']) && !empty($_GET['type'])){
+    $ptype = $_GET['type'];
+  } 
 
+  if ( isset($_GET['years']) && !empty($_GET['years'])){
+    $pyears = $_GET['years'];
+  }
+?>
 <section class="our-project-filter-hdr-sec publicationsFilter">
   <div class="container">
     <div class="row">
@@ -68,96 +77,63 @@ get_header();
           <h2 class="opfhdr-title">Filter Publications</h2>
         </div>
         <div class="our-project-filter-btns">
+          <form action="" method="get">
           <ul class="reset-list clearfix">
+            <?php 
+            $types = get_terms( array(
+              'taxonomy' => 'publication_type',
+              'hide_empty' => false,
+              'parent' => 0
+            ) );
+            ?>
             <li>
               <div class="filter-btn-cntlr">
-                <div class="filter-btn"><button><span>LOREM IPSUM</span></button></div>
+                <div class="filter-btn"><button type="button"><span>Type</span></button></div>
+                <?php if ( ! empty( $types ) && ! is_wp_error( $types ) ){  ?>
                 <div class="filter-btn-dorpdown">
+                  <?php $i = 10; foreach ( $types as $type ) { ?>
                   <div class="filter-btn-dorpdown-item">
                     <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa1" name="show_ongoing_project" value="YES">
+                      <input type="radio" id="pa<?php echo $i; ?>" <?php echo ( $ptype == $type->slug )? 'checked': ''; ?> name="type" value="<?php echo $type->slug; ?>">
                       <span class="checkmark"></span> 
-                      <label for="pa1"> Lorem Ipsum</label> 
+                      <label for="pa<?php echo $i; ?>"><?php echo $type->name; ?></label> 
                     </div>
                   </div>
-                  <div class="filter-btn-dorpdown-item">
-                    <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa2" name="show_completed_project" value="YES">
-                      <span class="checkmark"></span> 
-                      <label for="pa2"> Lorem Ipsum</label> 
-                    </div>
-                  </div>
-
+                  <?php $i++; } ?>
                 </div>
+                <?php } ?>
               </div>
             </li>
+            <?php 
+            $years = get_terms( array(
+              'taxonomy' => 'publication_year',
+              'hide_empty' => false,
+              'parent' => 0
+            ) );
+            ?>
             <li>
               <div class="filter-btn-cntlr">
-                <div class="filter-btn"><button><span>LOREM IPSUM</span></button></div>
-                <div class="filter-btn-dorpdown">
-                  <div class="filter-btn-dorpdown-item">
-                    <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa3" name="show_client_project" value="YES">
-                      <span class="checkmark"></span> 
-                      <label for="pa3"> Lorem Ipsum</label> 
+                <div class="filter-btn"><button type="button"><span>YEAR</span></button></div>
+                <?php if ( ! empty( $years ) && ! is_wp_error( $years ) ){  ?>
+                  <div class="filter-btn-dorpdown">
+                    <?php $i = 20; foreach ( $years as $year ) { ?>
+                    <div class="filter-btn-dorpdown-item">
+                      <div class="filter-check-row clearfix">
+                        <input type="radio" id="pa<?php echo $i; ?>" <?php echo ( $pyears == $year->slug )? 'checked': ''; ?> name="years" value="<?php echo $year->slug; ?>">
+                        <span class="checkmark"></span> 
+                        <label for="pa<?php echo $i; ?>"><?php echo $year->name; ?></label> 
+                      </div>
                     </div>
+                    <?php $i++; } ?>
                   </div>
-                  <div class="filter-btn-dorpdown-item">
-                    <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa4" name="show_client_c_project" value="YES">
-                      <span class="checkmark"></span> 
-                      <label for="pa4"> Lorem Ipsum</label> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="filter-btn-cntlr">
-                <div class="filter-btn"><button><span>LOREM IPSUM</span></button></div>
-                <div class="filter-btn-dorpdown">
-                  <div class="filter-btn-dorpdown-item">
-                    <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa5" name="show_regoing_project" value="YES">
-                      <span class="checkmark"></span> 
-                      <label for="pa5"> Lorem Ipsum</label> 
-                    </div>
-                  </div>
-                  <div class="filter-btn-dorpdown-item">
-                    <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa6" name="show_regoing_project_2" value="YES">
-                      <span class="checkmark"></span> 
-                      <label for="pa6"> Lorem Ipsum</label> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="filter-btn-cntlr filter-btn-year-cntlr">
-                <div class="filter-btn"><button><span>LOREM IPSUM</span></button></div>
-                <div class="filter-btn-dorpdown">
-                  <div class="filter-btn-dorpdown-item">
-                    <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa7" name="year_1" value="YES">
-                      <span class="checkmark"></span> 
-                      <label for="pa7">Lorem Ipsum</label> 
-                    </div>
-                  </div>
-                  <div class="filter-btn-dorpdown-item">
-                    <div class="filter-check-row clearfix">
-                      <input type="checkbox" id="pa8" name="year_2" value="YES">
-                      <span class="checkmark"></span> 
-                      <label for="pa8">Lorem Ipsum</label> 
-                    </div>
-                  </div>
-                </div>
+                <?php } ?>
               </div>
             </li>
           </ul>
           <div class="search-filter-btn">
             <button>FILTER NOW</button>
           </div>
+          </form>
         </div>
       </div>
     </div>
@@ -169,9 +145,12 @@ get_header();
     <div class="row">
       <div class="col-md-12">
         <div class="filter-result-innr">
+          <?php if( !empty($ptype) OR !empty($pyears) ): ?>
           <div class="filter-result-hedding">
             <h2 class="opfhdr-title">FILTER RESULT</h2>
           </div>
+          <span id="filter" data-type="<?php echo $ptype; ?>" data-year="<?php echo $pyears; ?>" style="display: none;"></span>
+          <?php endif; ?>
           <div class="filter-result-items-wrap">
             <?php echo do_shortcode('[ajax_public_posts]'); ?>
           </div>

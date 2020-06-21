@@ -200,7 +200,10 @@ ul.wpforms-field-required li:before{
 	content: none!important;
 }
 
-
+.container-sm {
+    max-width: 990px;
+    width: 100%;
+}
 
 
 /**

@@ -2,7 +2,7 @@
 	margin-bottom: 0!important;
 }
 .Blogs-page-content-sec{
-	padding-top: 30px;
+	padding-top: 0;
 	padding-bottom: 60px;
 }
 .main-Blogs-sec-innr{
@@ -157,6 +157,8 @@
 	right: 0;
 	padding: 10px;
 	background: rgba(0,0,0,0.3);
+	display: flex;
+	align-items: center;
 }
 .blog-page-all-blog-items-sub-title h5{
 	line-height: 1.4;
@@ -219,3 +221,112 @@
 .blog-page-all-blog-items-sub-title-another div h5 a:hover{
 	color: #53bc20;
 } */
+
+
+@media(max-width: 1499px){
+
+}
+
+@media(max-width: 1399px){
+
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	.blog-page-all-blog-cntlr >ul >li:nth-child(4n+1) {
+	    clear: initial;
+	}
+	.blog-page-all-blog-cntlr >ul >li:nth-child(3n+1) {
+	    clear: left;
+	}
+	.blog-page-all-blog-cntlr >ul >li{
+		width: 33.3333%;
+		max-width: 100%;
+	}
+}
+
+@media(max-width: 991px){
+	.main-Blogs-content-title h3{
+		font-size: 25px;
+	}
+	.main-Blogs-content{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.blog-page-all-blog-cntlr >ul {
+	    margin-left: -10px;
+	    margin-right: -10px;
+	}
+	.blog-page-all-blog-cntlr >ul >li{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.blog-page-all-blog-innr{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media(max-width: 767px){
+	.main-Blogs-content{
+		flex-wrap: wrap;
+	}
+	.main-Blogs-content-img{
+		width: 100%;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 20px;
+	}
+	.main-Blogs-content-img img{
+		width: 100%;
+	}
+	.main-Blogs-content-desc{
+		width: 100%;
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.blog-page-all-blog-innr{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.blog-page-all-blog-cntlr >ul >li:nth-child(3n+1) {
+	    clear: initial;
+	}
+	.blog-page-all-blog-cntlr >ul >li:nth-child(2n+1) {
+	    clear: left;
+	}
+	.blog-page-all-blog-cntlr >ul >li {
+	    width: 50%;
+	}
+}
+
+@media(max-width: 575px){
+	.blog-page-all-blog-cntlr >ul >li {
+	    width: 100%;
+	}
+	.blog-page-all-blog-items{
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.blog-page-all-blog-hedding h3{
+		margin-bottom: 40px;
+	}
+	.main-Blogs-content-btn {
+	    padding-top: 15px;
+	}
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}

@@ -93,7 +93,7 @@ if( $rblogP1->have_posts() ):
             <h3>Other Posts</h3>
           </div>
           <div class="blog-page-all-blog-cntlr">
-            <ul class="reset-list">
+            <ul class="reset-list clearfix">
 <?php 
 while( $rblogP1->have_posts() ): $rblogP1->the_post();
   $imgID = get_post_thumbnail_id();
@@ -101,7 +101,7 @@ while( $rblogP1->have_posts() ): $rblogP1->the_post();
 ?>
               <li>
                 <div class="blog-page-all-blog-items inline-bg" style="background: url('<?php echo $useImg; ?>');">
-                 <div class="blog-page-all-blog-items-sub-title">
+                 <div class="blog-page-all-blog-items-sub-title mHc">
                    <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                  </div>
                 </div>

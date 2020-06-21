@@ -62,6 +62,7 @@
 }
 .advocacyCn .upcoming-event-con-rgt{
 	width: 56%;
+	padding-left: 20px;
 }
 .advocacyCn .uec-title span,
 .advocacyCn .uec-title a {
@@ -145,6 +146,168 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
     font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
+}
+
+
+@media(max-width: 1499px){
+
+}
+
+@media(max-width: 1399px){
+
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	.filter-result-items-des p{
+		padding-left: 50px;
+	}
+	ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des p {
+	    padding-right: 50px;
+	}
+
+}
+
+@media(max-width: 991px){
+	.advocacyCn{
+		padding-top: 0;
+	}
+	.filter-result-items-des p {
+	    padding-left: 0;
+	}
+	ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des p{
+		padding-right: 0;
+	}
+	.uec-title{
+		font-size: 30px;
+	}
+	.upcoming-event-con-rgt p{
+		font-size: 18px;
+	}
+	.advocacyCn{
+		padding-bottom: 50px;
+	}
+	.page-banner.exSuccessStories h1.page-banner-title{
+		font-size: 60px;
+	}
+	.exAnnualReports ul li:nth-child(2n+1) .publicatons-page-top-sec-des {
+	    padding-left: 25px;
+	}
+	.publicatons-page-top-sec-des{
+		width: 68%;
+		max-width: 100%;
+	}
+	.publicatons-page-top-sec-img{
+		max-width: 100%;
+		width: 32%;
+	}
+}
+
+@media(max-width: 767px){
+	.notableEventsCn h2 {
+	    font-size: 40px;
+	}
+	ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des{
+		padding-left: 0;
+	}
+	.notableEventsCnIn{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.advocacyCn .upcoming-event-con-lft{
+		width: 100%;
+	}
+	.upcoming-event-con-lft{
+		padding-bottom: 20px;
+		max-width: 450px;
+		margin-left: auto;
+		margin: auto;
+	}
+	.advocacyCn .upcoming-event-con-rgt{
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		text-align: left;
+	}
+	.advocacyCn .uec-title span{
+		padding-left: 0;
+	}
+	.uec-title{
+		font-size: 27px;
+	}
+	.upcoming-event-con-rgt p{
+		font-size: 17px;
+	}
+	.initiateEventItems .dm-advisor-grd-item-wrap ul li{
+		width: 50%;
+	}
+	.page-banner.exSuccessStories h1.page-banner-title{
+		font-size: 55px;
+	}
+	.publicatons-page-top-sec-innr{
+		display: block;
+	}
+	.publicatons-page-top-sec-des{
+		width: 100%;
+	}
+	.publicatons-page-top-sec-img{
+		padding-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 350px;
+		width: 100%;
+		padding-top: 10px;
+	}
+	.rp-img img{
+		width: 100%;
+	}
+	.exAnnualReports ul li:nth-child(2n+1) .publicatons-page-top-sec-des {
+	    padding-left: 0;
+	}
+	.exAnnualReports ul li:nth-child(2n+1) .publicatons-page-top-sec-des p{
+		padding-right: 0;
+	}
+}
+
+@media(max-width: 575px){
+	.notableEventsCn h2 {
+	    font-size: 35px;
+	}
+	.notableEventsCnIn{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.initiateEventItems .dm-advisor-grd-item-wrap ul li {
+	    width: 100%;
+	}
+	.notableEventsCnIn{
+		padding-bottom: 50px;
+	}
+	.page-banner.exSuccessStories h1.page-banner-title{
+		font-size: 40px;
+	}
+}
+
+@media(max-width: 479px){
+	.storiesPageCn .fl-tabs-2 .tab-link {
+	    width: 100%;
+	}
+	.storiesPageCn .fl-tabs-2 .tab-link{
+		padding-top: 10px;
+	}
+	.page-banner.exSuccessStories h1.page-banner-title{
+		font-size: 35px;
+	}
+
+}
+
+@media(max-width: 359px){
+	.page-banner.exSuccessStories h1.page-banner-title{
+		font-size: 32px;
+	}
 }
 
 

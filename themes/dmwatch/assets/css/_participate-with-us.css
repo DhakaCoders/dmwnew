@@ -545,6 +545,16 @@ dm-us-contact-form-sec
 	.dm-us-contact-form-sec .dm-contact-form-head {
 	    padding-bottom: 30px;
 	}
+	.pcbsd-title {
+	    font-size: 50px;
+	}
+	.participateBnrSlideItem-des p{
+		font-size: 18px;
+		font-weight: 400;
+	}
+	.participate-bnr-slider-sec {
+	    margin-bottom: 70px;
+	}
 }
 
 @media(max-width: 575px){
@@ -591,6 +601,21 @@ dm-us-contact-form-sec
 	}
 	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label{
 		font-size: 17px;
+	}
+	.pcbsd-title {
+	    font-size: 37px;
+	}
+	.participateBnrSlideItem-des p {
+    	font-size: 17px;
+	}
+	.participate-bnr-slider-sec {
+	    margin-bottom: 50px;
+	}
+	.participateBnrSlideItem-des{
+		text-align: center;
+	}
+	.participateBnrSlideItem-des {
+	    min-height: 400px;
 	}
 }
 

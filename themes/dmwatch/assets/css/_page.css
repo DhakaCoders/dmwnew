@@ -295,13 +295,19 @@ ol li::before {
 .searchBanner.page-banner.page-bnr-lft-con .page-banner-inr .page-banner-title span{
 	color: #fff;
 	text-transform: none;
+	font-size: 40px;
+}
+.SearchWrap.dm-blog-grd-sec {
+    margin: 0;
+    padding: 90px 0 50px;
 }
 .SearchWrap .dm-blog-grd-item-title{
     display: block;
     font-size: 36px;
 }
-.SearchWrap .dm-blog-grd-item strong{
-	margin-bottom: 20px;
+.SearchWrap .dm-blog-grd-item strong {
+    margin-bottom: 20px;
+    text-transform: capitalize;
 }
 .SearchWrap .dm-blog-grd-item p{
 	font-size: 20px;
@@ -314,6 +320,7 @@ ol li::before {
 	width: 30px;
 	height: 30px;
 	background: #88BE43;
+    border: 0;
 }
 .dm-blog-grd-item span:before{
 	display: none;
@@ -329,6 +336,9 @@ ol li::before {
 }
 .searchBanner.page-banner{
 	margin: 0;
+}
+.searchBanner.page-banner.page-bnr-lft-con .page-banner-title{
+	font-size: 50px;
 }
 @media(max-width: 1499px){
 

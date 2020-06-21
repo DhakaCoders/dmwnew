@@ -11,7 +11,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
     <div class="page-banner-des">
       <div class="page-banner-inr">
         <div>
-          <h1 class="page-banner-title">Search</h1>
+          <h1 class="page-banner-title">Search result for: <span><?php echo get_search_query(); ?></span></h1>
         </div>
       </div>
     </div>
@@ -29,6 +29,8 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
           <ul class="reset-list">
           <?php 
             while(have_posts()): the_post();
+              $thisID = get_the_ID();
+              $postType = get_post_type($thisID);
               $categories = get_the_terms( get_the_ID(), 'category' );
               $term_name = '';
               if ( ! empty( $categories ) ) {
@@ -40,9 +42,12 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
             <li>
               <div class="dm-blog-grd-item">
                 <div>
-                  <h2 class="dm-blog-grd-item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                  <strong><?php echo get_the_date('M d, Y'); ?><?php echo $term_name; ?></strong>
-                  <?php the_excerpt(); ?>
+                  <h2 class="dm-blog-grd-item-title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  </h2>
+                  <?php if(!empty( $postType )): ?><strong><?php echo $postType; ?></strong><?php endif; ?>
+                  <?php echo get_the_excerpt(''); ?>
+                  <a class="readmore" href="<?php the_permalink(); ?>">Read More</a>
                 </div>
                 <span></span>
               </div>

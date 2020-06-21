@@ -286,7 +286,50 @@ ol li::before {
 .page-404.text-center {
     padding: 120px 0;
 }
-
+.searchBanner .page-banner-des{
+	min-height: 400px;
+}
+.searchBanner.page-banner.page-bnr-lft-con .page-banner-inr {
+    bottom: 160px;
+}
+.searchBanner.page-banner.page-bnr-lft-con .page-banner-inr .page-banner-title span{
+	color: #fff;
+	text-transform: none;
+}
+.SearchWrap .dm-blog-grd-item-title{
+    display: block;
+    font-size: 36px;
+}
+.SearchWrap .dm-blog-grd-item strong{
+	margin-bottom: 20px;
+}
+.SearchWrap .dm-blog-grd-item p{
+	font-size: 20px;
+}
+.SearchWrap .dm-blog-grd-item{
+	padding-left: 60px;
+}
+.SearchWrap .dm-blog-grd-item span{
+	top: 4px;
+	width: 30px;
+	height: 30px;
+	background: #88BE43;
+}
+.dm-blog-grd-item span:before{
+	display: none;
+}
+.SearchWrap .dm-blog-grd-item a.readmore{
+	color: #88BE43;
+}
+.SearchWrap .dm-blog-grd-item a:hover{
+	color: #8ccc39;
+}
+.SearchWrap .dm-blog-grd-sec{
+	margin: 0;
+}
+.searchBanner.page-banner{
+	margin: 0;
+}
 @media(max-width: 1499px){
 
 }

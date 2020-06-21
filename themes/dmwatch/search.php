@@ -4,7 +4,7 @@ $thisID = get_option( 'page_for_posts' );
 $standaardbanner = get_field('bannerimage', $thisID);
 if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-blog.jpg';
 ?>
-<section class="page-banner page-bnr-lft-con page-bnr-blog" style="overflow: hidden;">
+<section class="page-banner page-bnr-lft-con page-bnr-blog searchBanner" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
@@ -18,7 +18,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
   </div>
 </section><!-- end of page-banner -->
 
-<section class="dm-blog-grd-sec">
+<section class="dm-blog-grd-sec SearchWrap">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -51,15 +51,6 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
           </ul>
           <div class="dm-blog-srch-pagi-sec clearfix">
             <div class="dm-blog-srch-pagi-sec-inr">
-              <div class="dm-blog-secr">
-                <span>Search</span>
-                <div class="hdr-search">
-                  <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
-                        <input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="Enter Search Keyword...">
-                      <button><i class="fas fa-search"></i></button>
-                  </form>
-                </div>
-              </div>
               <div class="dm-blog-pagi-ctlr">
                 <?php
                 global $wp_query;

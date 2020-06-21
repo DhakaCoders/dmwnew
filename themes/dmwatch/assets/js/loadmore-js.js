@@ -115,4 +115,43 @@ $("#mediaLoadMore").on('click', function(e) {
         },
     });
 });
+
+$("#publicloadMore").on('click', function(e) {
+    e.preventDefault();
+    //init
+    var that = $(this);
+    var page = $(this).data('page');
+    var newPage = page + 1;
+    var ajaxurl = that.data('url');
+    //ajax call
+    $.ajax({
+        url: ajaxurl,
+        type: 'post',
+        data: {
+            page: page,
+            el_li: 'not',
+            action: 'ajax_public_script_load_more'
+        },
+        beforeSend: function ( xhr ) {
+            $('#publicloader').show();
+             
+        },
+        
+        success: function(html ) {
+            //check
+            if (html == 0) {
+                $('.fl-see-all-btn').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
+                $('.fl-see-all-btn').hide();
+                $('#publicloader').hide();
+            } else {
+                $('#publicloader').hide();
+                that.data('page', newPage);
+                $('#public-content').append(html.substr(html.length-1, 1) === '0'? html.substr(0, html.length-1) : html);
+            }
+        },
+        error: function(html ) {
+            console.log('asdfsd');
+        },
+    });
+});
 })(jQuery);

@@ -441,6 +441,19 @@ if( !empty($textcolor) ):
 <?php endif; ?>
 <?php endif; ?>
 
+<?php 
+  $pageIDs = get_field('select_logos', 'options');
+  if( !empty($pageIDs) ):
+    $count = count($pageIDs);
+    $query = new WP_Query(array( 
+    'post_type'=> 'page',
+    'post_status' => 'publish',
+    'posts_per_page'=> $count,
+    'post__in' => $pageIDs
+    ) 
+  );
+?>
+<?php if( $query->have_posts() ):?>
 <section class="dm-pa-service-sec-wrp">
   <div class="container">
     <div class="row">
@@ -452,61 +465,31 @@ if( !empty($textcolor) ):
       <div class="col-sm-12">
         <div class="dm-pa-service-wrp">
           <ul class="clearfix reset-list">
+            <?php 
+              while($query->have_posts()): $query->the_post();
+              $intro2 = get_field('introsec', get_the_ID()); 
+            ?>
             <li>
               <div class="dm-pa-service-innr">
+                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                 <div class="dm-pa-service-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dm-pa-service-img-1.png">
+                  <?php 
+                    if( !empty($intro2['logo']) ):
+                      echo cbv_get_image_tag($intro2['logo']);
+                    endif;
+                  ?>
                 </div>
               </div>
             </li>
-            <li>
-              <div class="dm-pa-service-innr">
-                <div class="dm-pa-service-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dm-pa-service-img-2.png">
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="dm-pa-service-innr">
-                <div class="dm-pa-service-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dm-pa-service-img-3.png">
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="dm-pa-service-innr">
-                <div class="dm-pa-service-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dm-pa-service-img-4.png">
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="dm-pa-service-innr">
-                <div class="dm-pa-service-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dm-pa-service-img-5.png">
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="dm-pa-service-innr">
-                <div class="dm-pa-service-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dm-pa-service-img-6.png">
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="dm-pa-service-innr">
-                <div class="dm-pa-service-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dm-pa-service-img-7.png">
-                </div>
-              </div>
-            </li>
+            <?php endwhile; ?>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php endif; wp_reset_postdata(); ?>
+<?php endif; ?>
 <?php 
 get_template_part('templates/footer', 'top');
 get_footer(); 

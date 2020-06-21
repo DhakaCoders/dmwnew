@@ -1,0 +1,110 @@
+.dm-prarpip-banner-sec{
+	padding-top: 35px;
+	padding-bottom: 55px;
+}
+
+.dm-prarpip-banner-sec-inr span{
+	display: block;
+	color: #006838;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+.dm-prarpip-banner-sec-title{
+	display: block;
+	font-size: 49px;
+	line-height: 1;
+	margin-bottom: 10px;
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	color: #88BE43;
+	margin-bottom: 15px;
+}
+.dm-prarpip-banner-sec-inr strong{
+	display: block;
+	color: #006838;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.dm-prarpip-banner-img{
+	height: 677px;
+}
+.dm-prarpip-banner-des{
+	padding: 25px 40px 10px 40px;
+	background: #006838;
+	margin-left: 50px;
+	margin-right: 50px;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	margin-top: -90px;
+}
+.dm-prarpip-banner-des-title{
+	display: block;
+	font-size: 31px;
+	line-height: 1;
+	margin-bottom: 8px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: #fff;
+}
+.dm-prarpip-banner-des p{
+	font-size: 21px;
+	line-height: 29px;
+	color: #fff;
+}
+
+
+
+.dm-prarpip-des-sec-inr p{
+	font-size: 21px;
+	line-height: 34px;
+	margin-bottom: 30px;
+}
+.dm-prarpip-des-sec-inr p strong{
+	display: block;
+	font-size: 30px;
+	font-weight: 500;
+	padding-bottom: 5px;
+	color: #606060;
+}
+
+.dm-prarpip-des-btm-left{
+	float: left;
+	width: 67.7083%;
+	padding-right: 50px;
+}
+.dm-prarpip-des-btm-right{
+	float: left;
+	width: 32.2916%;
+	padding-left: 30px;
+	padding-top: 20px;
+	border-left: 2px solid #88BE43;
+	margin-top: 15px;
+}
+.dm-prarpip-des-btm-left p{
+	font-size: 21px;
+	line-height: 34px;
+	margin-bottom: 20px;
+}
+.dm-prarpip-des-btm-rgt-title{
+	display: block;
+	font-size: 30px;
+	line-height: 1;
+	margin-bottom: 10px;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+}
+.dm-prarpip-des-btm-right p{
+	font-size: 19px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+.dm-prarpip-des-sec{
+	padding-bottom: 80px;
+}
+.dm-prarpip-des-sec-inr p:nth-child(5){
+	margin-bottom: 0;
+}

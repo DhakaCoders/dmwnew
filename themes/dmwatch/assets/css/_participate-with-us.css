@@ -445,7 +445,7 @@ dm-us-contact-form-sec
 	    font-size: 20px;
 	}
 	.participateBnrSlideItem-des{
-		height: 550px;
+		min-height: 550px;
 	}
 }
 
@@ -490,7 +490,7 @@ dm-us-contact-form-sec
 		font-size: 20px!important;
 	}
 	.participateBnrSlideItem-des{
-		height: 450px;
+		min-height: 450px;
 	}
 	.pcbsd-title {
 	    font-size: 60px;

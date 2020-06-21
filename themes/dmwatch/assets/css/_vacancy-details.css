@@ -3,15 +3,16 @@
 }
 .vacancy-details-innr{
 }
-.vacancy-details-left{
-	float: left;
-	max-width: 28.18%;
-	width: 100%;
-	margin-right: 2.22%;
-	background: #F5F7F7;
-	padding-left: 32px;
+.vacancy-details-left {
+    float: left;
+    max-width: 30%;
+    width: 100%;
+    margin-right: 2.22%;
+    background: #F5F7F7;
+    padding-left: 25px;
     padding-bottom: 30px;
     padding-top: 34px;
+    padding-right: 25px;
 }
 .vacancy-details-left ul > li{
 	font-size: 16.5px;
@@ -26,10 +27,10 @@
 }
 .vacancy-details-content{
 	float: left;
-	max-width: 69.60%;
+	max-width: 67%;
 	width: 100%;
 	background: #F5F7F7;
-	padding: 42px 60px 245px 63px;
+	padding: 42px 60px 100px 63px;
 }
 .vacancy-details-content h4{
 	font-weight: 700;
@@ -124,4 +125,18 @@
 }
 .vacancy-link-items .vacancy-link-2nd-ul > li > a:hover{
 	color: #53bc20;
+}
+
+@media(max-width: 991px){
+	.vacancy-details-left {
+	    width: 100%;
+	    margin-right: 0;
+	    margin-bottom: 30px;
+	    max-width: 100%;
+	}
+	.vacancy-details-content {
+	    width: 100%;
+	    max-width: 100%;
+	    padding: 42px 25px 100px 25px;
+	}
 }

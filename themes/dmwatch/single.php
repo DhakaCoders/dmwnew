@@ -50,17 +50,6 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
             <div class="dm-bd-grd-item-des">
               <?php the_content(); ?>
             </div>
-            <div class="dm-bd-grd-search-sec">
-              <div class="dm-bd-grd-search-sec-inr">
-                <span>Search</span>
-                <div class="hdr-search">
-                  <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
-                        <input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="Enter Search Keyword...">
-                      <button><i class="fas fa-search"></i></button>
-                  </form>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

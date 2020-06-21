@@ -43,16 +43,16 @@ get_header();
           <div class="col-md-12">
               <?php 
                 $ucquery = new WP_Query(array( 
-                    'post_type'=> 'event',
+                    'post_type'=> 'success_stories',
                     'post_status' => 'publish',
                     'posts_per_page' =>-1,
                     'orderby' => 'date',
                     'order'=> 'ASC',
                     'tax_query' => array(
                       array(
-                         'taxonomy' => 'event_cat',
+                         'taxonomy' => 'publication_type',
                           'field'    => 'slug',
-                          'terms'    => 'upcoming',
+                          'terms'    => 'notable-events',
                           ),
                     ),
                   ) 
@@ -64,7 +64,7 @@ get_header();
                  while($ucquery->have_posts()): $ucquery->the_post();
                  $attach_id = get_post_thumbnail_id(get_the_ID());
                   if( !empty($attach_id) )
-                    $event_src = cbv_get_image_src($attach_id,'bloggrid');
+                    $event_src = cbv_get_image_src($attach_id);
                   else
                     $event_src = '';   
                 ?>
@@ -109,29 +109,29 @@ get_header();
         <div class="row">
           <div class="col-md-12">
             <?php 
-              $ucquery = new WP_Query(array( 
-                  'post_type'=> 'event',
-                  'post_status' => 'publish',
-                  'posts_per_page' =>-1,
-                  'orderby' => 'date',
-                  'order'=> 'ASC',
-                  'tax_query' => array(
-                    array(
-                       'taxonomy' => 'event_cat',
-                        'field'    => 'slug',
-                        'terms'    => 'upcoming',
-                        ),
-                  ),
-                ) 
-              );
-              if($ucquery->have_posts()):
+                $ucquery1 = new WP_Query(array( 
+                    'post_type'=> 'success_stories',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'publication_type',
+                          'field'    => 'slug',
+                          'terms'    => 'initiate',
+                          ),
+                    ),
+                  ) 
+                );
+              if($ucquery1->have_posts()):
             ?>
             <ul class="clearfix reset-list publicatinList notableEventsList">
                 <?php 
-                 while($ucquery->have_posts()): $ucquery->the_post();
+                 while($ucquery1->have_posts()): $ucquery1->the_post();
                  $attach_id = get_post_thumbnail_id(get_the_ID());
                   if( !empty($attach_id) )
-                    $event_src = cbv_get_image_src($attach_id,'bloggrid');
+                    $event_src = cbv_get_image_src($attach_id);
                   else
                     $event_src = '';   
                 ?>
@@ -143,7 +143,7 @@ get_header();
                       <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a> </p>
                   </div>
                   <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-03.jpg">
+                    <img src="<?php echo $event_src; ?>">
                   </div>
                 </div>
               </li>
@@ -232,21 +232,21 @@ get_header();
         <div class="container">
           <div class="row">
             <?php 
-              $ucquery = new WP_Query(array( 
-                  'post_type'=> 'event',
-                  'post_status' => 'publish',
-                  'posts_per_page' =>-1,
-                  'orderby' => 'date',
-                  'order'=> 'ASC',
-                  'tax_query' => array(
-                    array(
-                       'taxonomy' => 'event_cat',
-                        'field'    => 'slug',
-                        'terms'    => 'upcoming',
-                        ),
-                  ),
-                ) 
-              );
+                $ucquery = new WP_Query(array( 
+                    'post_type'=> 'success_stories',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'publication_type',
+                          'field'    => 'slug',
+                          'terms'    => 'advocacy',
+                          ),
+                    ),
+                  ) 
+                );
               if($ucquery->have_posts()):
             ?>
             <div class="col-sm-12">
@@ -254,7 +254,7 @@ get_header();
                  while($ucquery->have_posts()): $ucquery->the_post();
                  $attach_id = get_post_thumbnail_id(get_the_ID());
                   if( !empty($attach_id) )
-                    $event_src = cbv_get_image_src($attach_id,'bloggrid');
+                    $event_src = cbv_get_image_src($attach_id);
                   else
                     $event_src = '';   
                 ?>

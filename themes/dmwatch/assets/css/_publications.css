@@ -69,6 +69,7 @@
 	padding-top: 29px;
 	position: relative;
 	overflow: hidden;
+	order: 2;
 }
 .filter-result-sec-four{
 	background: #F5F7F7;
@@ -253,8 +254,8 @@ ul.publicatinList li:nth-child(2n+2) .filter-result-items-des p{
 	.filter-result-items-des p{
 		font-size: 17px;
 	}
-	.publicatons-sec-one-title{
-		padding-top: 0;
+	.publicatons-page-top-sec-des p{
+		padding-left: 0;
 	}
 	
 }

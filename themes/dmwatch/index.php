@@ -40,7 +40,7 @@ if( $rblogP->have_posts() ):
       <div class="col-md-12">
         <div class="main-Blogs-sec-innr">
           <div class="main-Blogs-sec-hedding">
-            <h2>Blogs</h2>
+            <h2>Latest Post</h2>
           </div>
           <div class="main-Blogs-cntlr">
 <?php 
@@ -90,7 +90,7 @@ if( $rblogP1->have_posts() ):
       <div class="col-md-12">
         <div class="blog-page-all-blog-innr">
           <div class="blog-page-all-blog-hedding">
-            <h3>All Blogs</h3>
+            <h3>Other Posts</h3>
           </div>
           <div class="blog-page-all-blog-cntlr">
             <ul class="reset-list">

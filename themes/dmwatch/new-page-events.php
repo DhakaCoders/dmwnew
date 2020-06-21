@@ -3,17 +3,29 @@
   Template Name: Events
 */
 get_header();
+$thisID = get_the_ID();
+$pageTitle = get_the_title($thisID);
+$custom_page_title = get_field('custom_page_title', $thisID);
+if(!empty(str_replace(' ', '', $custom_page_title))){
+  $pageTitle = $custom_page_title;
+}
+
+$standaardbanner = get_field('bannerimage', $thisID);
+if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-event.jpg';
+
+
+$bcontent = get_field('description', $thisID);
 ?>
 
 <section class="page-banner page-bnr-rgt-con page-bnr-event" style="overflow: hidden;">
   <div class="page-banner-controller">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/page-bnr-event.jpg);">
+    <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
     <div class="page-banner-des">
       <div class="page-banner-inr">
         <div>
-          <h1 class="page-banner-title">EVENT</h1>
-          <p>Water, sanitation and hygiene are at the very core of sustainable development,<br> crucial for survival of people and the planet. </p>
+          <h1 class="page-banner-title"><?php echo $pageTitle; ?></h1>
+          <?php if( !empty($bcontent) ) echo wpautop($bcontent); ?>
         </div>
       </div>
     </div>
@@ -82,7 +94,12 @@ get_header();
                       <strong><?php echo get_the_date('M d, Y'); ?></strong> 
                       <p><?php the_title(); ?></p>
                       <div class="timer">
-                        <img src="<?php echo THEME_URI; ?>/assets/images/timer.png">
+                        <div id="timer">
+                          <div id="days"></div>
+                          <div id="hours"></div>
+                          <div id="minutes"></div>
+                          <div id="seconds"></div>
+                        </div>
                       </div>
                     </div>
                   </div>

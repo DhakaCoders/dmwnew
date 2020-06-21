@@ -168,12 +168,18 @@ if( !empty($textcolor) ):
 <?php endif; ?>
 <?php endif; ?>
 
+<?php
+  $showhideproject = get_field('showhideproject', $thisID);
+  if( $showhideproject ):
+    $projects = get_field('projectfilter', $thisID);
+    if( $projects ):
+?>
 <section class="dm-featured-project-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="dm-featured-project-sec-hdr">
-          <h2 class="dmfpshdr-title">Featured Project</h2>
+          <?php if( !empty($projects['title']) ) printf('<h2 class="dmfpshdr-title">%s</h2>', $projects['title'] ); ?>
         </div>
       </div>
       <div class="col-md-12">
@@ -186,253 +192,122 @@ if( !empty($textcolor) ):
         <div class="dm-featured-project-tabs-con-cntlr">
           <div id="tab-1" class="fl-tab-content">
             <div class="dm-featured-project-tabs-con">
+            <?php 
+            $ongoingIDS = $projects['ongoing_projects'];
+            if( !empty($ongoingIDS) ){
+              $count = count($ongoingIDS);
+              $oquery = new WP_Query(array( 
+              'post_type'=> 'project',
+              'post_status' => 'publish',
+              'posts_per_page'=> $count,
+              'post__in' => $ongoingIDS,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'practice_area',
+                  'field' => 'slug',
+                  'terms' => 'ongoing-projects'
+                )
+              )
+              ) 
+            );
+            ?>
+            <?php if( $oquery->have_posts() ):?>
               <div class="filter-results-grd-cntlr">
                 <ul class="clearfix reset-list">
+                <?php 
+                  while($oquery->have_posts()): $oquery->the_post();
+                    $pintro = get_field('introsec', get_the_ID());
+                    if( !empty($pintro['image']) ):
+                      $oproject = cbv_get_image_src($pintro['image'], 'projectgrid');
+                      $oproject_tag = cbv_get_image_tag($pintro['image'], 'projectgrid');
+                    else:
+                      $oproject = '';
+                      $oproject_tag = '';
+                    endif;
+                ?>
                   <li>
                     <div class="filter-results-grd-item">
-                      <a href="#" class="overlay-link"></a>
+                      <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                       <div class="filter-results-img-cntlr">
-                        <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-01.jpg);">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-01.jpg">
+                        <div class="filter-results-img" style="background: url(<?php echo $oproject; ?>);">
+                          <?php echo $oproject_tag; ?>
                         </div>
                       </div>
                       <div class="filter-results-img-hover">
                         <div>
-                          <strong>THE LIVELIHOODS AND
-                            MARKET/VALUE CHAIN
-                            ASSESSMENT <i><img src="<?php echo THEME_URI; ?>/assets/images/link-clip-icon.png"></i></strong>
+                          <strong><?php the_title(); ?> <i><img src="<?php echo THEME_URI; ?>/assets/images/link-clip-icon.png"></i></strong>
                         </div>
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="filter-results-grd-item">
-                      <a href="#" class="overlay-link"></a>
-                      <div class="filter-results-img-cntlr">
-                        <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-02.jpg);">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-02.jpg">
-                        </div>
-                      </div>
-                      <div class="filter-results-img-hover">
-                        <div>
-                          <strong>THE LIVELIHOODS AND
-                            MARKET/VALUE CHAIN
-                            ASSESSMENT <i><img src="<?php echo THEME_URI; ?>/assets/images/link-clip-icon.png"></i></strong>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="filter-results-grd-item">
-                      <a href="#" class="overlay-link"></a>
-                      <div class="filter-results-img-cntlr">
-                        <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-03.jpg);">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-03.jpg">
-                        </div>
-                      </div>
-                      <div class="filter-results-img-hover">
-                        <div>
-                          <strong>THE LIVELIHOODS AND
-                            MARKET/VALUE CHAIN
-                            ASSESSMENT <i><img src="<?php echo THEME_URI; ?>/assets/images/link-clip-icon.png"></i></strong>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  <?php endwhile; ?>
                 </ul>
               </div>
+              <?php endif; wp_reset_postdata(); ?>
+              <?php }else{ ?>
+                <div class="noresult" style="text-align:center; padding:20px 0;">No Result!</div>
+              <?php } ?>
             </div>
           </div>
           <div id="tab-2" class="fl-tab-content current">
             <div class="dm-featured-project-tabs-con">
+            <?php 
+            $completedIDS = $projects['completed_projects'];
+            if( !empty($completedIDS) ){
+              $ccount = count($completedIDS);
+              $cquery = new WP_Query(array( 
+              'post_type'=> 'project',
+              'post_status' => 'publish',
+              'posts_per_page'=> $ccount,
+              'post__in' => $completedIDS,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'practice_area',
+                  'field' => 'slug',
+                  'terms' => 'completed-projects'
+                )
+              )
+              ) 
+            );
+            ?>
+            <?php if( $cquery->have_posts() ):?>
               <div class="filter-results-grd-cntlr">
                 <ul class="clearfix reset-list">
+                  <?php 
+                  while($cquery->have_posts()): $cquery->the_post();
+                    $pintro = get_field('introsec', get_the_ID());
+                    if( !empty($pintro['image']) ):
+                      $oproject = cbv_get_image_src($pintro['image'], 'projectgrid');
+                      $oproject_tag = cbv_get_image_tag($pintro['image'], 'projectgrid');
+                    else:
+                      $oproject = '';
+                      $oproject_tag = '';
+                    endif;
+                ?>
                   <li>
                     <div class="filter-results-grd-item">
-                      <a href="#" class="overlay-link"></a>
+                      <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                       <div class="filter-results-img-cntlr">
-                        <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-04.jpg);">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-04.jpg">
+                        <div class="filter-results-img" style="background: url(<?php echo $oproject; ?>);">
+                          <?php echo $oproject_tag; ?>
                         </div>
                       </div>
                       <div class="filter-results-img-hover">
                         <div>
-                          <strong>THE LIVELIHOODS AND
-                            MARKET/VALUE CHAIN
-                            ASSESSMENT <i><img src="<?php echo THEME_URI; ?>/assets/images/link-clip-icon.png"></i></strong>
+                          <strong><?php the_title(); ?> <i><img src="<?php echo THEME_URI; ?>/assets/images/link-clip-icon.png"></i></strong>
                         </div>
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="filter-results-grd-item">
-                      <a href="#" class="overlay-link"></a>
-                      <div class="filter-results-img-cntlr">
-                        <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-05.jpg);">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-05.jpg">
-                        </div>
-                      </div>
-                      <div class="filter-results-img-hover">
-                        <div>
-                          <strong>THE LIVELIHOODS AND
-                            MARKET/VALUE CHAIN
-                            ASSESSMENT <i><img src="<?php echo THEME_URI; ?>/assets/images/link-clip-icon.png"></i></strong>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="filter-results-grd-item">
-                      <a href="#" class="overlay-link"></a>
-                      <div class="filter-results-img-cntlr">
-                        <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-06.jpg);">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-06.jpg">
-                        </div>
-                      </div>
-                      <div class="filter-results-img-hover">
-                        <div>
-                          <strong>THE LIVELIHOODS AND
-                            MARKET/VALUE CHAIN
-                            ASSESSMENT <i><img src="<?php echo THEME_URI; ?>/assets/images/link-clip-icon.png"></i></strong>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  <?php endwhile; ?>
                 </ul>
               </div>
+              <?php endif; wp_reset_postdata(); ?>
+              <?php }else{ ?>
+                <div class="noresult" style="text-align:center; padding:20px 0;">No Result!</div>
+              <?php } ?>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<?php
-  $showhideex = get_field('showhideex', $thisID);
-  if( $showhideex ):
-    $expertp = get_field('expertperson', $thisID);
-    if( $expertp ):
-?>
-<section class="dm-pa-grid-sec-wrp">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="dm-pa-grid-wrp">
-          <?php if( !empty($expertp['title']) ) printf('<h2 class="dm-pa-grid-head-title">%s</h2>', $expertp['title'] ); ?>
-          <?php 
-            $teamIDS = $expertp['select_members'];
-            if( !empty($teamIDS) ){
-              $count = count($teamIDS);
-              $query = new WP_Query(array( 
-              'post_type'=> 'teams',
-              'post_status' => 'publish',
-              'posts_per_page'=> $count,
-              'post__in' => $teamIDS
-              ) 
-            );
-                  
-            }else{
-              $query = new WP_Query(array( 
-              'post_type'=> 'teams',
-              'post_status' => 'publish',
-              'posts_per_page' => 4,
-              'orderby' => 'date',
-              'order'=> 'desc'
-              ) 
-            );
-            }
-          ?>
-          <?php if( $query->have_posts() ):?>
-          <ul class="reset-list clearfix">
-            <?php 
-              $i = 1;
-              while($query->have_posts()): $query->the_post();
-               $fullname = get_field('full_name', get_the_ID()); 
-               $position = get_field('position', get_the_ID()); 
-               $profileimage = get_field('profile_image', get_the_ID()); 
-               $aboutcont = get_field('aboutcont', get_the_ID());
-            ?>
-            <li>
-              <div class="dm-pa-grid-innr">
-                <div class="dm-pa-grid-img-cntlr">
-                  <div class="dm-pa-grid-img">
-                    <?php if(!empty( $profileimage )): ?>
-                      <?php echo cbv_get_image_tag( $profileimage ); ?>
-                    <?php else: ?>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/dm-pa-grid-img.png">
-                    <?php endif; ?>
-                    <div class="dm-pa-grid-img-hover"></div>
-                    <a id="quickViewOpener" data-toggle="modal" data-target="#quickViewModal<?php echo $i; ?>" href="#" class="popup-btn"></a>
-                  </div>
-                </div>
-                <div class="dm-pa-grid-dsc">
-                  <h4 class="dm-pa-grid-dsc-title"><?php the_title( );?></h4>
-                  <?php if( !empty($position) ) printf('<span>%s</span>', $position); ?>
-                </div>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade dm-modal-con-wrap" id="quickViewModal<?php echo $i; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <button type="button" class="close popup-close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true"><img src="<?php echo THEME_URI; ?>/assets/images/close-icon.jpg"></span>
-                    </button>
-                    <div class="info-popup-container">
-                      <div class="info-popup-cntlr-inr clearfix">
-                        <div class="info-popup-sidebar">
-                          <div class="crkmts-grd-item">
-                            <div class="itm-grd-img-bx">
-                              <?php if(!empty( $profileimage )): echo cbv_get_image_tag( $profileimage ); endif;?>
-                            </div>
-                            <div class="itm-short-des">
-                              <strong>
-                                <?php 
-                                  if( !empty($fullname) ) 
-                                    printf('%s', $fullname);
-                                  else
-                                    printf('%s', get_the_title(get_the_ID()));
-                                ?>
-                              </strong>
-                              <?php if( !empty($position) ) printf('<span>%s</span>', $position); ?>
-                            </div>
-                          </div>
-                          <?php $sinfo = get_field('socialinfo', get_the_ID()); ?>
-                          <div class="popup-social">
-                            <label>Social Media</label>
-                            <?php if( !empty($sinfo) ): ?>
-                            <ul class="reset-list">
-                              <?php if( !empty($sinfo['linkedin_url']) ): ?>
-                              <li><a href="<?php echo $sinfo['linkedin_url']; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/instagram.png"></a></li>
-                              <?php endif; ?>
-                              <?php if( !empty($sinfo['facebook_url']) ): ?>
-                              <li><a href="<?php echo $sinfo['facebook_url']; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/facebook.png"></a></li>
-                              <?php endif; ?>
-                              <?php if( !empty($sinfo['twitter_url']) ): ?>
-                              <li><a href="<?php echo $sinfo['twitter_url']; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/twitter.png"></a></li>
-                              <?php endif; ?>
-                              <?php if( !empty($sinfo['instagram_url']) ): ?>
-                              <li><a href="<?php echo $sinfo['instagram_url']; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/linkedin.png"></a></li>
-                              <?php endif; ?>
-                            </ul>
-                            <?php endif; ?>
-                          </div>
-                        </div>
-                        <div class="info-popup-des">
-                          <?php if( !empty($aboutcont) ) echo wpautop( $aboutcont ); ?>
-                        </div>
-                      </div>
-                    </div>
-
-
-                  </div>
-                </div>
-              </div>
-            </li>
-          <?php $i++; endwhile; ?>
-          </ul>
-          <?php endif; wp_reset_postdata(); ?>
         </div>
       </div>
     </div>

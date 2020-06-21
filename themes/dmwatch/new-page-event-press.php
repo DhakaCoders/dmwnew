@@ -3,17 +3,29 @@
   Template Name: Event - Press
 */
 get_header();
+$thisID = get_the_ID();
+$pageTitle = get_the_title($thisID);
+$custom_page_title = get_field('custom_page_title', $thisID);
+if(!empty(str_replace(' ', '', $custom_page_title))){
+  $pageTitle = $custom_page_title;
+}
+
+$standaardbanner = get_field('bannerimage', $thisID);
+if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-event-pp-report.jpg';
+
+
+$bcontent = get_field('description', $thisID);
 ?>
 
 <section class="page-banner page-bnr-rgt-con page-bnr-event-pp-report" style="overflow: hidden;">
   <div class="page-banner-controller">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/page-bnr-event-pp-report.jpg);">
+    <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
     <div class="page-banner-des">
       <div class="page-banner-inr">
         <div>
-          <h1 class="page-banner-title">PRESS RELEASE</h1>
-          <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial<br> for survival of people and the planet. </p>
+          <h1 class="page-banner-title"><?php echo $pageTitle; ?></h1>
+          <?php if( !empty($bcontent) ) echo wpautop($bcontent); ?>
         </div>
       </div>
     </div>
@@ -25,11 +37,15 @@ get_header();
     <div class="row">
       <div class="col-sm-12">
         <div class="eventLinksstep1">
-          <ul>
-            <li><a href="/events/">Events</a></li>
-            <li><a href="/events/media">Media</a></li>
-            <li class="active"><a href="#">Press</a></li>
-          </ul>
+          <?php 
+            $menuOptions = array( 
+                'theme_location' => 'cbv_event_menu', 
+                'menu_class' => 'clearfix reset-list',
+                'container' => '',
+                'container_class' => ''
+              );
+            wp_nav_menu( $menuOptions ); 
+          ?>  
         </div>
       </div>
     </div>

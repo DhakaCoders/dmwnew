@@ -529,11 +529,13 @@ box-shadow: 0px 0px 5px 0px rgba(213,213,213,1);
 	content: "";
 	display: none;
 }
-.eventLinksstep1 ul li.active a{
+.eventLinksstep1 ul li.active a,
+.eventLinksstep1 ul li.current-menu-item a{
 	color: #53bc20;
 }
 .singleEvent .dm-bd-grd-sec{ background: #fff; padding-top: 100px; }
-.fl-see-all-btn div.ajaxloading {
+.fl-see-all-btn div.ajaxloading,
+.fl-see-all-btn-rep div.ajaxloading  {
     display: flex;
     align-items: center;
     justify-content: center;

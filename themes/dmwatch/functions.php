@@ -29,6 +29,7 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'projectsingle', 664, 510, true );
         add_image_size( 'projectthumb', 122, 92, true );
         add_image_size( 'publicationgird', 308, 398, true );
+        add_image_size( 'reportgird', 377, 216, true );
 
 		
 		// add size to media uploader
@@ -46,6 +47,7 @@ if( !function_exists('cbv_theme_setup') ){
 		register_nav_menus( array(
           'cbv_main_menu' => __( 'Header Menu', THEME_NAME ),
           'cbv_ft_menu' => __( 'Footer Menu', THEME_NAME ),
+          'cbv_event_menu' => __( 'Event Menu', THEME_NAME ),
 		) );
 
 	}
@@ -82,6 +84,7 @@ include_once(THEME_DIR .'/inc/post-loadmore.php');
 include_once(THEME_DIR .'/inc/loadmore-event.php');
 include_once(THEME_DIR .'/inc/loadmore-media.php');
 include_once(THEME_DIR .'/inc/loadmore-publications.php');
+include_once(THEME_DIR .'/inc/loadmore-reports.php');
 include_once(THEME_DIR .'/inc/wc-functions.php');
 /**
 ACF Option pages->>

@@ -41,49 +41,56 @@ get_header();
       <div class="container">
         <div class="row">
           <div class="col-md-12">
+              <?php 
+                $ucquery = new WP_Query(array( 
+                    'post_type'=> 'success_stories',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'publication_type',
+                          'field'    => 'slug',
+                          'terms'    => 'notable-events',
+                          ),
+                    ),
+                  ) 
+                );
+                if($ucquery->have_posts()):
+              ?>
             <ul class="clearfix reset-list publicatinList notableEventsList">
+                <?php 
+                 while($ucquery->have_posts()): $ucquery->the_post();
+                 $attach_id = get_post_thumbnail_id(get_the_ID());
+                  if( !empty($attach_id) )
+                    $event_src = cbv_get_image_src($attach_id);
+                  else
+                    $event_src = '';   
+                ?>
               <li>
-                <div class="filter-result-items clearfix">
-                  <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-01.jpg">
-                  </div>
+                <div class="filter-result-items">
                   <div class="filter-result-items-des">
-                      <h3 class="publicatons-sec-one-title"><a href="#">Livelihoods, Coping and Support During COVID-19 Crisis</a></h3>
+                      <h3 class="publicatons-sec-one-title">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                      </h3>
                       <span>2020 | Policy Brief</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <a href="#">Continue Reading.</a> </p>
+                      <p><?php echo get_the_excerpt(''); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a></p>
+                  </div>
+                  <div class="filter-result-items-img">
+                    <img src="<?php echo $event_src; ?>">
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="filter-result-items clearfix">
-                  <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-02.jpg">
-                  </div>
-                  <div class="filter-result-items-des">
-                      <h3 class="publicatons-sec-one-title"><a href="#">Livelihoods, Coping and Support During COVID-19 Crisis</a></h3>
-                      <span>2020 | Policy Brief</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <a href="#">Continue Reading.</a> </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="filter-result-items clearfix">
-                  <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-03.jpg">
-                  </div>
-                  <div class="filter-result-items-des">
-                      <h3 class="publicatons-sec-one-title"><a href="#">Livelihoods, Coping and Support During COVID-19 Crisis</a></h3>
-                      <span>2020 | Policy Brief</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <a href="#">Continue Reading.</a> </p>
-                  </div>
-                </div>
-              </li>
+              <?php endwhile; ?>
             </ul>
+            <?php endif; ?>
+
           </div>
         </div>
       </div>
     </div>
-    <div class="notableEventsCn">
+    <div class="notableEventsCn" style="display: none;">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -96,42 +103,58 @@ get_header();
       </div>      
     </div>
   </div>
-  <div id="tab-2" class="fl-tab-content">
+   <div id="tab-2" class="fl-tab-content">
     <div class="notableEvents">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
+            <?php 
+                $ucquery1 = new WP_Query(array( 
+                    'post_type'=> 'success_stories',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'publication_type',
+                          'field'    => 'slug',
+                          'terms'    => 'initiate',
+                          ),
+                    ),
+                  ) 
+                );
+              if($ucquery1->have_posts()):
+            ?>
             <ul class="clearfix reset-list publicatinList notableEventsList">
+                <?php 
+                 while($ucquery1->have_posts()): $ucquery1->the_post();
+                 $attach_id = get_post_thumbnail_id(get_the_ID());
+                  if( !empty($attach_id) )
+                    $event_src = cbv_get_image_src($attach_id);
+                  else
+                    $event_src = '';   
+                ?>
               <li>
-                <div class="filter-result-items clearfix">
-                  <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-03.jpg">
-                  </div>
+                <div class="filter-result-items">
                   <div class="filter-result-items-des">
-                      <h3 class="publicatons-sec-one-title"><a href="#">Lorem Ipsum is simply dummy</a></h3>
+                      <h3 class="publicatons-sec-one-title"><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
                       <span>2020 | Policy Brief</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <a href="#">Continue Reading.</a> </p>
+                      <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a> </p>
+                  </div>
+                  <div class="filter-result-items-img">
+                    <img src="<?php echo $event_src; ?>">
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="filter-result-items clearfix">
-                  <div class="filter-result-items-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/filter-results-img-02.jpg">
-                  </div>
-                  <div class="filter-result-items-des">
-                      <h3 class="publicatons-sec-one-title"><a href="#">Lorem Ipsum is simply dummy</a></h3>
-                      <span>2020 | Policy Brief</span>
-                      <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. <a href="#">Continue Reading.</a> </p>
-                  </div>
-                </div>
-              </li>
+              <?php endwhile; ?>
             </ul>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
-    <div class="initiateEventsCn">
+    <div class="initiateEventsCn" style="display: none;">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -208,23 +231,50 @@ get_header();
       <div class="advocacyCn">
         <div class="container">
           <div class="row">
+            <?php 
+                $ucquery = new WP_Query(array( 
+                    'post_type'=> 'success_stories',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'publication_type',
+                          'field'    => 'slug',
+                          'terms'    => 'advocacy',
+                          ),
+                    ),
+                  ) 
+                );
+              if($ucquery->have_posts()):
+            ?>
             <div class="col-sm-12">
+                <?php 
+                 while($ucquery->have_posts()): $ucquery->the_post();
+                 $attach_id = get_post_thumbnail_id(get_the_ID());
+                  if( !empty($attach_id) )
+                    $event_src = cbv_get_image_src($attach_id);
+                  else
+                    $event_src = '';   
+                ?>
               <div class="upcoming-event-con clearfix">
+                <div class="upcoming-event-con-rgt">
+                  <h3 class="uec-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                  <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a> </p>
+                </div>
                 <div class="upcoming-event-con-lft">
                   <div class="upcoming-event-fea-img inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/ss-advocacy.png);">
                   </div>
                 </div>
-                <div class="upcoming-event-con-rgt">
-                  <h3 class="uec-title"><span>Meet the leaders</span></h3>
-                  <p>Water, sanitation and hygiene are at the very core of sustainable development, crucial for survival of people and the planet. Water scarcity affects more than 40 percent of people around the world, which is projected to increase. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m <a href="#">Continue Reading.</a> </p>
-                </div>
-                
               </div>
+              <?php endwhile; ?>
             </div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
-      <div class="initiateEventsCn">
+      <div class="initiateEventsCn" style="display: none;">
         <div class="container">
           <div class="row">
             <div class="col-md-12">

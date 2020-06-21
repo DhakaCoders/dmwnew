@@ -4,21 +4,21 @@ $thisID = get_option( 'page_for_posts' );
 $standaardbanner = get_field('bannerimage', $thisID);
 if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-blog.jpg';
 ?>
-<section class="page-banner page-bnr-lft-con page-bnr-blog" style="overflow: hidden;">
+<section class="page-banner page-bnr-lft-con page-bnr-blog searchBanner" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
     <div class="page-banner-des">
       <div class="page-banner-inr">
         <div>
-          <h1 class="page-banner-title">Search</h1>
+          <h1 class="page-banner-title">Search result for: <span><?php echo get_search_query(); ?></span></h1>
         </div>
       </div>
     </div>
   </div>
 </section><!-- end of page-banner -->
 
-<section class="dm-blog-grd-sec">
+<section class="dm-blog-grd-sec SearchWrap">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -29,6 +29,8 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
           <ul class="reset-list">
           <?php 
             while(have_posts()): the_post();
+              $thisID = get_the_ID();
+              $postType = get_post_type($thisID);
               $categories = get_the_terms( get_the_ID(), 'category' );
               $term_name = '';
               if ( ! empty( $categories ) ) {
@@ -40,9 +42,12 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
             <li>
               <div class="dm-blog-grd-item">
                 <div>
-                  <h2 class="dm-blog-grd-item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                  <strong><?php echo get_the_date('M d, Y'); ?><?php echo $term_name; ?></strong>
-                  <?php the_excerpt(); ?>
+                  <h2 class="dm-blog-grd-item-title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  </h2>
+                  <?php if(!empty( $postType )): ?><strong><?php echo $postType; ?></strong><?php endif; ?>
+                  <?php echo get_the_excerpt(''); ?>
+                  <a class="readmore" href="<?php the_permalink(); ?>">Read More</a>
                 </div>
                 <span></span>
               </div>
@@ -51,15 +56,6 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
           </ul>
           <div class="dm-blog-srch-pagi-sec clearfix">
             <div class="dm-blog-srch-pagi-sec-inr">
-              <div class="dm-blog-secr">
-                <span>Search</span>
-                <div class="hdr-search">
-                  <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
-                        <input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="Enter Search Keyword...">
-                      <button><i class="fas fa-search"></i></button>
-                  </form>
-                </div>
-              </div>
               <div class="dm-blog-pagi-ctlr">
                 <?php
                 global $wp_query;

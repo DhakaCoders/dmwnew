@@ -53,17 +53,13 @@ $intro = get_field('introsec', $thisID);
             <?php 
             while($query->have_posts()): $query->the_post();   
              $vimgid = get_field('image', get_the_ID()); 
-             $jobinfo = get_field('jobinfo', get_the_ID()); 
-             $jlink = $jobinfo['link']
+             $jobinfo = get_field('jobinfo', get_the_ID());
             ?>
              <li>
                <div class="dm-vacancy-grid-inr">
                  <div class="dm-vacancy-grid-img-contrl">
-                    <?php if( !empty($jlink) ): ?>
-                    <a href="<?php echo $jlink; ?>" class="overlay-link"></a>
-                    <?php endif; ?>
+                    <a href="<?php the_permalink();?>" class="overlay-link"></a>
                    <div class="dm-vacancy-grid-img">
-                     
                     <?php  
                       if( !empty($vimgid) ):
                         echo cbv_get_image_tag( $vimgid );
@@ -77,11 +73,9 @@ $intro = get_field('introsec', $thisID);
                    <h4 class="dm-vacancy-grid-dsc-title"><?php the_title(); ?></h4>
                    <?php
                       if( !empty($jobinfo['job_location']) ) printf('<span>JOB LOCATION: %s</span>', $jobinfo['job_location']);
-                      if( !empty($jobinfo['deadline']) ) printf('<span>DEADLINE: %s</span>', $jobinfo['deadline']);
+                      if( !empty($jobinfo['application_deadline']) ) printf('<span>DEADLINE: %s</span>', $jobinfo['application_deadline']);
                    ?>
-                   <?php if( !empty($jlink) ): ?>
-                   <a href="<?php echo $jlink; ?>">READ MORE</a>
-                   <?php endif; ?>
+                   <a href="<?php the_permalink();?>">READ MORE</a>
                  </div>
                </div>
              </li>

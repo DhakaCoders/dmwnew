@@ -4,28 +4,75 @@
  */
 
 function public_script_load_more($args = array()) {
+  $year = $type = ''; 
+  $taxs = array();
+
   $query = new WP_Query(array( 
     'post_type'=> 'publication',
     'post_status' => 'publish',
     'posts_per_page'=> 1,
     'orderby' => 'date',
-    'order'=> 'ASC'
+    'order'=> 'DESC'
     ) 
   );
-  if( $query->have_posts() ):
+if( $query->have_posts() ):
 
 while($query->have_posts()): $query->the_post();
     $recentID = get_the_ID();
  endwhile;
+endif; wp_reset_postdata();
+
+    if ( isset($_GET['type']) && !empty($_GET['type'])){
+      $taxs[] = array(
+        'taxonomy' => 'publication_type',
+        'field' => 'slug',
+        'terms' => $_GET['type']
+      );
+      $type = $_GET['type'];
+    }
+
+    if ( isset($_GET['years']) && !empty($_GET['years'])){
+      $taxs[] = array(
+        'taxonomy' => 'publication_year',
+        'field' => 'slug',
+        'terms' => $_GET['years']
+      );
+      $year = $_GET['years'];
+    }
+
+    $taxquery = '';
+    if( $taxs ){
+      if(count($taxs) > 1){
+        $taxquery = array(
+        'relation' => 'AND',
+        $taxs
+        );
+      } else{
+        $taxquery = array($taxs);
+      }
+    }
+    $query2 = new WP_Query(array( 
+      'post_type'=> 'publication',
+      'post_status' => 'publish',
+      'orderby' => 'date',
+      'order'=> 'DESC',
+      'post__not_in' => array($recentID),
+      'tax_query' => $taxquery
+      ) 
+    );
+    
+
+
+ if( $query2->have_posts()  ):
   echo '<ul class="clearfix reset-list publicatinList" id="public-content">';
-      ajax_public_script_load_more($args, $recentID);
+      ajax_public_script_load_more($args, $recentID, $type, $year);
   echo '</ul>';
   echo '<div class="fl-see-all-btn">
   <div class="ajaxloading" id="publicloader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
    <a href="#" id="publicloadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >SEE ALL</a>';
    echo '</div>';
   else:
-
+  echo '<div class="noresult" style="text-align:center; padding:20px 0;">No Result!</div>';
   endif; wp_reset_postdata();
 }
 /*
@@ -37,7 +84,7 @@ add_shortcode('ajax_public_posts', 'public_script_load_more');
 /*
  * load more script call back
  */
-function ajax_public_script_load_more($args, $recentID = '') {
+function ajax_public_script_load_more($args, $recentID = '', $type='', $year = '') {
     //init ajax
     $ajax = false;
     //check ajax call or not
@@ -46,13 +93,59 @@ function ajax_public_script_load_more($args, $recentID = '') {
         $ajax = true;
     }
     //number of posts per page default
-    $num = 3;
+    $num = 1;
     //page number
     $paged = 1;
     if(isset($_POST['page']) && !empty($_POST['page'])){
         $paged = $_POST['page'] + $paged;
     }
-    echo $recentID;
+    if(isset($_POST['post_id']) && !empty($_POST['post_id'])){
+        $recentID = $_POST['post_id'];
+    }
+
+
+    $taxs = array();
+   
+    if ( isset($_POST['type']) && !empty($_POST['type'])){
+      $taxs[] = array(
+        'taxonomy' => 'publication_type',
+        'field' => 'slug',
+        'terms' => $_POST['type']
+      );
+    }
+    if ( isset($type) && !empty($type)){
+      $taxs[] = array(
+        'taxonomy' => 'publication_type',
+        'field' => 'slug',
+        'terms' => $type
+      );
+    }
+    if ( isset($_POST['year']) && !empty($_POST['year'])){
+      $taxs[] = array(
+        'taxonomy' => 'publication_year',
+        'field' => 'slug',
+        'terms' => $_POST['year']
+      );
+    }
+    if ( isset($year) && !empty($year)){
+      $taxs[] = array(
+        'taxonomy' => 'publication_year',
+        'field' => 'slug',
+        'terms' => $year
+      );
+    }
+
+    $taxquery = '';
+    if( $taxs ){
+      if(count($taxs) > 1){
+        $taxquery = array(
+        'relation' => 'AND',
+        $taxs
+        );
+      } else{
+        $taxquery = array($taxs);
+      }
+    }
     $query = new WP_Query(array( 
       'post_type'=> 'publication',
       'post_status' => 'publish',
@@ -60,7 +153,8 @@ function ajax_public_script_load_more($args, $recentID = '') {
       'paged'=>$paged,
       'orderby' => 'date',
       'order'=> 'DESC',
-      'post__not_in' => array($recentID)
+      'post__not_in' => array($recentID),
+      'tax_query' => $taxquery
       ) 
     );
     if($query->have_posts()){

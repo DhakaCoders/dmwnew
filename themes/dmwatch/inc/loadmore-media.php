@@ -38,7 +38,7 @@ function ajax_news_script_load_more($args) {
         $paged = $_POST['page'] + $paged;
     }
     $query = new WP_Query(array( 
-      'post_type'=> 'news',
+      'post_type'=> 'media',
       'post_status' => 'publish',
       'posts_per_page' =>$num,
       'paged'=>$paged,
@@ -124,7 +124,7 @@ function ajax_media_script_load_more($args) {
         $paged = $_POST['page'] + $paged;
     }
     $query = new WP_Query(array( 
-      'post_type'=> 'news',
+      'post_type'=> 'media',
       'post_status' => 'publish',
       'posts_per_page' =>$num,
       'paged'=>$paged,

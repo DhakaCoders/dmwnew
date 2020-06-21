@@ -238,7 +238,7 @@ function ajax_report_script_load_more($args) {
         $ajax = true;
     }
     //number of posts per page default
-    $num = 3;
+    $num = 9;
     //page number
     $paged = 1;
     if(isset($_POST['page']) && !empty($_POST['page'])){
@@ -263,8 +263,8 @@ function ajax_report_script_load_more($args) {
     ?>
     <li>
       <div class="publicatons-page-top-sec-img">
-        <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
         <div class="rp-img-wrap">
+            <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
             <div class="rp-img">
               <?php echo $rep_tag; ?>
             </div>
@@ -273,6 +273,7 @@ function ajax_report_script_load_more($args) {
               <span>Publication <?php echo get_the_date('Y'); ?> | Policy Brief</span>
             </div>
         </div>
+
       </div>      
     </li>
     <?php

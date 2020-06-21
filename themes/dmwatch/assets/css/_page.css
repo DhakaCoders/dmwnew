@@ -340,6 +340,14 @@ ol li::before {
 .searchBanner.page-banner.page-bnr-lft-con .page-banner-title{
 	font-size: 50px;
 }
+.annualReports #report-content .rp-desc{
+	top: auto;
+	bottom: 0;
+	opacity: 1;
+}
+.annualReports #report-content .publicatons-page-top-sec-img .rp-img-wrap:after{
+	opacity: 1;
+}
 @media(max-width: 1499px){
 
 }

@@ -38,3 +38,6 @@ nav.main-nav ul li.current-menu-item a{
 	color: #53bc20;
 }
 
+li.current-menu-item > a{
+	color: #000!important;
+}

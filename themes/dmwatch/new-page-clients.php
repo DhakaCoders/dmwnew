@@ -39,7 +39,7 @@ if (!empty($custom_title)) {
             if($clquery->have_posts()):
           ?>
           <div class="client-partners-items-wrap">
-            <ul class="ulc reset-list">
+            <ul class="ulc reset-list clearfix">
               <?php 
                while($clquery->have_posts()): $clquery->the_post();
                   $logos = get_field('intro');

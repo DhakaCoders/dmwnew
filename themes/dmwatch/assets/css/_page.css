@@ -134,7 +134,7 @@ ol li::before {
 
 
 .page-banner-des{
-	min-height: 641px;
+	min-height: 590px;
 }
 .page-banner-bg{
 	position: absolute;
@@ -219,7 +219,7 @@ ol li::before {
 	text-align: right;
 }
 .page-banner.page-bnr-rgt-con .page-banner-title{
-	font-size: 82px;
+	font-size: 60px;
 	color: #88BE43;
 }
 

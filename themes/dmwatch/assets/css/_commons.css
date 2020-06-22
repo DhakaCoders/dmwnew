@@ -96,15 +96,16 @@ Containers
 	width: 100%;
 }
 .container{
-	max-width: 1220px;
+	max-width: 1170px;
 	width: 100%;
 }
-.container-md{
-
+.container-md {
+    max-width: 1024px;
+    width: 100%;
 }
-
-.container-sm{
-
+.container-sm {
+    max-width: 990px;
+    width: 100%;
 }
 
 
@@ -200,12 +201,6 @@ ul.sub-menu li:before,
 ul.wpforms-field-required li:before{
 	content: none!important;
 }
-
-.container-sm {
-    max-width: 990px;
-    width: 100%;
-}
-
 
 /**
 Selects

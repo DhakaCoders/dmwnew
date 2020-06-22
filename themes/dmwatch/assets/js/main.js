@@ -394,6 +394,8 @@ $('.our-project-filter-btns form input').on('change', function(){
 });
 
 
+$('.dm-tp-useful-grd-item ul li').prepend('<span></span>');
+
     new WOW().init();
 
 })(jQuery);

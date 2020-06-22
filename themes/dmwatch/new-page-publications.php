@@ -32,14 +32,6 @@ get_header();
           ?>
           <li>
             <div class="publicatons-page-top-sec-innr clearfix">
-              <div class="publicatons-page-top-sec-des">
-                <div class="publicatons-top-title">
-                  <p>Recent Publication <?php echo get_the_date('Y'); ?></p>
-                </div>
-                <h3 class="publicatons-sec-one-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <span><?php echo get_the_date('Y'); ?> | Policy Brief</span>
-                <?php echo wpautop(cbv_get_excerpt()); ?>
-              </div>
               <div class="publicatons-page-top-sec-img">
                 <div class="rp-img">
                   <?php echo $pub_tag; ?>
@@ -49,6 +41,15 @@ get_header();
                   <span>Publication <?php echo get_the_date('Y'); ?> | Policy Brief</span>
                 </div>
               </div>
+              <div class="publicatons-page-top-sec-des">
+                <div class="publicatons-top-title">
+                  <p>Recent Publication <?php echo get_the_date('Y'); ?></p>
+                </div>
+                <h3 class="publicatons-sec-one-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <span><?php echo get_the_date('Y'); ?> | Policy Brief</span>
+                <?php echo wpautop(cbv_get_excerpt()); ?>
+              </div>
+              
             </div>
           </li>
           <?php endwhile; ?>

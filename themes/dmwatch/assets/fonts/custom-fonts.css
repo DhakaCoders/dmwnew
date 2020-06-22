@@ -61,3 +61,27 @@
          url('MontserratBold/MontserratBold.ttf') format('truetype'),
          url('MontserratBold/MontserratBold.svg#MontserratBold') format('svg');
 }
+
+
+@font-face {
+    font-family: 'Arialregular';
+    src: url('Arialregular/Arialregular.eot');
+    src: url('Arialregular/Arialregular.eot') format('embedded-opentype'),
+         url('Arialregular/Arialregular.woff2') format('woff2'),
+         url('Arialregular/Arialregular.woff') format('woff'),
+         url('Arialregular/Arialregular.ttf') format('truetype'),
+         url('Arialregular/Arialregular.svg#Arialregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('ArialMT/ArialMT.eot');
+    src: url('ArialMT/ArialMT.eot?#iefix') format('embedded-opentype'),
+        url('ArialMT/ArialMT.woff2') format('woff2'),
+        url('ArialMT/ArialMT.woff') format('woff'),
+        url('ArialMT/ArialMT.ttf') format('truetype'),
+        url('ArialMT/ArialMT.svg#ArialMT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

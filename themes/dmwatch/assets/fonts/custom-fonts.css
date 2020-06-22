@@ -139,3 +139,32 @@
     font-display: swap;
 }
 
+
+@font-face {
+    font-family: 'Verdana';
+    src: url('Verdana/Verdana.eot');
+    src: url('Verdana/Verdana.eot?#iefix') format('embedded-opentype'),
+        url('Verdana/Verdana.woff2') format('woff2'),
+        url('Verdana/Verdana.woff') format('woff'),
+        url('Verdana/Verdana.ttf') format('truetype'),
+        url('Verdana/Verdana.svg#Verdana') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Verdana-Bold';
+    src: url('Verdana-Bold/Verdana-Bold.eot');
+    src: url('Verdana-Bold/Verdana-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Verdana-Bold/Verdana-Bold.woff2') format('woff2'),
+        url('Verdana-Bold/Verdana-Bold.woff') format('woff'),
+        url('Verdana-Bold/Verdana-Bold.ttf') format('truetype'),
+        url('Verdana-Bold/Verdana-Bold.svg#Verdana-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+

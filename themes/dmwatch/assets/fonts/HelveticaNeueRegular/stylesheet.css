@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'HelveticaNeueRegular';
+    src: url('HelveticaNeueRegular/HelveticaNeueRegular.eot');
+    src: url('HelveticaNeueRegular/HelveticaNeueRegular.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaNeueRegular/HelveticaNeueRegular.woff2') format('woff2'),
+        url('HelveticaNeueRegular/HelveticaNeueRegular.woff') format('woff'),
+        url('HelveticaNeueRegular/HelveticaNeueRegular.ttf') format('truetype'),
+        url('HelveticaNeueRegular/HelveticaNeueRegular.svg#HelveticaNeueRegular') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -3,7 +3,7 @@
 }
 .dm-about-sec-inr{
 	background: #88BE43;
-	padding: 50px 70px 25px 45px;
+	padding: 50px 50px 40px 50px;
 	position: relative;
 	z-index: 12;
 	-webkit-box-shadow: 1px 3px 7px 0px rgba(147,147,147,1);
@@ -15,15 +15,15 @@
 	display: block;
 	font-size: 36px;
 	line-height: 1;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
 }
-.dm-about-sec-inr p{
-	font-size: 22px;
-	line-height: 35px;
-	color: #fff;
+.dm-about-sec-inr p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
 }
 .dm-about-sec-inr p a{
 	color: #2f760c;

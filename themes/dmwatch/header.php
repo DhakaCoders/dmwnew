@@ -43,7 +43,7 @@
                         <button><i class="fas fa-search"></i></button>
                     </form>
                   </div>
-                  <div class="hdr-topbar-grd quick-icon-dropdown">
+                  <div class="hdr-topbar-grd quick-icon-dropdown" style="display: none;">
                     <img src="<?php echo THEME_URI; ?>/assets/images/hdr-topbar-grd-img.png">
                     <div class="quick-dropdown-menu">
                       <ul class="reset-list clearfix">

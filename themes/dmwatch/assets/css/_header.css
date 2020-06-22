@@ -254,18 +254,19 @@ nav.main-nav ul.sub-menu li:hover:after {
 }
 .header .hdr-search{
 	margin-bottom: 15px;
+	width: 210px;
 }
 .hdr-search form{
 	position: relative;
-	max-width: 145px;
+	max-width: 210px;
 	width: 100%;
-	margin-right: 12px;
+	margin-right: 0;
 	display: flex;
 }
 .hdr-search form input[type="search"]{
 	width: 100%;
 	border: 1px solid #369b00;
-	height: 22px;
+	height: 29px;
 	border-radius: 30px;
 	font-size: 11px;
 	line-height: 1;
@@ -277,7 +278,7 @@ nav.main-nav ul.sub-menu li:hover:after {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	width: 35px;
+	width: 40px;
 	background: #6cbe31;
 	color: #fff;
 	display: flex;

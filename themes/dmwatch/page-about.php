@@ -31,7 +31,7 @@ $intro = get_field('introsec', $thisID);
 
 <?php if( $intro ): ?>
 <section class="dm-about-sec">
-  <div class="container">
+  <div class="container-md">
     <div class="row">
       <div class="col-md-12">
         <div class="dm-about-sec-inr">

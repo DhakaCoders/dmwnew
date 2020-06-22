@@ -50,7 +50,7 @@
                         <li>
                           <div class="quick-dropdown-menu-item">
                             <a href="#">
-                              <img src="<?php echo THEME_URI; ?>/assets/images/web-mail-icon.png">
+                              <i class="fas fa-envelope-open-text"></i>
                               <span>Web mail</span>
                             </a>
                           </div>
@@ -58,24 +58,8 @@
                         <li>
                           <div class="quick-dropdown-menu-item">
                             <a href="#">
-                              <img src="<?php echo THEME_URI; ?>/assets/images/web-mail-icon.png">
-                              <span>Web mail</span>
-                            </a>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="quick-dropdown-menu-item">
-                            <a href="#">
-                              <img src="<?php echo THEME_URI; ?>/assets/images/web-mail-icon.png">
-                              <span>Web mail</span>
-                            </a>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="quick-dropdown-menu-item">
-                            <a href="#">
-                              <img src="<?php echo THEME_URI; ?>/assets/images/web-mail-icon.png">
-                              <span>Web mail</span>
+                              <i class="fas fa-globe"></i>
+                              <span>Old website</span>
                             </a>
                           </div>
                         </li>

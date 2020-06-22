@@ -56,7 +56,7 @@ function report_search_script_load_more($args = array()) {
   echo '</ul>';
   echo '<div class="fl-see-all-btn">
   <div class="ajaxloading" id="searchloader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
-   <a href="#" id="searchloadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >SEE ALL</a>';
+   <a href="#" id="searchloadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Load More</a>';
    echo '</div>';
   else:
   echo '<div class="noresult" style="text-align:center; padding:20px 0;">No Result!</div>';
@@ -216,7 +216,7 @@ function report_script_load_more($args = array()) {
   echo '</ul>';
   echo '<div class="fl-see-all-btn-rep">
   <div class="ajaxloading" id="reportloader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
-   <a href="#" id="reportloadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >SEE ALL</a>';
+   <a href="#" id="reportloadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Load More</a>';
    echo '</div>';
 
 }
@@ -238,7 +238,7 @@ function ajax_report_script_load_more($args) {
         $ajax = true;
     }
     //number of posts per page default
-    $num = 3;
+    $num = 9;
     //page number
     $paged = 1;
     if(isset($_POST['page']) && !empty($_POST['page'])){
@@ -263,8 +263,8 @@ function ajax_report_script_load_more($args) {
     ?>
     <li>
       <div class="publicatons-page-top-sec-img">
-        <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
         <div class="rp-img-wrap">
+            <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
             <div class="rp-img">
               <?php echo $rep_tag; ?>
             </div>
@@ -273,6 +273,7 @@ function ajax_report_script_load_more($args) {
               <span>Publication <?php echo get_the_date('Y'); ?> | Policy Brief</span>
             </div>
         </div>
+
       </div>      
     </li>
     <?php

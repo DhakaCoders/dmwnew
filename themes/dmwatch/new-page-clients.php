@@ -48,7 +48,7 @@ if (!empty($custom_title)) {
               <li>
                 <div class="client-partners-items">
                   <?php if( !empty($logos['link']) ): ?>
-                    <a href="<?php echo $logos['link']; ?>" class="overlay-link"></a>
+                    <a target="_blank" href="<?php echo $logos['link']; ?>" class="overlay-link"></a>
                   <?php endif; ?>
                   <?php 
                     if( is_array($logIcon) ){

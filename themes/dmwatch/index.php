@@ -66,7 +66,7 @@ while( $rblogP->have_posts() ): $rblogP->the_post();
                 </div>
               </div>
             </div>
-<?php endwhile; ?>
+<?php endwhile; wp_reset_query(); wp_reset_postdata(); ?>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ while( $rblogP->have_posts() ): $rblogP->the_post();
 <?php 
 $rblogP1 = new WP_Query(array(
   'post_type' => 'post',
-  'posts_per_page' => 9,
+  'posts_per_page' => 12,
   'offset' => 1
 ));
 if( $rblogP1->have_posts() ):
@@ -90,13 +90,14 @@ if( $rblogP1->have_posts() ):
       <div class="col-md-12">
         <div class="blog-page-all-blog-innr">
           <div class="blog-page-all-blog-hedding">
-            <h3>Other Posts</h3>
+            <h3>All Posts</h3>
           </div>
           <div class="blog-page-all-blog-cntlr">
             <ul class="reset-list clearfix">
 <?php 
 while( $rblogP1->have_posts() ): $rblogP1->the_post();
-  $imgID = get_post_thumbnail_id();
+  $imgID = get_post_thumbnail_id(get_the_ID());
+  $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ) );
   if( !empty( $imgID ) ) $useImg = cbv_get_image_src($imgID); else $useImg = THEME_URI . '/assets/images/dm-pa-grid-img.png';
 ?>
               <li>

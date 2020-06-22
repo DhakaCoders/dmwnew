@@ -1,65 +1,55 @@
-<?php 
+<?php
 get_header();
-while ( have_posts() ) :
-  the_post();
-  $categories = get_the_terms( get_the_ID(), 'category' );
-  $term_name = '';
-  if ( ! empty( $categories ) ) {
-      foreach( $categories as $category ) {
-         $term_name = ' | '.$category->name; 
-      }
-  }
-
-$thisID = get_option( 'page_for_posts' );
-$standaardbanner = get_field('bannerimage', $thisID);
-if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-blog-details.jpg';
+$thisID = get_the_ID();
+while( have_posts() ): the_post();
+	$fimgID = get_post_thumbnail_id();
+	$imgsrc = cbv_get_image_src($fimgID);
+	$bannerImgId = get_field('banner_image');
+	$bannerImgSrc = cbv_get_image_src($bannerImgId);
+	$banner_title = get_field('banner_title');
+	$banner_description = get_field('banner_description');
+  if( empty( $bannerImgSrc ) ) $bannerImgSrc = THEME_URI .'/assets/images/an-our-page-banner-bg.jpg';
+  if( empty( $banner_title ) ) $banner_title = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
+  if( empty( $banner_description ) ) $banner_description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
 ?>
-<section class="page-banner page-bnr-blog-details" style="overflow: hidden;">
-  <div class="page-banner-controller">
-    <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
-    </div>
-    <div class="page-banner-des">
-      <div class="page-banner-inr">
-        <div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- end of page-banner -->
-
-<section class="dm-blog-details-des-sec">
+<section class="dm-prarpip-banner-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="dm-blog-details-des-sec-inr">
-          <h1 class="dm-bd-des-title"><?php the_title(); ?></h1>
-          <strong><?php echo get_the_date('M d, Y'); ?><?php echo $term_name; ?></strong>
-          <?php the_excerpt(); ?>
+        <div class="dm-prarpip-banner-sec-inr">
+          <span>Blog | <?php echo get_the_date('M d, Y'); ?></span>
+          <h1 class="dm-prarpip-banner-sec-title"><?php the_title(); ?></h1>
+          <?php if( !empty( $bannerImgSrc ) ): ?>
+          <div class="dm-prarpip-banner-img inline-bg" style="background: url('<?php echo $bannerImgSrc; ?>');">
+          </div>
+          <div class="dm-prarpip-banner-des">
+          	<?php 
+          	if( !empty( $banner_title ) ) printf('<h2 class="dm-prarpip-banner-des-title">%s</h2>', $banner_title);
+          	echo wpautop( $banner_description );
+          	?>
+          </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="dm-bd-grd-sec-ctlr">
-  <section class="dm-bd-grd-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="dm-bd-grd-sec-inr">
-            <div class="dm-bd-grd-item-des">
-              <?php the_content(); ?>
-            </div>
-          </div>
+<section class="dm-prarpip-des-sec">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="dm-prarpip-des-sec-inr">
+          <?php the_content(); ?>
         </div>
       </div>
     </div>
-  </section>
-</div>
-
+  </div>
+</section>
 
 <?php 
 endwhile;
+
 get_template_part('templates/footer', 'top');
 get_footer(); 
 ?>

@@ -105,7 +105,7 @@
     </div>
   </div> 
   <div class="ftr-msg-icon">
-    <img src="<?php echo THEME_URI; ?>/assets/images/msg-icon.png">
+    <a href="mailto:"><img src="<?php echo THEME_URI; ?>/assets/images/msg-icon.png"></a>
   </div>
 </footer>
 <?php wp_footer(); ?>

@@ -113,9 +113,9 @@ if( !empty($textcolor) ):
 
 
 <?php
-  $showhideservices = get_field('showhideservices', $thisID);
+  $showhideservices = get_field('showhideservices', 384);
   if( $showhideservices ):
-    $fservices = get_field('featuredservices', $thisID);
+    $fservices = get_field('featuredservices', 384);
     if( $fservices ):
      $services = $fservices['services'];
 ?>
@@ -169,9 +169,9 @@ if( !empty($textcolor) ):
 <?php endif; ?>
 
 <?php
-  $showhideproject = get_field('showhideproject', $thisID);
+  $showhideproject = get_field('showhideproject', 384);
   if( $showhideproject ):
-    $projects = get_field('projectfilter', $thisID);
+    $projects = get_field('projectfilter', 384);
     if( $projects ):
 ?>
 <section class="dm-featured-project-sec">
@@ -245,7 +245,7 @@ if( !empty($textcolor) ):
               </div>
               <?php endif; wp_reset_postdata(); ?>
               <?php }else{ ?>
-                <div class="noresult" style="text-align:center; padding:20px 0;">No Result!</div>
+                <div class="noresult" style="text-align:center; padding:20px 0;">No Results. Please check back soon!</div>
               <?php } ?>
             </div>
           </div>

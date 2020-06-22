@@ -344,6 +344,7 @@ form .dropdown-menu li a{
     padding: 2px;
     border-radius: 3px;
     margin-left: auto; 
+    text-transform: uppercase;
 }
 
 .fl-see-all-btn a:hover,

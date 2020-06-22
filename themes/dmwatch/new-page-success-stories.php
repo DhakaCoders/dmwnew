@@ -50,7 +50,7 @@ get_header();
                     'order'=> 'ASC',
                     'tax_query' => array(
                       array(
-                         'taxonomy' => 'publication_type',
+                         'taxonomy' => 'story_types',
                           'field'    => 'slug',
                           'terms'    => 'notable-events',
                           ),
@@ -117,7 +117,7 @@ get_header();
                     'order'=> 'ASC',
                     'tax_query' => array(
                       array(
-                         'taxonomy' => 'publication_type',
+                         'taxonomy' => 'story_types',
                           'field'    => 'slug',
                           'terms'    => 'initiate',
                           ),
@@ -240,7 +240,7 @@ get_header();
                     'order'=> 'ASC',
                     'tax_query' => array(
                       array(
-                         'taxonomy' => 'publication_type',
+                         'taxonomy' => 'story_types',
                           'field'    => 'slug',
                           'terms'    => 'advocacy',
                           ),

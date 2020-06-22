@@ -214,13 +214,13 @@
 	
 }
 .hmFeaServicesSlider{
-	margin: 0 -10px!important;
+	margin: 0 -15px!important;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
 .hmFeaServicesSlideItem{
-	padding: 0 10px;
+	padding: 0 15px;
 }
 
 .hm-fea-service-item-img img{

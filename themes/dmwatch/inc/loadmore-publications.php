@@ -69,7 +69,7 @@ endif; wp_reset_postdata();
   echo '</ul>';
   echo '<div class="fl-see-all-btn">
   <div class="ajaxloading" id="publicloader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
-   <a href="#" id="publicloadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >SEE ALL</a>';
+   <a href="#" id="publicloadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Load More</a>';
    echo '</div>';
   else:
   echo '<div class="noresult" style="text-align:center; padding:20px 0;">No Result!</div>';

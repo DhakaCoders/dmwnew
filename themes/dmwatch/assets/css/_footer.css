@@ -187,8 +187,14 @@
 	bottom: 35px;
 	right: 10px;
 	cursor: pointer;
+	transition: all 0.4s;
 }
-
+.ftr-msg-icon a{
+	display: block;
+}
+.ftr-msg-icon a:hover img{
+	transform: scale(1.1);
+}
 .ftr-cpwrt span p {
     margin: 0;
 }

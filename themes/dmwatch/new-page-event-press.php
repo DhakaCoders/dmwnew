@@ -36,16 +36,12 @@ $bcontent = get_field('description', $thisID);
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="eventLinksstep1">
-          <?php 
-            $menuOptions = array( 
-                'theme_location' => 'cbv_event_menu', 
-                'menu_class' => 'clearfix reset-list',
-                'container' => '',
-                'container_class' => ''
-              );
-            wp_nav_menu( $menuOptions ); 
-          ?>  
+        <div class="eventLinksstep1"> 
+          <ul>
+            <li><a href="<?php echo home_url(''); ?>/events/">Events</a></li>
+            <li><a href="<?php echo home_url(''); ?>/events/media/">Media</a></li>
+            <li class="active"><a href="javascript:void()">Press</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -69,51 +65,52 @@ $bcontent = get_field('description', $thisID);
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
               </div>
               <div class="event-pp-report-page-tab-1-grds">
+              <?php 
+                $ucquery = new WP_Query(array( 
+                    'post_type'=> 'press',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'presstype',
+                          'field'    => 'slug',
+                          'terms'    => 'press-release',
+                          ),
+                    ),
+                  ) 
+                );
+                if($ucquery->have_posts()):
+              ?>
                 <ul class="clearfix reset-list">
+                <?php 
+                 while($ucquery->have_posts()): $ucquery->the_post();
+                 $attach_id = get_post_thumbnail_id(get_the_ID());
+                  if( !empty($attach_id) )
+                    $event_src = cbv_get_image_src($attach_id);
+                  else
+                    $event_src = ''; 
+                  $ninfo = get_field('news_info');  
+                ?>
                   <li>
                     <div class="event-pp-report-page-tab-1-grd">
                       <div class="epprpt-grd-fea-img">
-                        <a href="#" class="overlay-link"></a>
-                        <div class="inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/epprpt-grd-fea-img-01.jpg);"></div>
+                        <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                        <div class="inline-bg" style="background: url(<?php echo $event_src; ?>"></div>
                       </div>
                       <div class="mhc epprpt-grd-des">
-                        <span>JUNE  27, 2020</span>
-                        <h4 class="epprpt-grd-des-title"><a href="#">Lorem Ipsum</a></h4>
-                        <p>Lorem Ipsum Executive Officer, ABD</p>
-                        <a href="#">View Full <i></i></a>
+                        <span><?php echo get_the_date('M d, Y'); ?></span>
+                        <h4 class="epprpt-grd-des-title"><a href="#"><?php the_title(); ?></a></h4>
+                        <p><?php echo $ninfo; ?></p>
+                        <a href="<?php the_permalink(); ?>">View Full <i></i></a>
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="event-pp-report-page-tab-1-grd">
-                      <div class="epprpt-grd-fea-img">
-                        <a href="#" class="overlay-link"></a>
-                        <div class="inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/epprpt-grd-fea-img-02.jpg);"></div>
-                      </div>
-                      <div class="mhc epprpt-grd-des">
-                        <span>JUNE  27, 2020</span>
-                        <h4 class="epprpt-grd-des-title"><a href="#">Lorem Ipsum</a></h4>
-                        <p>Lorem Ipsum Executive Officer, ABD</p>
-                        <a href="#">View Full <i></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="event-pp-report-page-tab-1-grd">
-                      <div class="epprpt-grd-fea-img">
-                        <a href="#" class="overlay-link"></a>
-                        <div class="inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/epprpt-grd-fea-img-03.jpg);"></div>
-                      </div>
-                      <div class="mhc epprpt-grd-des">
-                        <span>JUNE  27, 2020</span>
-                        <h4 class="epprpt-grd-des-title"><a href="#">Lorem Ipsum</a></h4>
-                        <p>Lorem Ipsum Executive Officer, ABD</p>
-                        <a href="#">View Full <i></i></a>
-                      </div>
-                    </div>
-                  </li>
+                  <?php endwhile; ?>
                 </ul>
-                <div class="fl-see-all-btn">
+              <?php endif; ?>
+                <div class="fl-see-all-btn" style="display: none;">
                   <a href="#">SEE ALL</a>
                 </div>
               </div>
@@ -127,57 +124,53 @@ $bcontent = get_field('description', $thisID);
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
               </div>
               <div class="event-pp-report-page-tab-2-grds">
+              <?php 
+                $ucquery = new WP_Query(array( 
+                    'post_type'=> 'press',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'presstype',
+                          'field'    => 'slug',
+                          'terms'    => 'report',
+                          ),
+                    ),
+                  ) 
+                );
+                if($ucquery->have_posts()):
+              ?>
                 <ul class="clearfix reset-list">
+                <?php 
+                 while($ucquery->have_posts()): $ucquery->the_post();
+                 $attach_id = get_post_thumbnail_id(get_the_ID());
+                  if( !empty($attach_id) )
+                    $event_src = cbv_get_image_src($attach_id);
+                  else
+                    $event_src = ''; 
+                  $ninfo = get_field('news_info');  
+                ?>
                   <li>
                     <div class="event-pp-report-page-tab-2-grd">
                       <div class="epprpt2-grd-fea-img">
-                        
-                        <div class="inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/epprpt2-grd-fea-img-01.jpg);">
-                          <a href="#" class="overlay-link"></a>
+                        <div class="inline-bg" style="background: url(<?php echo $event_src; ?>">
+                          <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                         </div>
                       </div>
                       <div class="epprpt2-grd-des">
                         <span>JUNE  27, 2020</span>
-                        <h4 class="epprpt-grd-des-title"><a href="#">Lorem Ipsum</a></h4>
-                        <strong>Lorem Ipsum Executive Officer, ABD</strong>
-                        <p>Water, sanitation and hygiene are at the very core of sustainable development, Water scarcity. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
+                        <h4 class="epprpt-grd-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                        <strong><?php echo $ninfo; ?></strong>
+                        <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading.</a></p>
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="event-pp-report-page-tab-2-grd">
-                      <div class="epprpt2-grd-fea-img">
-                        
-                        <div class="inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/epprpt2-grd-fea-img-02.jpg);">
-                          <a href="#" class="overlay-link"></a>
-                        </div>
-                      </div>
-                      <div class="epprpt2-grd-des">
-                        <span>JUNE  27, 2020</span>
-                        <h4 class="epprpt-grd-des-title"><a href="#">Lorem Ipsum</a></h4>
-                        <strong>Lorem Ipsum Executive Officer, ABD</strong>
-                        <p>Water, sanitation and hygiene are at the very core of sustainable development, Water scarcity. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="event-pp-report-page-tab-2-grd">
-                      <div class="epprpt2-grd-fea-img">
-                        
-                        <div class="inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/epprpt2-grd-fea-img-03.jpg);">
-                          <a href="#" class="overlay-link"></a>
-                        </div>
-                      </div>
-                      <div class="epprpt2-grd-des">
-                        <span>JUNE  27, 2020</span>
-                        <h4 class="epprpt-grd-des-title"><a href="#">Lorem Ipsum</a></h4>
-                        <strong>Lorem Ipsum Executive Officer, ABD</strong>
-                        <p>Water, sanitation and hygiene are at the very core of sustainable development, Water scarcity. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Unknown printer took a galley of type and scrambled it to m  <a href="#">Continue Reading.</a> </p>
-                      </div>
-                    </div>
-                  </li>
+<?php endwhile; ?>
                 </ul>
-                <div class="fl-see-all-btn">
+              <?php endif; ?>
+                <div class="fl-see-all-btn" style="display: none;">
                   <a href="#">SEE ALL</a>
                 </div>
               </div>

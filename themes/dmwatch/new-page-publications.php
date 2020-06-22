@@ -133,6 +133,7 @@ get_header();
           </ul>
           <div class="search-filter-btn">
             <button>FILTER NOW</button>
+            <button class="clearnow" type="reset">RESET</button>
           </div>
           </form>
         </div>
@@ -141,17 +142,16 @@ get_header();
   </div>
 </section>
 
+<?php if( !empty($ptype) OR !empty($pyears) ): ?>
 <section class="filter-result-sec-four">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="filter-result-innr">
-          <?php if( !empty($ptype) OR !empty($pyears) ): ?>
           <div class="filter-result-hedding">
             <h2 class="opfhdr-title">FILTER RESULT</h2>
           </div>
           <span id="filter" data-type="<?php echo $ptype; ?>" data-year="<?php echo $pyears; ?>" style="display: none;"></span>
-          <?php endif; ?>
           <div class="filter-result-items-wrap">
             <?php echo do_shortcode('[ajax_public_posts]'); ?>
           </div>
@@ -160,6 +160,7 @@ get_header();
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <?php 
 get_template_part('templates/footer', 'top');

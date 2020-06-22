@@ -91,9 +91,13 @@
     <div class="row">
       <div class="col-md-12">
         <div class="hm-practice-area-items hmPracticeAreaSlider">
-          <?php foreach( $practices as $pract ): ?>
+          <?php foreach( $practices as $pract ): 
+              //printr($pract);
+          $link1 = $pract['link']; 
+          ?>
           <div class="hmPracticeAreaSlideItem">
             <div class="hm-practice-area-item">
+              <a href="<?php echo $pract['link']; ?>" class="overlay-link"></a>
               <div class="hm-practice-area-fea-img">
                 <?php 
                 if( !empty($pract['image']) ):
@@ -102,7 +106,6 @@
                 ?>
               </div>
               <div class="hm-practice-area-item-des">
-                <a href="#" class="overlay-link"></a>
                 <?php 
                   if( !empty($pract['title']) ) printf('<h4 class="mHc hm-practice-area-item-title">%s</h4>', $pract['title']);
                   if( !empty($pract['description']) ) echo wpautop( $pract['description'] );

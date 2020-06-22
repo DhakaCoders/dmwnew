@@ -12,11 +12,6 @@ Text Domain: dmwatch
 */
 
 @import url('assets/css/main.css');
-
-
-.ftr-msg-icon{
-	display: none;
-}
 body.media{
     display: block;
 }

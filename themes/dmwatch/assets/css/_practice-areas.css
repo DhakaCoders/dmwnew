@@ -231,11 +231,6 @@ dm-pa-service-sec-wrp
 	text-transform: initial;
 	color: #606060;
 }
-
-.hm-fea-services-sec-2 .hm-fea-service-item-des p{
-	text-align: left;
-}
-
 .hm-fea-services-sec-2.hm-fea-services-sec{
 	-webkit-box-shadow: 0px 0px 17px 1px rgba(226,226,226,1);
 	-moz-box-shadow: 0px 0px 17px 1px rgba(226,226,226,1);

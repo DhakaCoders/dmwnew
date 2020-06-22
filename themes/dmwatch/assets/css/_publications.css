@@ -83,6 +83,7 @@
 	max-width: 74%;
 	width: 100%;
 	padding-right: 37px;
+	text-align: right;
 }
 .filter-result-items-des span{
     width: 100%;
@@ -202,6 +203,9 @@ ul.publicatinList li:nth-child(2n+2) .filter-result-items-des{
 	padding-right: 0;
 	padding-left: 37px;
 	text-align: left;
+}
+ul.publicatinList li:nth-child(2n+2) .filter-result-items-img{
+	order: 1;
 }
 ul.publicatinList li:nth-child(2n+2) .filter-result-items-des p{
 	padding-left: 0;

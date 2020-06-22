@@ -37,15 +37,11 @@ $bcontent = get_field('description', $thisID);
     <div class="row">
       <div class="col-sm-12">
         <div class="eventLinksstep1">
-          <?php 
-            $menuOptions = array( 
-                'theme_location' => 'cbv_event_menu', 
-                'menu_class' => 'clearfix reset-list',
-                'container' => '',
-                'container_class' => ''
-              );
-            wp_nav_menu( $menuOptions ); 
-          ?>  
+          <ul>
+            <li class="active"><a href="javascript:void()">Events</a></li>
+            <li><a href="<?php echo home_url(''); ?>/events/media/">Media</a></li>
+            <li><a href="<?php echo home_url(''); ?>/events/press/">Press</a></li>
+          </ul>  
         </div>
       </div>
     </div>

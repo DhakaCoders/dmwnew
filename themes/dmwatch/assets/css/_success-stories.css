@@ -57,6 +57,12 @@
 	flex-wrap: wrap;
 	align-items: center;
 }
+.advocacyCn .upcoming-event-con .upcoming-event-con-lft{
+	order: 2;
+}
+.advocacyCn .upcoming-event-con .upcoming-event-con-rgt{
+	order: 1;
+}
 .advocacyCn .upcoming-event-con-lft{
 	width: 44%;
 }

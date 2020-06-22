@@ -36,16 +36,12 @@ $bcontent = get_field('description', $thisID);
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="eventLinksstep1">
-          <?php 
-            $menuOptions = array( 
-                'theme_location' => 'cbv_event_menu', 
-                'menu_class' => 'clearfix reset-list',
-                'container' => '',
-                'container_class' => ''
-              );
-            wp_nav_menu( $menuOptions ); 
-          ?>  
+        <div class="eventLinksstep1">  
+          <ul>
+            <li><a href="<?php echo home_url(''); ?>/events/">Events</a></li>
+            <li class="active"><a href="javascript:void()">Media</a></li>
+            <li><a href="<?php echo home_url(''); ?>/events/press/">Press</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -72,12 +68,96 @@ $bcontent = get_field('description', $thisID);
         <div class="event-media-page-tab-con-inr">
           <div id="tab-1" class="fl-tab-content current">
             <div class="event-media-page-tab-con-cntlr emptc-tab-1-cntlr">
-              <?php echo do_shortcode( '[ajax_news_posts]' ); ?>
+              <?php 
+                $ucquery = new WP_Query(array( 
+                    'post_type'=> 'news',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'news_cat',
+                          'field'    => 'slug',
+                          'terms'    => 'news',
+                          ),
+                    ),
+                  ) 
+                );
+                if($ucquery->have_posts()):
+              ?>
+              <ul class="clearfix reset-list">
+                <?php 
+                 while($ucquery->have_posts()): $ucquery->the_post();
+                 $attach_id = get_post_thumbnail_id(get_the_ID());
+                  if( !empty($attach_id) )
+                    $event_src = cbv_get_image_src($attach_id);
+                  else
+                    $event_src = ''; 
+                  $ninfo = get_field('news_info');  
+                ?>
+                <li>
+                  <div class="event-media-page-tab-con-row clearfix">
+                    <div class="event-media-page-tab-con-fea-img">
+                      <?php echo cbv_get_image_tag($attach_id); ?>
+                    </div>
+                    <div class="event-media-page-tab-con-des">
+                      <h3 class="emptcd-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                      <span><?php echo $ninfo; ?></span>
+                      <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a> </p>
+                    </div>
+                  </div>
+                </li>
+                <?php endwhile; ?>
+              </ul>
+              <?php endif; ?>
             </div>
           </div>
           <div id="tab-2" class="fl-tab-content">
             <div class="event-media-page-tab-con-cntlr emptc-tab-2-cntlr">
-              <?php echo do_shortcode( '[ajax_media_posts]' ); ?>
+              <?php 
+                $ucquery = new WP_Query(array( 
+                    'post_type'=> 'news',
+                    'post_status' => 'publish',
+                    'posts_per_page' =>-1,
+                    'orderby' => 'date',
+                    'order'=> 'ASC',
+                    'tax_query' => array(
+                      array(
+                         'taxonomy' => 'news_cat',
+                          'field'    => 'slug',
+                          'terms'    => 'news',
+                          ),
+                    ),
+                  ) 
+                );
+                if($ucquery->have_posts()):
+              ?>
+<ul class="clearfix reset-list">
+                <?php 
+                 while($ucquery->have_posts()): $ucquery->the_post();
+                 $attach_id = get_post_thumbnail_id(get_the_ID());
+                  if( !empty($attach_id) )
+                    $event_src = cbv_get_image_src($attach_id);
+                  else
+                    $event_src = ''; 
+                  $ninfo = get_field('news_info');  
+                ?>
+  <li>
+    <div class="event-media-page-tab-con-row clearfix">
+      <div class="event-media-page-tab-con-fea-img">
+        <?php echo cbv_get_image_tag($attach_id); ?>
+      </div>
+      <div class="event-media-page-tab-con-des">
+        <h3 class="emptcd-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <span><?php echo $ninfo; ?></span>
+        <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a> </p>
+      </div>
+    </div>
+  </li>
+  <?php endwhile; ?>
+</ul>
+<?php endif; ?>
             </div>
           </div>
         </div>

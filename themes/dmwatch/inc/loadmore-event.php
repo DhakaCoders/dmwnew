@@ -9,7 +9,7 @@ function events_script_load_more($args = array()) {
   echo '</div>';
   echo '<div class="fl-see-all-btn">
   <div class="ajaxloading" id="ajxaloader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
-   <a href="#" id="loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >SEE ALL</a>';
+   <a href="#" id="loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Load More</a>';
    echo '</div>';
 
 }

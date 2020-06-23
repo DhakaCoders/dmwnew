@@ -34,19 +34,20 @@
 	color: #2B2829;
 }
 
-.dm-vision-mision-sec{
-	background: #F5F7F7;
-	padding: 60px 0 35px 0;
+.dm-vision-mision-sec {
+    background: #F5F7F7;
+    padding: 45px 0 25px 0;
 }
 .dm-vm-title{
 	display: block;
-	font-size: 50px;
+	font-size: 30px;
 	line-height: 1;
 	margin-bottom: 20px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #7fb23b;
 	text-align: center;
+	font-family: 'HelveticaNeueBold';
 }
 .dm-vm-title span{
 	color: #606060;
@@ -91,37 +92,39 @@
 }
 
 .dm-vm-grd-item-title{
+	font-family: 'Verdana';
 	display: block;
-	font-size: 34px;
+	font-size: 24px;
 	line-height: 1;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	font-weight: 700;
 	color: #7FB23B;
 	text-transform: uppercase;
 }
 .dm-vm-grd-item p{
-	font-size: 20px;
-	line-height: 33px;
+	font-size: 17px;
+	line-height: 27px;
 	color: #606060;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Arial';
 }
 
 
 .dm-about-value-sec{
-	margin-bottom: 110px;
+	/*margin-bottom: 110px;*/
 	background: #F5F7F7;
-	padding: 45px 0 50px;
+	padding: 50px 0 50px;
 }
 
 .dm-about-value-title{
 	display: block;
-	font-size: 50px;
+	font-size: 30px;
 	line-height: 1;
-	margin-bottom: 40px;
+	margin-bottom: 45px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #7FB23B;
 	text-align: center;
+	font-family: 'HelveticaNeueBold';
 }
 .dm-about-value-sec-inr ul{
 	padding-left: 200px;
@@ -143,10 +146,10 @@
     top: 9px;
 }
 .dm-about-value-sec-inr ul li strong {
-    font-size: 30px;
+    font-size: 24px;
     color: #606060;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 5px;
+    font-family: 'Verdana';
+    margin-bottom: 10px;
     font-weight: normal;
     display: block;
 }
@@ -154,7 +157,10 @@
 	clear: left;
 }
 .dm-about-value-sec-inr ul li p{
-	font-size: 16px;
+	font-size: 17px;
+	line-height: 27px;
+	color: #606060;
+	font-family: 'Arial';
 }
 .continue-reading-desc{
 	display: none;

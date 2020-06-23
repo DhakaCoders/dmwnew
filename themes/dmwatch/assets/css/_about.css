@@ -108,7 +108,9 @@
 	font-family: 'Arial';
 }
 
-
+.main-slide-text{
+	margin-bottom: 20px;
+}
 .dm-about-value-sec{
 	/*margin-bottom: 110px;*/
 	background: #F5F7F7;

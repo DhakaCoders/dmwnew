@@ -22,10 +22,11 @@
               <div class="main-slider-des">
                 <?php 
                 if( !empty($hslide['title']) ) printf('<strong class="main-slide-des-title">%s</strong>', $hslide['title']); 
+                if( !empty($hslide['description']) ) printf('<div class="main-slide-text">%s</div>', $hslide['description']); 
 
                   $hlink = $hslide['link'];
                   if( is_array( $hlink ) &&  !empty( $hlink['url'] ) ){
-                      printf('<a href="%s" target="%s">%s</a>', $hlink['url'], $hlink['target'], $hlink['title']); 
+                      printf('<div class="main-slide-link"><a href="%s" target="%s">%s</a></div>', $hlink['url'], $hlink['target'], $hlink['title']); 
                   }
                 ?>
               </div>

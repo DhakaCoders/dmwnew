@@ -129,7 +129,7 @@ ol li::before {
 /*page banner*/
 .page-banner{
 	position: relative;
-	margin-bottom: 100px;
+	margin-bottom: 0;
 }
 
 

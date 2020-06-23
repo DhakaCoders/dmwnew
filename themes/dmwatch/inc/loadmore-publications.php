@@ -158,6 +158,7 @@ function ajax_public_script_load_more($args, $recentID = '', $type='', $year = '
       ) 
     );
     if($query->have_posts()){
+    $post_count = $query->found_posts;
     while($query->have_posts()): $query->the_post();
     $attach_id = get_post_thumbnail_id(get_the_ID());
     if( !empty($attach_id) )
@@ -183,6 +184,10 @@ function ajax_public_script_load_more($args, $recentID = '', $type='', $year = '
     </li>
     <?php
     endwhile;
+
+    if( $post_count <= $num  ){
+      echo '<style>.fl-see-all-btn{display:none;}</style>';
+    }
      
     }else{
       //echo '<div class="postnot-found" style="text-align:center; padding:20px 0;">No results!</div>';

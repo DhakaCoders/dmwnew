@@ -141,7 +141,10 @@
     <div class="row">
       <div class="col-md-12">
         <div class="hm-fea-services-sec-hdr">
-        <?php if( !empty($service['title']) ) printf('<h2 class="hmfsshdr-title">%s</h2>', $service['title']); ?>
+        <?php 
+        if( !empty($service['title']) ) printf('<h2 class="hmfsshdr-title">%s</h2>', $service['title']); 
+        if( !empty($service['description']) ) echo wpautop($service['description']); 
+        ?>
         </div>
       </div>
     </div>

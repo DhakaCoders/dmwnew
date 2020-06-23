@@ -13,7 +13,7 @@
 }
 .dm-about-sec-title{
 	display: block;
-	font-size: 36px;
+	font-size: 30px;
 	line-height: 1;
 	margin-bottom: 20px;
 	font-weight: 700;
@@ -92,14 +92,13 @@
 }
 
 .dm-vm-grd-item-title{
-	font-family: 'Verdana';
+	font-family: 'Verdana-bold';
 	display: block;
-	font-size: 24px;
+	font-size: 23px;
 	line-height: 1;
 	margin-bottom: 15px;
 	font-weight: 700;
 	color: #7FB23B;
-	text-transform: uppercase;
 }
 .dm-vm-grd-item p{
 	font-size: 17px;
@@ -148,7 +147,7 @@
     top: 9px;
 }
 .dm-about-value-sec-inr ul li strong {
-    font-size: 24px;
+    font-size: 23px;
     color: #606060;
     font-family: 'Verdana';
     margin-bottom: 10px;
@@ -188,9 +187,6 @@
 	.dm-about-sec-inr {
 	    background: #88BE43;
 	    padding: 45px 65px 48px 45px;
-	}
-	.dm-about-sec-title {
-	    margin-bottom: 25px;
 	}
 	.dm-about-sec-inr p br{
 	    display: none;	
@@ -242,10 +238,6 @@
 	.dm-about-sec-inr {
 	    padding: 40px 30px 30px 45px;
 	}
-	.dm-about-sec-title {
-	    margin-bottom: 20px;
-	    font-size: 32px;
-	}
 	.dm-about-sec-inr p {
 	    font-size: 18px;
 	    line-height: 28px;
@@ -263,9 +255,6 @@
 	.dm-vm-grd-item p{
 		font-size: 20px;
 		line-height: 1.5;
-	}
-	.dm-vm-grd-item-title {
-	    font-size: 38px;
 	}
 	.dm-about-value-sec {
 	    margin-bottom: 75px;
@@ -299,10 +288,6 @@
 @media(max-width: 767px){
 	.dm-about-sec-inr {
 	    padding: 40px 30px 30px 30px;
-	}
-	.dm-about-sec-title {
-	    margin-bottom: 15px;
-	    font-size: 30px;
 	}
 	.dm-vision-mision-sec {
 	    padding: 40px 0 25px 0;
@@ -364,10 +349,6 @@
 	.dm-about-sec-inr {
 	    padding: 35px 20px 25px 40px;
 	}
-	.dm-about-sec-title {
-	    margin-bottom: 12px;
-	    font-size: 28px;
-	}
 	.dm-about-sec-inr p {
 	    line-height: 24px;
 	}
@@ -376,9 +357,6 @@
 	}
 	.dm-vm-grd-item {
 	    padding: 115px 20px 30px 25px;
-	}
-	.dm-vm-grd-item-title {
-	    font-size: 30px;
 	}
 	.dm-vm-grd-item p {
 	    font-size: 18px;
@@ -405,18 +383,11 @@
 	.dm-about-sec-inr {
 	    padding: 35px 10px 25px 20px;
 	}
-	.dm-about-sec-title {
-	    margin-bottom: 15px;
-	    font-size: 27px;
-	}
 	.dm-about-sec-inr p {
 	    font-size: 17px;
 	}
 	.dm-vm-title {
 	    font-size: 27px;
-	}
-	.dm-vm-grd-item-title {
-	    font-size: 28px;
 	}
 	.dm-vm-grd-item p {
 	    font-size: 16px;

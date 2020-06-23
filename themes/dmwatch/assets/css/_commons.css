@@ -20,10 +20,10 @@ body {
     color: #3b3b3b;
     font-size: 17px;
     line-height: 24px;
-    /*font-family: 'FranklinGothic-Book';*/
-   /* font-family: 'Raleway', sans-serif;*/
     font-family: 'Arial';
-   /* font-weight: 400;*/
+    font-weight: normal;
+ 	/*font-family: 'FranklinGothic-Book';*/
+   /* font-family: 'Raleway', sans-serif;*/
 }
 p{
 	line-height: 27px;

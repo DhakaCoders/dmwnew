@@ -29,17 +29,13 @@ dm-contact-form-sec-wrp
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
-	font-size: 25px;
-	line-height: 27px;
+	font-size: 17px;
 	color: #757575;
 	padding-bottom: 120px;
 }
 .dm-contact-form-head-title{
 	display: block;
-	font-size: 50px;
-	line-height: 52px;
 	color: #74A334;
-	font-weight: 500;
 	margin-bottom: 15px;
 	text-transform: uppercase;
 }

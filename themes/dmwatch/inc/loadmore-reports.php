@@ -148,6 +148,7 @@ function ajax_report_search_script_load_more($args, $type='', $year = '') {
       $query = new WP_Query();
     }
     if($query->have_posts()){
+    $post_count = $query->found_posts;
     while($query->have_posts()): $query->the_post();
     $attach_id = get_post_thumbnail_id(get_the_ID());
     if( !empty($attach_id) )
@@ -186,6 +187,10 @@ function ajax_report_search_script_load_more($args, $type='', $year = '') {
     </li>
     <?php
     endwhile;
+
+    if( $post_count <= $num  ){
+      echo '<style>.fl-see-all-btn{display:none;}</style>';
+    }
      
     }else{
       //echo '<div class="postnot-found" style="text-align:center; padding:20px 0;">No results!</div>';
@@ -254,6 +259,7 @@ function ajax_report_script_load_more($args) {
       ) 
     );
     if($query->have_posts()){
+    $post_count = $query->found_posts;
     while($query->have_posts()): $query->the_post();
     $attach_id = get_post_thumbnail_id(get_the_ID());
     if( !empty($attach_id) )
@@ -278,6 +284,10 @@ function ajax_report_script_load_more($args) {
     </li>
     <?php
     endwhile;
+
+    if( $post_count <= $num  ){
+      echo '<style>.fl-see-all-btn-rep{display:none;}</style>';
+    }
      
     }else{
       //echo '<div class="postnot-found" style="text-align:center; padding:20px 0;">No results!</div>';

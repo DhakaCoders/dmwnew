@@ -36,16 +36,14 @@ dm-project-info-sec-wrp
 }
 .dm-project-info-rgt-dsc p {
     margin-bottom: 48px;
-    line-height: 40px;
-    font-size: 22px;
-    margin-top: -10px;
+    line-height: 1.2;
+    font-size: 18px;
 }
 .dm-project-info-rgt-dsc span{
 	display: inline-block;
 	vertical-align: baseline;
-	font-size: 22px;
-	line-height: 24px;
-	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.2;
 	padding-bottom: 40px;
 }
 .dm-project-info-logo {
@@ -60,7 +58,7 @@ dm-project-info-sec-wrp
     padding-right: 15px;
 }
 .dm-project-info-btm-dsc a{
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 24px;
 	color:#88BE43;
 	font-weight: 700;
@@ -72,8 +70,8 @@ dm-project-info-sec-wrp
 	text-decoration: none;
 }
 .dm-project-info-btm-dsc p{
-	font-size: 22px;
-	line-height: 40px;
+	font-size: 18px;
+	line-height: 1.4;
 	margin-bottom: 45px;
 }
 .dm-project-info-btm-dsc-title{
@@ -89,15 +87,14 @@ dm-project-info-sec-wrp
 -------------------
 */
 .dm-vacancy-grid-sec-wrp{
-	background:#f5f7f6;
 	padding-bottom: 80px;
-	margin: 100px 0;
+	margin: 70px 0;
 }
 .dm-vacancy-grid-head{
 	text-align: center;
 	font-weight: 500;
-	font-size: 25px;
-	line-height: 27px;
+	font-size: 17px;
+	line-height: 1.4px;
 	color: #757575;
 	padding-bottom: 30px;
 }
@@ -139,23 +136,17 @@ dm-project-info-sec-wrp
 	background:#fff;
 }
 .dm-vacancy-grid-head-title{
-	font-size: 50px;
-	line-height: 52px;
 	color: #757575;
-	font-weight: 500;
-	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 	margin-top: 8px;
 	display: block;
+	font-family: 'HelveticaNeueBold';
 }
 .dm-vacancy-grid-dsc-title{
 	display: block;
-	font-size: 22px;
-	line-height: 27px;
 	color: #88BE43;
 	text-transform: uppercase;
-	font-weight: 800;
 	margin-bottom: 12px;
 }
 .dm-vacancy-grid-dsc span{
@@ -172,10 +163,10 @@ dm-project-info-sec-wrp
 	display: inline-block;
 	vertical-align: baseline;
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 16px;
 	color: #88BE43;
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: uppercase;
 	margin-top: 12px;
 }
@@ -220,10 +211,6 @@ dm-project-info-sec-wrp
 	.dm-vacancy-grid-head-title {
 	    font-size: 47px;
 	    line-height: 49px;
-	}
-	.dm-vacancy-grid-head {
-	    font-size: 24px;
-	    line-height: 26px;
 	}
 	.dm-vacancy-grid-dsc-title {
 	    font-size: 21px;
@@ -280,10 +267,6 @@ dm-project-info-sec-wrp
 	    font-size: 44px;
 	    line-height: 46px;
 	}
-	.dm-vacancy-grid-head {
-	    font-size: 21px;
-	    line-height: 24px;
-	}
 	.dm-vacancy-grid-dsc-title {
 	    font-size: 20px;
 	    line-height: 25px;
@@ -335,8 +318,6 @@ dm-project-info-sec-wrp
 	    line-height: 42px;
 	}
 	.dm-vacancy-grid-head {
-	    font-size: 19px;
-	    line-height: 22px;
 	    padding-bottom: 20px;
 	}
 	.dm-vacancy-grid-dsc-title {
@@ -393,9 +374,6 @@ dm-project-info-sec-wrp
 	.dm-vacancy-grid-head-title {
 	    font-size: 32px;
 	    line-height: 36px;
-	}
-	.dm-vacancy-grid-head{
-		font-size: 18px;
 	}
 
 }

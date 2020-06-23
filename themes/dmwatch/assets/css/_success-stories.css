@@ -15,9 +15,7 @@
 .topLine{
 	padding-bottom: 25px;
 }
-.storiesPageCn{
-	background: #F5F7F7;
-}
+
 .storiesPageCn .event-media-page-tab-sec{
 	background: transparent;
 	box-shadow: none;
@@ -150,7 +148,6 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
     text-align: center;
 }
 .annualReportsHdr h2 {
-    font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -187,9 +184,6 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
 	}
 	ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des p{
 		padding-right: 0;
-	}
-	.uec-title{
-		font-size: 30px;
 	}
 	.upcoming-event-con-rgt p{
 		font-size: 18px;
@@ -249,9 +243,6 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
 	}
 	.advocacyCn .uec-title span{
 		padding-left: 0;
-	}
-	.uec-title{
-		font-size: 27px;
 	}
 	.upcoming-event-con-rgt p{
 		font-size: 17px;

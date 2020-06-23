@@ -6,7 +6,7 @@
 	padding-bottom: 60px;
 }
 .main-Blogs-sec-innr{
-
+	padding-top: 25px;
 }
 .main-Blogs-sec-hedding h2{
     border-bottom: 1px solid #3b3b3b;
@@ -163,6 +163,7 @@
 .blog-page-all-blog-items-sub-title h5{
 	line-height: 1.4;
 	margin-bottom: 0;
+	font-size: 14.5px;
 }
 .blog-page-all-blog-items-sub-title > h5 >a{
 	display: inline-block;

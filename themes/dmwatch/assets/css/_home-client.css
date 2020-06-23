@@ -24,7 +24,7 @@
 	padding: 0 150px;
 }
 .client-partners-des p{
-	font-size: 23px;
+	font-size: 20px;
 	color: #606060;
 }
 .client-partners-items-wrap{
@@ -102,9 +102,6 @@
 	.client-partners-items-wrap >ul {
 	    margin: 0 -10px;
 	}
-	.client-partners-des p{
-		font-size: 21px;
-	}
 
 }
 
@@ -120,7 +117,7 @@
 		max-width: 100%;
 	}
 	.client-partners-des p{
-		font-size: 19px;
+		font-size: 18px;
 	}
 }
 

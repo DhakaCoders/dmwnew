@@ -444,7 +444,7 @@
               if( !empty($term->description) && $query->have_posts() ) 
                 echo wpautop($term->description); 
               else
-                echo '<p>Nothing to show here for now. Please check back soon!<p>';
+                echo '<p>Nothing to show here for now. Please check back soon!</p>';
               ?>
             </div>
             <?php if( $query->have_posts()): ?>
@@ -453,7 +453,7 @@
                 while($query->have_posts()): $query->the_post();
                   $pintro = get_field('introsec', get_the_ID());
                   if( !empty($pintro['image']) ):
-                    $project_src = cbv_get_image_src($pintro['image'], 'projectgrid');
+                    $project_src = cbv_get_image_src($pintro['image'], 'medium');
                   else:
                     $project_src = '';
                   endif;

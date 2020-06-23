@@ -136,6 +136,13 @@ ol li::before {
 .page-banner-des{
 	min-height: 590px;
 }
+.designTwo .page-banner-des{
+	min-height: 350px;
+}
+.designTwo .page-banner-des .page-banner-title{
+	text-transform: capitalize;
+	color: #fff;
+}
 .page-banner-bg{
 	position: absolute;
 	left: 0;

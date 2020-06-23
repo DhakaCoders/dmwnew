@@ -17,7 +17,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
 $description = get_field('description', $thisID);
 ?>
 
-<section class="page-banner page-bnr-team-members" style="overflow: hidden;">
+<section class="page-banner page-bnr-team-members designTwo" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>

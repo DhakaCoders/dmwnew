@@ -22,7 +22,7 @@ if (!empty($custom_title)) {
       <div class="col-md-12">
         <div class="client-partners-innr">
           <div class="client-partners-hedding">
-            <span><?php echo $page_title; ?> »</span>
+            <h1><?php echo $page_title; ?> »</h1>
           </div>
           <div class="client-partners-des">
             <?php if( !empty($desc) ) echo wpautop( $desc ); ?>

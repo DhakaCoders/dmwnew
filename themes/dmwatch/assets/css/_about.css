@@ -21,8 +21,8 @@
 	text-transform: uppercase;
 }
 .dm-about-sec-inr p {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 17px;
+    line-height: 27px;
     color: #fff;
 }
 .dm-about-sec-inr p a{
@@ -58,19 +58,19 @@
 	overflow: hidden;
 }
 .dm-vision-mision-grd-sec-inr{
-	max-width: 1020px;
+	max-width: 994px;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 .dm-vision-mision-grd-sec-inr ul{
-	margin: 0 -75px;
+	margin: 0 -30px;
 }
 .dm-vision-mision-grd-sec-inr ul li{
 	float: left;
 	width: 50%;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 

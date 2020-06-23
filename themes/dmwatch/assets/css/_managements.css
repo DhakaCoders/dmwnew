@@ -3,7 +3,7 @@
 }
 
 .rs-mangmnt-tm-sec{
-	padding: 55px 0 50px;
+	padding: 60px 0 50px;
 	
 }
 
@@ -11,7 +11,7 @@
 	text-align: center;
 }
 .individual-team-mambers-page-sec .management-sec-hdr{
-	padding-bottom: 25px;
+	padding-bottom: 30px;
 }
 .research-knwldg-mangmnt-tm-sec{
 	padding: 50px 0 0 0;
@@ -107,9 +107,9 @@
 	background: #fff;
 	padding-bottom: 15px;
 	border-bottom: 5px solid #88be42;
--webkit-box-shadow: 5px 5px 5px -2px rgba(150,152,151,1);
--moz-box-shadow: 5px 5px 5px -2px rgba(150,152,151,1);
-box-shadow: 5px 5px 5px -2px rgba(150,152,151,1);
+-webkit-box-shadow: 0px 5px 5px 0px rgba(150,152,151,0.5);
+-moz-box-shadow: 0px 5px 5px 0px rgba(150,152,151,0.5);
+box-shadow: 0px 5px 5px 0px rgba(150,152,151,0.5);
 position: relative;
 }
 .crkmts-grd-item-title{
@@ -213,8 +213,7 @@ position: relative;
 	color: #6D6C6C;
 	font-size: 20px;
 	line-height: 1;
-	text-transform: uppercase;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 }
 .itm-short-des span{
 	display: block;

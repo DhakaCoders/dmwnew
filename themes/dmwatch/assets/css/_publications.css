@@ -2,6 +2,7 @@
 	background: #F5F7F7;
     margin-bottom: 88px;
     box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+    padding-top: 40px;
 }
 .publicatons-page-top-sec-innr{
     display: flex;
@@ -131,16 +132,15 @@
     opacity: 0;
 }
 .rp-desc h4 {
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     margin: 0;
     line-height: 18px;
 }
 .rp-desc span {
-    font-size: 8px;
+    font-size: 11px;
     color: #9FDD47;
     display: block;
-    font-weight: 600;
     margin-top: 5px;
 }
 .publicatons-page-top-sec-img .rp-img-wrap,
@@ -184,11 +184,7 @@ transition: all 0.5s;
     display: block;
     font-size: 13px;    
 }
-.publicationsFilter h2,
 .filter-result-hedding h2{
-	font-size: 40px;
-
-}.filter-result-hedding h2{
 	text-align: center;
 }
 .filter-result-items-wrap{
@@ -288,9 +284,6 @@ ul.publicatinList li:nth-child(2n+2) .filter-result-items-des p{
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.publicationsFilter h2, .filter-result-hedding h2{
-		font-size: 35px;
-	}
 	.publicatons-page-top-sec-des p{
 		padding-right: 0;
 		font-size: 17px;
@@ -300,9 +293,6 @@ ul.publicatinList li:nth-child(2n+2) .filter-result-items-des p{
 @media(max-width: 575px){
 	.publicatons-sec-one-title a {
 	    font-size: 19px;
-	}
-	.publicationsFilter h2, .filter-result-hedding h2{
-		font-size: 30px;
 	}
 }
 

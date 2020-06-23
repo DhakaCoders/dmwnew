@@ -327,19 +327,19 @@ form .dropdown-menu li a{
     justify-content: center;
     background: #88BC41;
     border: 1px solid #88BC41;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1;
-    font-weight: 800;
     color: #fff;
     -webkit-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     -moz-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
-    width: 80px;
-    height: 26px;
+    width: 100px;
+    height: 30px;
     padding: 2px;
     border-radius: 3px;
     margin-left: auto; 
     text-transform: uppercase;
+    font-family: 'Verdana-Bold';
 }
 
 .fl-see-all-btn a:hover,

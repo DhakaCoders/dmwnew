@@ -176,9 +176,14 @@ $bcontent = get_field('bcontent', $thisID);
                 <?php } ?>
               </div>
             </li>
+            <li>
+              <div class="fl-filter-btn-cntlr">
+                <button type="submit">FILTER NOW</button>
+              </div>
+            </li>
           </ul>
-          <div class="search-filter-btn">
-            <button type="submit">FILTER NOW</button>
+          <div class="reset-filter-btn">
+            
             <button class="clearnow" type="reset">RESET</button>
           </div>
         </form>

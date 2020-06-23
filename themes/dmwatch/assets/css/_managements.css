@@ -279,10 +279,8 @@ position: relative;
 .filter-results-sec-hdr-title{
 	display: block;
 	color: #686767;
-	font-size: 57px;
 	line-height: 1;
 	text-transform: uppercase;
-	font-weight: 700;
 	margin-bottom: 45px;
 }
 
@@ -354,12 +352,13 @@ position: relative;
 	padding: 10px;
 	text-align: center;
 }
-.filter-results-img-hover strong{
-	color: #fff;
-	font-size: 25px;
-	line-height: 1;
-	display: inline-block;
-	vertical-align: baseline;
+.filter-results-img-hover strong {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    display: inline-block;
+    vertical-align: baseline;
+    font-weight: normal;
 }
 
 .filter-results-img-hover strong i{
@@ -413,13 +412,13 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
 }
 .our-project-filter-btns ul li{
 	float: left;
-	width: 25%;
+	width: 20%;
 	padding: 0 12px 24px;
 }
 
 .filter-btn button{
 	background: #fff;
-	min-height: 57px;
+	min-height: 45px;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -427,7 +426,7 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
 	border-radius: 3px;
 	color: #686767;
 	cursor: pointer;
-	font-size: 21px;
+	font-size: 17px;
 	line-height: 1;
 	font-weight: 500;
 	-webkit-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
@@ -545,9 +544,9 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
 	font-weight: normal;
 	cursor: pointer;
 	margin: 0;
-	font-size: 14.5px;
-	line-height: 1;
-	font-weight: 500;
+	font-size: 12.5px;
+	line-height: 1.2;
+	font-weight: normal;
 	padding-left: 26px;
 	color: #908F8F;
 	text-transform: uppercase;
@@ -564,10 +563,11 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
 }
 
 
-.search-filter-btn{
+.reset-filter-btn{
 	padding-top: 50px;
+	text-align: center;
 }
-.search-filter-btn button{
+.reset-filter-btn button{
     background: #88BE43;
     min-height: 43px;
     width: 190px;
@@ -579,12 +579,30 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
     cursor: pointer;
     font-size: 16px;
     line-height: 1;
-    font-weight: 500;
+    font-family: 'HelveticaNeueBold';
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
+    -moz-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
+    box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
+    margin-left: auto;
+    margin-right: auto;
+}
+.fl-filter-btn-cntlr button{
+    background: #88BE43;
+    min-height: 43px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'HelveticaNeueBold';
     -webkit-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     -moz-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
 }
-
 
 
 
@@ -899,12 +917,6 @@ body{
 }
 
 @media(max-width: 1399px){
-	.page-banner-title{
-		font-size: 85px;
-	}
-	.opfhdr-title, .filter-results-sec-hdr-title {
-	    font-size: 50px;
-	}
 	.mngs-hdr-title{
 		font-size: 45px;
 	}
@@ -967,9 +979,6 @@ body{
 	}
 	.our-management-short-des span{
 		font-size: 24px;
-	}
-	.opfhdr-title, .filter-results-sec-hdr-title {
-	    font-size: 45px;
 	}
 	.filter-results-sec-hdr-title {
 	    margin-bottom: 50px;
@@ -1049,10 +1058,10 @@ body{
 	.our-project-filter-btns ul li{
 		width: 50%;
 	}
-	.search-filter-btn {
+	.reset-filter-btn {
 	    padding-top: 40px;
 	}
-	.search-filter-btn button{
+	.reset-filter-btn button{
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1144,9 +1153,6 @@ body{
 	}
 	.our-management-short-des span {
 	    font-size: 21px;
-	}
-	.opfhdr-title, .filter-results-sec-hdr-title {
-	    font-size: 40px;
 	}
 	.filter-results-img-hover strong{
 		font-size: 22px;
@@ -1277,13 +1283,12 @@ body{
 		margin-right: auto;
 	}
 	.opfhdr-title, .filter-results-sec-hdr-title {
-	    font-size: 35px;
 	    margin-bottom: 30px;
 	}
 	.filter-btn button{
 		font-size: 17px;
 	}
-	.search-filter-btn {
+	.reset-filter-btn {
 	    padding-top: 25px;
 	}
 	.filter-results-grd-cntlr ul{
@@ -1357,9 +1362,6 @@ body{
 	}
 	.our-project-filter-btns ul li{
 		width: 100%;
-	}
-	.opfhdr-title, .filter-results-sec-hdr-title {
-	    font-size: 31px;
 	}
 	.team-single-avater{
 		max-width: 250px;

@@ -172,6 +172,7 @@ ol li::before {
 	font-weight: 700;
 	margin: 0;
 	text-shadow: 2px 0px 7px #2F3627;
+	font-family: 'Raleway', sans-serif;
 }
 .page-banner-des{
 	color: #fff;
@@ -202,9 +203,12 @@ ol li::before {
 	bottom: 160px;
 }
 
-.page-banner.page-bnr-lft-con .page-banner-title{
-	font-size: 63px;
+.page-banner.page-bnr-lft-con .page-banner-title,
+.pcbsd-title,
+.page-banner-title{
+	font-size: 60px;
 	color: #88BE43;
+	font-family: 'Raleway', sans-serif;
 }
 
 .page-banner.page-bnr-rgt-con .page-banner-inr{
@@ -219,7 +223,6 @@ ol li::before {
 	text-align: right;
 }
 .page-banner.page-bnr-rgt-con .page-banner-title{
-	font-size: 60px;
 	color: #88BE43;
 }
 

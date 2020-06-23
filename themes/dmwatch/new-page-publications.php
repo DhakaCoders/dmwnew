@@ -130,10 +130,14 @@ get_header();
                 <?php } ?>
               </div>
             </li>
+            <li>
+              <div class="fl-filter-btn-cntlr">
+                <button type="submit">Filter Now</button>
+              </div>
+            </li>
           </ul>
-          <div class="search-filter-btn">
-            <button>FILTER NOW</button>
-            <button class="clearnow" type="reset">RESET</button>
+          <div class="reset-filter-btn">
+            <button class="clearnow" type="reset">Reset Filter</button>
           </div>
           </form>
         </div>

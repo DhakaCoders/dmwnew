@@ -139,10 +139,9 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
     padding-bottom: 35px;
 }
 .annualReports {
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom: 45px;
-    margin-bottom: 70px;
-    background: #F5F7F7;
+    margin-bottom: 30px;
 }
 .annualReportsHdr{
     text-align: center;

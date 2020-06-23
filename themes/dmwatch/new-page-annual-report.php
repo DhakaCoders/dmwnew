@@ -59,7 +59,7 @@ get_header();
             ?>
             <li>
               <div class="filter-btn-cntlr">
-                <div class="filter-btn"><button type="button"><span>YEAR</span></button></div>
+                <div class="filter-btn"><button type="button"><span>Year</span></button></div>
                 <?php if ( ! empty( $years ) && ! is_wp_error( $years ) ){  ?>
                   <div class="filter-btn-dorpdown">
                     <?php $i = 20; foreach ( $years as $year ) { ?>
@@ -75,9 +75,14 @@ get_header();
                 <?php } ?>
               </div>
             </li>
+            <li>
+              <div class="fl-filter-btn-cntlr">
+                <button type="submit">Filter Now</button>
+              </div>
+            </li>
           </ul>
-          <div class="search-filter-btn">
-            <button>FILTER NOW</button>
+          <div class="reset-filter-btn">
+            <button class="clearnow" type="reset">Reset Filter</button>
           </div>
           </form>
         </div>

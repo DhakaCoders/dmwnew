@@ -178,13 +178,12 @@ $bcontent = get_field('bcontent', $thisID);
             </li>
             <li>
               <div class="fl-filter-btn-cntlr">
-                <button type="submit">FILTER NOW</button>
+                <button type="submit">Filter Now</button>
               </div>
             </li>
           </ul>
           <div class="reset-filter-btn">
-            
-            <button class="clearnow" type="reset">RESET</button>
+            <button class="clearnow" type="reset">Reset Filter</button>
           </div>
         </form>
         </div>

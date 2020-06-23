@@ -46,6 +46,7 @@
 	margin-bottom: 20px;
 	font-size: 56px;
 	line-height: 1.1;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .mainSlider.slick-slider ul.slick-dots{

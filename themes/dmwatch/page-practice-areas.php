@@ -50,7 +50,7 @@ if( !empty($textcolor) ):
 </style>
 <?php endif; ?>
 <section class="dm-we-do-content-sec-wrp">
-  <div class="container">
+  <div class="container-md">
     <div class="row">
       <div class="col-sm-12">
         <div class="dm-we-do-dsc-wrp" style="<?php echo (!empty($bgcolor))? 'background:'.$bgcolor: ''; ?>">

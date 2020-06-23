@@ -82,7 +82,7 @@ $mission = $vmsec['mission'];
             <li>
               <div class="dm-vm-grd-item mHc">
                 <?php
-                  if( !empty($vision['title']) ) printf('<h2 class="dm-vm-grd-item-title">%s</h2>', $vision['title'] );
+                  if( !empty($vision['title']) ) printf('<h3 class="dm-vm-grd-item-title">%s</h3>', $vision['title'] );
                   if(!empty($vision['description'])) echo wpautop( $vision['description'], true );
                 ?>
               </div>
@@ -92,7 +92,7 @@ $mission = $vmsec['mission'];
             <li>
               <div class="dm-vm-grd-item mHc">
                 <?php
-                  if( !empty($mission['title']) ) printf('<h2 class="dm-vm-grd-item-title">%s</h2>', $mission['title'] );
+                  if( !empty($mission['title']) ) printf('<h3 class="dm-vm-grd-item-title">%s</h3>', $mission['title'] );
                   if(!empty($mission['description'])) echo wpautop( $mission['description'], true );
                 ?>
               </div>

@@ -605,7 +605,9 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
     box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
 }
 
-
+.fl-filter-btn-cntlr button:hover{
+	background: #77ad33;
+}
 
 .our-management-bio-sec{
 

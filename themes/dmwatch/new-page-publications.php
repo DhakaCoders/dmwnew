@@ -114,7 +114,7 @@ get_header();
             ?>
             <li>
               <div class="filter-btn-cntlr">
-                <div class="filter-btn"><button type="button"><span>YEAR</span></button></div>
+                <div class="filter-btn"><button type="button"><span>Year</span></button></div>
                 <?php if ( ! empty( $years ) && ! is_wp_error( $years ) ){  ?>
                   <div class="filter-btn-dorpdown">
                     <?php $i = 20; foreach ( $years as $year ) { ?>

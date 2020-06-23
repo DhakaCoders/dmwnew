@@ -58,7 +58,8 @@ box-shadow: 0px 0px 5px 0px rgba(213,213,213,1);
 	height: 4px;
 	background: #88BE43;
 }
-.fl-tabs-2 .tab-link:hover{
+.fl-tabs-2 .tab-link:hover,
+.fl-tabs-2 .tab-link.current{
 	color: #88BE43;
 }
 

@@ -59,6 +59,7 @@
           </div>
           <div class="ftr-facebook">
             <div class="ftr-facebook-inr">
+              <h4 class="ftr-menu-title"><?php _e( 'Social media', THEME_NAME ); ?></h4>
               <div class="ftr-cnt-socials-media">
                 <?php if( !empty($sinfo) ): ?>
                 <ul class="reset-list">
@@ -83,26 +84,24 @@
                 </ul>
                 <?php endif; ?>
               </div>
-              <div class="ftr-fb-area">
-                <img src="<?php echo THEME_URI; ?>/assets/images/facebook-img.jpg">
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="ftr-copywrite-sec clearfix">
-          <div class="developed-by">
-            
-          </div>
-          <div class="ftr-cpwrt">
-            <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>
+  </div>
+  <div class="copyright-text">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="ftr-copywrite-sec clearfix">
+              <div class="ftr-cpwrt">
+                <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+    </div>   
   </div> 
   <div class="ftr-msg-icon">
     <a href="mailto:"><img src="<?php echo THEME_URI; ?>/assets/images/msg-icon.png"></a>

@@ -3,9 +3,9 @@
 	overflow: hidden;
 }
 .main-slider-des {
-    padding: 200px 0 170px;
+    padding: 190px 0 160px;
     max-width: 775px;
-    min-height: 665px;
+    min-height: 625px;
 }
 
 .main-slider-des a{
@@ -95,17 +95,17 @@
 
 .dm-watch-sec-cntlr{
 	display: flex;
-	align-items: center;
 }
 .dm-watch-sec-fea-img{
 	order: 2;
-	width: 45%;
+	width: 40%;
 	padding-left: 30px;
 	text-align: right;
+	padding-top: 70px;
 }
 .dm-watch-sec-des{
 	order: 1;
-	width: 55%;
+	width: 60%;
 	padding-right: 60px;
 }
 
@@ -196,7 +196,7 @@
 	box-shadow: none;
 }
 .hm-practice-area-item:hover .hm-practice-area-fea-img img{
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 .hm-fea-services-sec{
 	padding: 60px 0 75px;
@@ -392,7 +392,7 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	padding: 10px 15px 30px;
 }
 .hmProTabSlideItemCon{
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 	min-height: 260px;
 	background-size: cover!important;
 	background-repeat: no-repeat!important;

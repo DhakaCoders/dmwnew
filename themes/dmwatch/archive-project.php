@@ -14,7 +14,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
 
 $bcontent = get_field('bcontent', $thisID);
 ?>
-<section class="page-banner page-bnr-lft-con page-bnr-our-project" style="overflow: hidden;">
+<section class="page-banner designTwo" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
@@ -71,7 +71,7 @@ $bcontent = get_field('bcontent', $thisID);
     <div class="row">
       <div class="col-md-12">
         <div class="our-project-filter-hdr">
-          <h2 class="opfhdr-title">OUR PROJECTS</h2>
+          <h2 class="opfhdr-title">Filter Projects</h2>
         </div>
         <div class="our-project-filter-btns">
           <form action="" method="get">
@@ -85,7 +85,7 @@ $bcontent = get_field('bcontent', $thisID);
           <ul class="reset-list clearfix">
             <li>
               <div class="filter-btn-cntlr">
-                <div class="filter-btn"><button type="button"><span>PRACTICE AREA</span></button></div>
+                <div class="filter-btn"><button type="button"><span>Practice Area</span></button></div>
                 <?php if ( ! empty( $aareas ) && ! is_wp_error( $aareas ) ){  ?>
                 <div class="filter-btn-dorpdown">
                   <?php $i = 1; foreach ( $aareas as $aarea ) { ?>
@@ -110,7 +110,7 @@ $bcontent = get_field('bcontent', $thisID);
             ?>
             <li>
               <div class="filter-btn-cntlr">
-                <div class="filter-btn"><button type="button"><span>CLIENT</span></button></div>
+                <div class="filter-btn"><button type="button"><span>Client</span></button></div>
                 <?php if ( ! empty( $clients ) && ! is_wp_error( $clients ) ){  ?>
                 <div class="filter-btn-dorpdown">
                   <?php $i = 10; foreach ( $clients as $client ) { ?>
@@ -135,7 +135,7 @@ $bcontent = get_field('bcontent', $thisID);
             ?>
             <li>
               <div class="filter-btn-cntlr">
-                <div class="filter-btn"><button type="button"><span>REGION</span></button></div>
+                <div class="filter-btn"><button type="button"><span>Region</span></button></div>
                 <?php if ( ! empty( $regions ) && ! is_wp_error( $regions ) ){  ?>
                 <div class="filter-btn-dorpdown">
                   <?php $i = 20; foreach ( $regions as $region ) { ?>
@@ -160,7 +160,7 @@ $bcontent = get_field('bcontent', $thisID);
             ?>
             <li>
               <div class="filter-btn-cntlr filter-btn-year-cntlr">
-                <div class="filter-btn"><button type="button"><span>YEAR</span></button></div>
+                <div class="filter-btn"><button type="button"><span>Year</span></button></div>
                 <?php if ( ! empty( $years ) && ! is_wp_error( $years ) ){  ?>
                 <div class="filter-btn-dorpdown">
                   <?php $i = 40; foreach ( $years as $year ) { ?>
@@ -240,8 +240,8 @@ if($query->have_posts()):
                 <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                 <div class="filter-results-img-cntlr">
                   <?php if( !empty($pintro['image']) ): ?>
-                  <div class="filter-results-img" style="background: url(<?php echo cbv_get_image_src($pintro['image'], 'projectgrid'); ?>);">
-                    <?php echo cbv_get_image_tag($pintro['image'], 'projectgrid'); ?>
+                  <div class="filter-results-img" style="background: url(<?php echo cbv_get_image_src($pintro['image'], 'medium'); ?>);">
+                    <?php echo cbv_get_image_tag($pintro['image'], 'medium'); ?>
                   </div>
                   <?php else: ?>
                     <div class="filter-results-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/filter-results-img-01.jpg);">

@@ -384,7 +384,7 @@ $('.initTxt p a, .initTxt p a').on('click', function(e){
 $('.continue-reading-desc a').on('click', function(e){
   e.preventDefault();
   $('.dm-about-sec-inr .continue-reading-desc, .dm-we-do-dsc .continue-reading-desc').slideUp();
-  $('.initTxt a').show();
+  $('.initTxt a').fadeIn('300');
 });
 
 $('.dm-intobox1 a').on('click', function(e){
@@ -394,8 +394,8 @@ $('.dm-intobox1 a').on('click', function(e){
 });
 $('.dm-intobox2 a').on('click', function(e){
   e.preventDefault();
-  $(this).parents('.dm-intobox2').slideUp();
-  $('.dm-intobox1 a').show();
+  $(this).parents('.dm-intobox2').slideUp('300');
+  $('.dm-intobox1 a').fadeIn('300');
 });
 
 /*$('.clearnow').on('click', function(){
@@ -409,6 +409,12 @@ $('.our-project-filter-btns form input').on('change', function(){
   }
 });
 
+$('.hdr-search input').on('focus', function(){
+  $(this).parents('.hdr-search').addClass('focused');
+});
+$('.hdr-search input').on('focusout', function(){
+  $(this).parents('.hdr-search').removeClass('focused');
+});
 
 $('.dm-tp-useful-grd-item ul li').prepend('<span></span>');
 

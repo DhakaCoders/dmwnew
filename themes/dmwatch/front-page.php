@@ -441,10 +441,9 @@
             ?>
             <div class="hm-project-tab-short-des">
               <?php 
-              if( !empty($term->description) && $query->have_posts() ) 
-                echo wpautop($term->description); 
-              else
+              if( !$query->have_posts())
                 echo '<p>Nothing to show here for now. Please check back soon!</p>';
+
               ?>
             </div>
             <?php if( $query->have_posts()): ?>

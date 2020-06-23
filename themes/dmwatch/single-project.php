@@ -4,16 +4,12 @@ get_header();
 $thisID = get_the_ID();
 $standaardbanner = get_field('bannerimage', $thisID);
 if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-an-our-project-details.jpg';
-
-
 $details = get_field('description', $thisID);
-
 $client = get_field('clientinfo', $thisID);
-
 $banner = get_field('bannercont', $thisID);
 ?>
 
-<section class="page-banner page-bnr-lft-con page-bnr-an-our-project-details" style="overflow: hidden;">
+<section class="page-banner page-bnr-an-our-project-details designTwo" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
@@ -21,13 +17,17 @@ $banner = get_field('bannercont', $thisID);
       <div class="page-banner-inr">
         <div>
           <?php 
-            if( !empty($banner['title']) ) printf('<h1 class="page-banner-title">%s</h1>', $banner['title'] );
+            if( !empty($banner['title']) ) 
+              printf('<h1 class="page-banner-title">%s</h1>', $banner['title'] );
+            else
+              printf('<h1 class="page-banner-title">%s</h1>', get_the_title() );
             if(!empty($banner['description'])) echo wpautop( $banner['description'] ); 
           ?>
         </div>
       </div>
     </div>
   </div>
+  
   <?php if(!empty( $banner['logo'] )): ?>
   <div class="page-bnr-btm-logo">
     <?php echo cbv_get_image_tag( $banner['logo'] ); ?>

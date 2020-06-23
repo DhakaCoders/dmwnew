@@ -139,9 +139,12 @@ ol li::before {
 .designTwo .page-banner-des{
 	min-height: 350px;
 }
+.designThree .page-banner-des{
+	min-height: 450px;
+}
 .designTwo .page-banner-des .page-banner-title{
 	text-transform: capitalize;
-	color: #fff;
+	color: #88BE43;
 }
 .page-banner-bg{
 	position: absolute;
@@ -153,6 +156,15 @@ ol li::before {
 	background-repeat: no-repeat!important;
 	background-position: center center!important;
 	z-index: 1;
+}
+.page-banner-bg:after{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: '';
+	background: rgba(0,0,0,0.4);
 }
 .page-banner-bg img{
 	display: none;
@@ -172,9 +184,8 @@ ol li::before {
 }
 .page-banner-title{
 	display: block;
-	font-size: 106px;
+	font-size: 60px;
 	line-height: 1;
-	text-transform: uppercase;
 	color: #fff;
 	font-weight: 700;
 	margin: 0;
@@ -185,9 +196,9 @@ ol li::before {
 	color: #fff;
 }
 .page-banner-des p{
+	font-family: 'FranklinGothic-Book';
 	margin-bottom: 0;
-	font-size: 21px;
-	line-height: 1.5;
+	font-size: 18px;
 	padding-top: 15px;
 }
 .page-banner-des p a{

@@ -334,12 +334,12 @@ form .dropdown-menu li a{
     -webkit-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     -moz-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
-    width: 80px;
-    height: 26px;
+    width: 150px;
+    height: 40px;
     padding: 2px;
     border-radius: 3px;
-    margin-left: auto; 
     text-transform: uppercase;
+    margin: 0 auto;
 }
 
 .fl-see-all-btn a:hover,

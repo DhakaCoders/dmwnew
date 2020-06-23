@@ -207,7 +207,7 @@
           </div>
           <?php endif;  wp_reset_postdata(); ?>
           <div class="fl-see-all-btn">
-            <a href="#" data-toggle="modal" data-target="#hmFeaServices_modal" href="#">SEE ALL</a>
+            <a href="#" data-toggle="modal" data-target="#hmFeaServices_modal" href="#">See All Services</a>
           </div>
 
 <div class="modal fade hmFeaServicesModal dm-modal-con-wrap" id="hmFeaServices_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -329,9 +329,9 @@
             ?>
             <div class="clientsPartnersLogosSlideItem">
               <?php if( !empty($logos['link']) ): ?>
-                <a href="<?php echo $logos['link']; ?>" class="overlay-link"></a>
               <?php endif; ?>
-              <div>
+              <div class="hpcLogo">
+                <a href="<?php echo $logos['link']; ?>" class="overlay-link"></a>
                 <?php 
                   if( is_array($logIcon) ){
                     echo '<img src="'.$logIcon['url'].'" alt="'.$logIcon['alt'].'" title="'.$logIcon['title'].'">';
@@ -398,6 +398,16 @@
 ?>
 <section class="hm-projects-section">
   <div class="container">
+  <div class="row" style="display: none;">
+    <div class="col-md-12">
+      <div class="hm-practice-area-sec-hdr">
+      <h2 class="hmpashdr-title">Projects</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when<br>
+  an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+      </div>
+    </div>
+  </div>
     <div class="row">
       <div class="col-md-12">
         <div class="fl-tabs clearfix hm-projects-tabs">

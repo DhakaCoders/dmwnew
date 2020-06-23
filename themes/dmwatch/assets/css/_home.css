@@ -1,10 +1,3 @@
-.home-sections-cntlr{
-	font-family: 'FranklinGothic-Book';
-}
-
-.main-slider-sec{
-	padding-bottom: 40px;
-}
 .mainSlider{
 	margin: 0!important;
 	overflow: hidden;
@@ -80,8 +73,8 @@
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;	
-  -webkit-animation-delay: 0.9s;
-  animation-delay: 0.9s;	
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;	
 }
 .mainSlider .mainSLideItem.slick-current .main-slider-des a{
   -webkit-animation-name: fadeInUpShort;
@@ -90,8 +83,8 @@
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;	
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;	
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s;	
 }
 
 
@@ -112,7 +105,7 @@
 .dm-watch-sec-des{
 	order: 1;
 	width: 55%;
-	padding-right: 100px;
+	padding-right: 60px;
 }
 
 .dmwsd-title {
@@ -124,22 +117,22 @@
     font-size: 30px;
     line-height: 1.2;
 }
-.dm-watch-sec-des p{
-	margin-bottom: 30px;
-	font-size: 21px;
-	line-height: 1.2;
+.dm-watch-sec-des a{
+	color: #86c531;
 }
-
+.dm-watch-sec-des a:hover{
+	color: #549526;
+}
 .hm-practice-area-sec{
-	padding: 85px 0 65px;
+	padding: 60px 0 65px;
+	background: #f5f7f7;
 }
 
 .hmpashdr-title{
-	font-size: 48px;
 	line-height: 1.2;
 	display: block;
 	color: #86c531;
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -147,17 +140,14 @@
 .hm-practice-area-sec-hdr{
 	text-align: center;
 }
-.hm-practice-area-sec-hdr p{
-	font-size: 19px;
-}
 .hm-practice-area-sec-hdr{
-	padding-bottom: 50px;
+	padding-bottom: 25px;
 }
 .hm-practice-area-item-des{
 	text-align: center;
 	padding-bottom: 25px;
-	padding-left: 31px;
-	padding-right: 31px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 .hmPracticeAreaSlider{
 	margin: 0 -12px!important;
@@ -170,6 +160,7 @@
 	padding-left: 12px;
 	padding-right: 12px;
 	width: 33.3333%;
+	margin-bottom: 24px;
 }
 .hm-practice-area-item-title{
 	font-weight: 700;
@@ -188,11 +179,13 @@
 .hm-practice-area-fea-img img{
 	width: 100%;
 }
-
+.hm-practice-area-item{
+	box-shadow: 0px 4px 5px #ddd;
+	position: relative;
+}
 
 .hm-fea-services-sec{
-	background: #f5f7f7;
-	padding: 85px 0 70px;
+	padding: 60px 0 65px;
 	margin-bottom: 100px;
 }
 
@@ -206,7 +199,6 @@
 .hmfsshdr-title{
 	text-transform: uppercase;
 	line-height: 1.2;
-	font-size: 48px;
 	color: #8dc63f;
 }
 .hm-fea-service-item-img{
@@ -217,7 +209,6 @@
 }
 
 .hmfsid-title{
-	font-size: 18px;
 	line-height: 1.2;
 	display: block;
 	margin-bottom: 15px;
@@ -589,9 +580,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.main-slider-des {
 	    padding: 110px 0 98px;
 	}
-	.main-slider-sec {
-	    padding-bottom: 60px;
-	}
 	.main-slider-des {
 		max-width: 448px;
 	}
@@ -651,9 +639,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 @media(max-width: 575px){
 	.main-slide-des-title {
 	    font-size: 30px;
-	}
-	.main-slider-sec {
-	    padding-bottom: 40px;
 	}
 	.dmwsd-title,
 	.hmfsshdr-title,

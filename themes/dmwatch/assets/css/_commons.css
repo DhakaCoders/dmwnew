@@ -373,3 +373,6 @@ form .dropdown-menu li a{
 .slick-dots > li:only-child {
         display: none;
     }
+.dm-intobox2{
+	display: none;
+}

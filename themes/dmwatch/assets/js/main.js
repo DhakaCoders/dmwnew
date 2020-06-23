@@ -387,6 +387,17 @@ $('.continue-reading-desc a').on('click', function(e){
   $('.initTxt a').show();
 });
 
+$('.dm-intobox1 a').on('click', function(e){
+  e.preventDefault();
+  $('.dm-intobox2').slideDown();
+  $(this).hide();
+});
+$('.dm-intobox2 a').on('click', function(e){
+  e.preventDefault();
+  $(this).parents('.dm-intobox2').slideUp();
+  $('.dm-intobox1 a').show();
+});
+
 /*$('.clearnow').on('click', function(){
   $('.our-project-filter-btns form').reset();
 });*/

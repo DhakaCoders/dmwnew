@@ -57,8 +57,13 @@
             <div class="dm-watch-sec-des">
             <?php 
               if( !empty($intro['title']) ) printf('<h1 class="dmwsd-title">%s</h1>', $intro['title']);
-              if( !empty($intro['description']) ) echo wpautop( $intro['description'] );
             ?>
+            <div class="dm-intobox1">
+            <?php if( !empty($intro['description']) ) echo wpautop( $intro['description'] ); ?>
+            </div>
+            <div class="dm-intobox2">
+            <?php if( !empty($intro['description2']) ) echo wpautop( $intro['description2'] ); ?>
+            </div>
             </div>
           </div>
         </div>
@@ -108,7 +113,7 @@
               </div>
               <div class="hm-practice-area-item-des">
                 <?php 
-                  if( !empty($pract['title']) ) printf('<h4 class="mHc hm-practice-area-item-title">%s</h4>', $pract['title']);
+                  if( !empty($pract['title']) ) printf('<h3 class="mHc hm-practice-area-item-title">%s</h3>', $pract['title']);
                   if( !empty($pract['description']) ) echo wpautop( $pract['description'] );
                 ?>
               </div>
@@ -188,7 +193,7 @@
                 </div>
                 <div class="hm-fea-service-item-des">
                 <?php 
-                  if( !empty(get_the_title()) ) printf('<h5 class="hmfsid-title mHc">%s</h5>', get_the_title());
+                  if( !empty(get_the_title()) ) printf('<h3 class="hmfsid-title mHc">%s</h3>', get_the_title());
                   if( !empty($serv['description']) ) echo wpautop( $serv['description'] );
                 ?>
                 </div>

@@ -10,7 +10,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
 
 $intro = get_field('introsec', $thisID);
 ?>
-<section class="page-banner page-bnr-vacancy" style="overflow: hidden;">
+<section class="page-banner designTwo page-bnr-vacancy" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
       <img src="<?php echo $standaardbanner; ?>" alt="banner">

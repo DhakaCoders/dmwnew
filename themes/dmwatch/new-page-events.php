@@ -48,7 +48,7 @@ $bcontent = get_field('description', $thisID);
   </div>
 </section>
 
-<section class="sec-bg-gray event-page-sec">
+<section class="event-page-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">

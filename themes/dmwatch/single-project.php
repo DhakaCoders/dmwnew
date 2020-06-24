@@ -72,10 +72,10 @@ $banner = get_field('bannercont', $thisID);
                 <?php endif; ?>
               </div>
               <div class="dm-project-info-rgt-dsc">
-                <h2 class="dm-info-dsc-title">PROJECT INFORMATION</h2>
-                <h4 class="dm-info-dsc-title-1">TITLE:</h4>
+                <h2 class="dm-info-dsc-title">Project Information</h2>
+                <h4 class="dm-info-dsc-title-1">Title:</h4>
                 <p><?php the_title(); ?></p>
-                <h4 class="dm-info-dsc-title-1">CLIENT:</h4>
+                <h4 class="dm-info-dsc-title-1">Client:</h4>
                 <?php if( !empty($client['name']) ) printf('<span>%s</span>', $client['name']); ?>
                 <?php if( !empty($client['logo']) ): ?>
                 <div class="dm-project-info-logo">
@@ -89,7 +89,7 @@ $banner = get_field('bannercont', $thisID);
               </div>
             </div>
             <div class="dm-project-info-btm-dsc">
-              <h4 class="dm-project-info-btm-dsc-title">PROJECT DESCRIPTION:</h4>
+              <h4 class="dm-project-info-btm-dsc-title">Project Description:</h4>
               <?php if( !empty($details) ) echo wpautop($details); ?>
               <div class="backLinks">
                 <a href="<?php echo esc_url( home_url('/') );?>" ><i class="fas fa-arrow-left"></i> BACK TO THE HOME</a><br/>

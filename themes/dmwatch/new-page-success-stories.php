@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<section class="page-banner page-bnr-rgt-con page-bnr-event exSuccessStories" style="overflow: hidden;">
+<section class="page-banner designTwo dtLeft" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/success-stories.png);">
     </div>

@@ -9,9 +9,6 @@
 	color: #88BE43!important;
 	font-size: 70px;
 }
-.page-banner.exSuccessStories h1.page-banner-title + p{
-	color: #494D51;
-}
 .topLine{
 	padding-bottom: 25px;
 }
@@ -151,7 +148,9 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
     margin-bottom: 20px;
 }
 
-
+.storiesPageCn{
+	padding: 25px 0 35px;
+}
 @media(max-width: 1499px){
 
 }

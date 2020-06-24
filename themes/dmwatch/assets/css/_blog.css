@@ -53,12 +53,10 @@
 
 .dm-blog-grd-item-title{
 	display: block;
-	font-size: 48px;
 	line-height: 1;
 	margin-bottom: 15px;
 	font-weight: 500;
 	color: #757575;
-	text-transform: uppercase;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-ms-transition: all 0.5s;
@@ -67,7 +65,7 @@
 	color: #757575;
 }
 .dm-blog-grd-item strong{
-	font-size: 22px;
+	font-size: 18px;
 	color: #6D6D6D;
 	margin-bottom: 35px;
 	font-family: 'FranklinGothic-Book';

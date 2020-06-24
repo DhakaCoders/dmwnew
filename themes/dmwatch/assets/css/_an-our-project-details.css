@@ -31,7 +31,6 @@ dm-project-info-sec-wrp
 	color: #88BE43;
 	font-weight: 700; 
 	margin-bottom: 15px;
-	text-transform: uppercase;
 }
 .dm-project-info-rgt-dsc p {
     margin-bottom: 48px;
@@ -69,7 +68,6 @@ dm-project-info-sec-wrp
 }
 .dm-project-info-btm-dsc p{
 	font-size: 18px;
-	line-height: 1.4;
 	margin-bottom: 45px;
 }
 .dm-project-info-btm-dsc-title{
@@ -141,11 +139,12 @@ dm-project-info-sec-wrp
 	display: block;
 	font-family: 'HelveticaNeueBold';
 }
-.dm-vacancy-grid-dsc-title{
-	display: block;
-	color: #88BE43;
-	text-transform: uppercase;
-	margin-bottom: 12px;
+.dm-vacancy-grid-dsc-title {
+    display: block;
+    color: #88BE43;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 .dm-vacancy-grid-dsc span{
 	display: block;
@@ -153,9 +152,8 @@ dm-project-info-sec-wrp
 	line-height: 16px;
 	font-weight: 700;
 	color: #757575;
-	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
-	padding-bottom: 12px;
+	padding-bottom: 7px;
 }
 .dm-vacancy-grid-dsc a{
 	display: inline-block;
@@ -183,6 +181,11 @@ dm-project-info-sec-wrp
 .dm-project-info-lft-img{
 	cursor: pointer;
 }
+.dm-project-info-lft-img{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
+    box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);	
+}
 .dm-thumb-images{
 	padding: 0 15px 0 5px;
 }
@@ -209,10 +212,6 @@ dm-project-info-sec-wrp
 	.dm-vacancy-grid-head-title {
 	    font-size: 47px;
 	    line-height: 49px;
-	}
-	.dm-vacancy-grid-dsc-title {
-	    font-size: 21px;
-	    line-height: 26px;
 	}
 	.dm-vacancy-grid-dsc {
 	    padding: 25px 20px 27px;
@@ -265,10 +264,6 @@ dm-project-info-sec-wrp
 	    font-size: 44px;
 	    line-height: 46px;
 	}
-	.dm-vacancy-grid-dsc-title {
-	    font-size: 20px;
-	    line-height: 25px;
-	}
 	.dm-vacancy-grid-wrp ul li {
 	    width: 50%;
 	    padding: 0 12px 20px;
@@ -317,10 +312,6 @@ dm-project-info-sec-wrp
 	}
 	.dm-vacancy-grid-head {
 	    padding-bottom: 20px;
-	}
-	.dm-vacancy-grid-dsc-title {
-	    font-size: 19px;
-	    line-height: 24px;
 	}
 	.dm-vacancy-grid-dsc {
 	    padding: 25px 10px 27px;

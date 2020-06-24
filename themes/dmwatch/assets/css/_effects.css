@@ -9,7 +9,8 @@ a,input,img,textarea,button,svg,select,
 .filter-results-grd-item,
 .filter-results-img-hover strong i,
 .dm-advisor-grd-item-des a i,
-.annualReports .publicatons-page-top-sec-img img{
+.annualReports .publicatons-page-top-sec-img img,
+.dm-pa-service-wrp ul li .dm-pa-service-innr:hover img{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;

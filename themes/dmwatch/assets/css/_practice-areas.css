@@ -210,6 +210,9 @@ dm-pa-service-sec-wrp
     text-align: center;
     position: relative;
 }
+.dm-pa-service-wrp ul li .dm-pa-service-innr:hover img{
+	transform: scale(1.1);
+}
 .dm-pa-service-wrp ul li:nth-child(7n+1){
 	clear: left;
 }

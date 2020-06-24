@@ -127,12 +127,15 @@
 	font-family: 'HelveticaNeueBold';
 }
 .dm-about-value-sec-inr ul {
-    padding-left: 150px;
-    padding-right: 150px;
+/*    padding-left: 150px;
+    padding-right: 150px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .dm-about-value-sec-inr ul li{
 	float: left;
-	width: 50%;
+	width: 33.33%;
 	padding: 0 30px 25px 30px;
 	position: relative;
 }
@@ -144,6 +147,15 @@
     position: absolute;
     left: 0;
     top: 9px;
+}
+.dm-about-value-sec-inr ul li:after {
+    content: "";
+    height: 43px;
+    width: 12px;
+    background: #7FB23B;
+    position: absolute;
+    left: 0px;
+    top: 4px;
 }
 .dm-about-value-sec-inr ul li strong {
     font-size: 23px;

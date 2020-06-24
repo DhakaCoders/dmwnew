@@ -62,7 +62,10 @@ while( $rblogP->have_posts() ): $rblogP->the_post();
                 </ul>
                 <p><?php the_excerpt(); ?></p>
                 <div class="main-Blogs-content-btn">
-                  <a class="main-Blogs-content-btn-arrow" href="<?php the_permalink(); ?>">Read More</a>
+                  <a class="main-Blogs-content-btn-arrow" href="<?php the_permalink(); ?>">
+                    <span>Read More</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -101,7 +104,10 @@ while( $rblogP1->have_posts() ): $rblogP1->the_post();
   if( !empty( $imgID ) ) $useImg = cbv_get_image_src($imgID); else $useImg = THEME_URI . '/assets/images/dm-pa-grid-img.png';
 ?>
               <li>
-                <div class="blog-page-all-blog-items inline-bg" style="background: url('<?php echo $useImg; ?>');">
+                <div class="blog-page-all-blog-items">
+                  <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                  <div class="inline-bg blog-page-all-blog-item-img" style="background: url('<?php echo $useImg; ?>');">
+                  </div>
                  <div class="blog-page-all-blog-items-sub-title mHc">
                    <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                  </div>

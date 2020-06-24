@@ -185,10 +185,11 @@
 
 .ftr-msg-icon{
 	position: fixed;
-	bottom: 35px;
+	bottom: 70px;
 	right: 10px;
 	cursor: pointer;
 	transition: all 0.4s;
+	z-index: 100;
 }
 .ftr-msg-icon a{
 	display: block;

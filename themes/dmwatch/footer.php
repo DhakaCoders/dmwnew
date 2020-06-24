@@ -107,6 +107,9 @@
     <a href="mailto:"><img src="<?php echo THEME_URI; ?>/assets/images/msg-icon.png"></a>
   </div>
 </footer>
+<div class="ad-back-to-top">
+  <i class="fas fa-angle-double-up"></i>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

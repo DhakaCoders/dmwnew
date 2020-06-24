@@ -10,15 +10,19 @@ a,input,img,textarea,button,svg,select,
 .filter-results-img-hover strong i,
 .dm-advisor-grd-item-des a i,
 .annualReports .publicatons-page-top-sec-img img,
-.dm-pa-service-wrp ul li .dm-pa-service-innr:hover img{
+.dm-pa-service-wrp ul li .dm-pa-service-innr:hover img,
+.blog-page-all-blog-item-img,
+.ad-back-to-top i{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
+
 .dm-pa-grid-innr:hover .dm-pa-grid-img img,
 .dm-vacancy-grid-inr:hover .dm-vacancy-grid-img,
 .scale,
-.annualReports .publicatons-page-top-sec-img:hover img{
+.annualReports .publicatons-page-top-sec-img:hover img,
+.blog-page-all-blog-items:hover .blog-page-all-blog-item-img{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);

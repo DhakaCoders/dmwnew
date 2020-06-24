@@ -65,54 +65,7 @@ $bcontent = get_field('description', $thisID);
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
               </div>
               <div class="event-pp-report-page-tab-1-grds">
-              <?php 
-                $ucquery = new WP_Query(array( 
-                    'post_type'=> 'press',
-                    'post_status' => 'publish',
-                    'posts_per_page' =>-1,
-                    'orderby' => 'date',
-                    'order'=> 'ASC',
-                    'tax_query' => array(
-                      array(
-                         'taxonomy' => 'presstype',
-                          'field'    => 'slug',
-                          'terms'    => 'press-release',
-                          ),
-                    ),
-                  ) 
-                );
-                if($ucquery->have_posts()):
-              ?>
-                <ul class="clearfix reset-list">
-                <?php 
-                 while($ucquery->have_posts()): $ucquery->the_post();
-                 $attach_id = get_post_thumbnail_id(get_the_ID());
-                  if( !empty($attach_id) )
-                    $event_src = cbv_get_image_src($attach_id);
-                  else
-                    $event_src = ''; 
-                  $ninfo = get_field('news_info');  
-                ?>
-                  <li>
-                    <div class="event-pp-report-page-tab-1-grd">
-                      <div class="epprpt-grd-fea-img">
-                        <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
-                        <div class="inline-bg" style="background: url(<?php echo $event_src; ?>"></div>
-                      </div>
-                      <div class="mhc epprpt-grd-des">
-                        <span><?php echo get_the_date('M d, Y'); ?></span>
-                        <h4 class="epprpt-grd-des-title"><a href="#"><?php the_title(); ?></a></h4>
-                        <p><?php echo $ninfo; ?></p>
-                        <a href="<?php the_permalink(); ?>">View Full <i></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <?php endwhile; ?>
-                </ul>
-              <?php endif; ?>
-                <div class="fl-see-all-btn" style="display: none;">
-                  <a href="#">SEE ALL</a>
-                </div>
+                <?php echo do_shortcode( '[ajax_press_posts]' ); ?>
               </div>
               
             </div>

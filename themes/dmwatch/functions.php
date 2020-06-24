@@ -82,6 +82,7 @@ include_once(THEME_DIR .'/inc/breadcrumbs.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
 include_once(THEME_DIR .'/inc/post-loadmore.php');
 include_once(THEME_DIR .'/inc/loadmore-event.php');
+include_once(THEME_DIR .'/inc/loadmore-press.php');
 include_once(THEME_DIR .'/inc/loadmore-media.php');
 include_once(THEME_DIR .'/inc/loadmore-publications.php');
 include_once(THEME_DIR .'/inc/loadmore-reports.php');

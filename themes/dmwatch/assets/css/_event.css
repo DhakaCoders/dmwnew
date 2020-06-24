@@ -504,6 +504,15 @@
     margin-left: auto;
 }
 
+.fl-see-all-btn .pressloading,
+.fl-see-all-btn-rep .pressloading{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media(max-width: 1499px){
 

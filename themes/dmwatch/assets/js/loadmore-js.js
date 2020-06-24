@@ -55,7 +55,7 @@ $("#newsLoadMore").on('click', function(e) {
             action: 'ajax_news_script_load_more'
         },
         beforeSend: function ( xhr ) {
-            $('#ajxaloader').show();
+            $('#newsajxaloader').show();
              
         },
         
@@ -64,9 +64,9 @@ $("#newsLoadMore").on('click', function(e) {
             if (html == 0) {
                 $('.fl-see-all-btn').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
                 $('.fl-see-all-btn').hide();
-                $('#ajxaloader').hide();
+                $('#newsajxaloader').hide();
             } else {
-                $('#ajxaloader').hide();
+                $('#newsajxaloader').hide();
                 that.data('page', newPage);
                 $('#news-content').append(html.substr(html.length-1, 1) === '0'? html.substr(0, html.length-1) : html);
             }
@@ -101,8 +101,8 @@ $("#mediaLoadMore").on('click', function(e) {
         success: function(html ) {
             //check
             if (html == 0) {
-                $('.fl-see-all-btn').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
-                $('.fl-see-all-btn').hide();
+                $('.fl-see-all-btn-rep').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
+                $('.fl-see-all-btn-rep').hide();
                 $('#medialoader').hide();
             } else {
                 $('#medialoader').hide();
@@ -115,6 +115,85 @@ $("#mediaLoadMore").on('click', function(e) {
         },
     });
 });
+
+$("#pressLoadMore").on('click', function(e) {
+    e.preventDefault();
+    //init
+    var that = $(this);
+    var page = $(this).data('page');
+    var newPage = page + 1;
+    var ajaxurl = that.data('url');
+    //ajax call
+    $.ajax({
+        url: ajaxurl,
+        type: 'post',
+        data: {
+            page: page,
+            el_li: 'not',
+            action: 'ajax_press_script_load_more'
+        },
+        beforeSend: function ( xhr ) {
+            $('#pressajxaloader').show();
+             
+        },
+        
+        success: function(html ) {
+            //check
+            if (html == 0) {
+                $('.fl-see-all-btn').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
+                $('.fl-see-all-btn').hide();
+                $('#pressajxaloader').hide();
+            } else {
+                $('#pressajxaloader').hide();
+                that.data('page', newPage);
+                $('#press-content').append(html.substr(html.length-1, 1) === '0'? html.substr(0, html.length-1) : html);
+            }
+        },
+        error: function(html ) {
+            console.log('asdfsd');
+        },
+    });
+});
+
+$("#mediaLoadMore").on('click', function(e) {
+    e.preventDefault();
+    //init
+    var that = $(this);
+    var page = $(this).data('page');
+    var newPage = page + 1;
+    var ajaxurl = that.data('url');
+    //ajax call
+    $.ajax({
+        url: ajaxurl,
+        type: 'post',
+        data: {
+            page: page,
+            el_li: 'not',
+            action: 'ajax_media_script_load_more'
+        },
+        beforeSend: function ( xhr ) {
+            $('#medialoader').show();
+             
+        },
+        
+        success: function(html ) {
+            //check
+            if (html == 0) {
+                $('.fl-see-all-btn-rep').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
+                $('.fl-see-all-btn-rep').hide();
+                $('#medialoader').hide();
+            } else {
+                $('#medialoader').hide();
+                that.data('page', newPage);
+                $('#media-content').append(html.substr(html.length-1, 1) === '0'? html.substr(0, html.length-1) : html);
+            }
+        },
+        error: function(html ) {
+            console.log('asdfsd');
+        },
+    });
+});
+
 
 $("#publicloadMore").on('click', function(e) {
     e.preventDefault();

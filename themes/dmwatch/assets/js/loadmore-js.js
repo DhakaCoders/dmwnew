@@ -155,7 +155,7 @@ $("#pressLoadMore").on('click', function(e) {
     });
 });
 
-$("#mediaLoadMore").on('click', function(e) {
+$("#repressLoadMore").on('click', function(e) {
     e.preventDefault();
     //init
     var that = $(this);
@@ -169,10 +169,10 @@ $("#mediaLoadMore").on('click', function(e) {
         data: {
             page: page,
             el_li: 'not',
-            action: 'ajax_media_script_load_more'
+            action: 'ajax_repress_script_load_more'
         },
         beforeSend: function ( xhr ) {
-            $('#medialoader').show();
+            $('#repressloader').show();
              
         },
         
@@ -181,11 +181,11 @@ $("#mediaLoadMore").on('click', function(e) {
             if (html == 0) {
                 $('.fl-see-all-btn-rep').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
                 $('.fl-see-all-btn-rep').hide();
-                $('#medialoader').hide();
+                $('#repressloader').hide();
             } else {
-                $('#medialoader').hide();
+                $('#repressloader').hide();
                 that.data('page', newPage);
-                $('#media-content').append(html.substr(html.length-1, 1) === '0'? html.substr(0, html.length-1) : html);
+                $('#repress-content').append(html.substr(html.length-1, 1) === '0'? html.substr(0, html.length-1) : html);
             }
         },
         error: function(html ) {

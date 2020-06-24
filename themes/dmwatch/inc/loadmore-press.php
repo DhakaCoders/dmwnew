@@ -31,7 +31,7 @@ function ajax_press_script_load_more($args) {
         $ajax = true;
     }
     //number of posts per page default
-    $num = 2;
+    $num = 3;
     //page number
     $paged = 1;
     if(isset($_POST['page']) && !empty($_POST['page'])){
@@ -71,7 +71,7 @@ function ajax_press_script_load_more($args) {
         </div>
         <div class="mhc epprpt-grd-des">
           <span><?php echo get_the_date('M d, Y'); ?></span>
-          <h4 class="epprpt-grd-des-title"><a href="#"><?php the_title(); ?></a></h4>
+          <h4 class="epprpt-grd-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
           <p><?php echo $ninfo; ?></p>
           <a href="<?php the_permalink(); ?>">View Full <i></i></a>
         </div>
@@ -103,12 +103,12 @@ add_action('wp_ajax_ajax_press_script_load_more', 'ajax_press_script_load_more')
 
 
 function repress_script_load_more($args = array()) {
-  echo '<ul class="clearfix reset-list" id="media-content">';
+  echo '<ul class="clearfix reset-list" id="repress-content">';
       ajax_repress_script_load_more($args);
   echo '</ul>';
   echo '<div class="fl-see-all-btn-rep">
-  <div class="ajaxloading" id="medialoader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
-   <a href="#" id="mediaLoadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Load More</a>';
+  <div class="ajaxloading repressloading" id="repressloader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
+   <a href="#" id="repressLoadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Load More</a>';
    echo '</div>';
 
 }
@@ -130,14 +130,14 @@ function ajax_repress_script_load_more($args) {
         $ajax = true;
     }
     //number of posts per page default
-    $num = 2;
+    $num = 3;
     //page number
     $paged = 1;
     if(isset($_POST['page']) && !empty($_POST['page'])){
         $paged = $_POST['page'] + $paged;
     }
     $query = new WP_Query(array( 
-      'post_type'=> 'news',
+      'post_type'=> 'press',
       'post_status' => 'publish',
       'posts_per_page' =>$num,
       'paged'=>$paged,
@@ -145,9 +145,9 @@ function ajax_repress_script_load_more($args) {
       'order'=> 'DESC',
       'tax_query' => array(
         array(
-           'taxonomy' => 'news_cat',
+           'taxonomy' => 'presstype',
             'field'    => 'slug',
-            'terms'    => 'oped-media',
+            'terms'    => 'report',
             ),
       ),
       ) 
@@ -165,14 +165,17 @@ function ajax_repress_script_load_more($args) {
     $ninfo = get_field('news_info');  
     ?>
     <li>
-      <div class="event-media-page-tab-con-row clearfix">
-        <div class="event-media-page-tab-con-fea-img">
-          <?php echo cbv_get_image_tag($attach_id); ?>
+      <div class="event-pp-report-page-tab-2-grd">
+        <div class="epprpt2-grd-fea-img">
+          <div class="inline-bg" style="background: url(<?php echo $event_src; ?>">
+            <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+          </div>
         </div>
-        <div class="event-media-page-tab-con-des">
-          <h3 class="emptcd-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-          <span><?php echo $ninfo; ?></span>
-          <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading...</a> </p>
+        <div class="epprpt2-grd-des">
+          <span><?php echo get_the_date('M d, Y'); ?></span>
+          <h4 class="epprpt-grd-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+          <strong><?php echo $ninfo; ?></strong>
+          <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Continue Reading.</a></p>
         </div>
       </div>
     </li>

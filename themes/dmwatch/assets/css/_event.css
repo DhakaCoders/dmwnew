@@ -505,7 +505,7 @@
 }
 
 .fl-see-all-btn .pressloading,
-.fl-see-all-btn-rep .pressloading{
+.fl-see-all-btn-rep .repressloading{
 	display: flex;
     align-items: center;
     justify-content: center;

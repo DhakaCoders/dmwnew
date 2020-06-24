@@ -14,7 +14,7 @@ $standaardbanner = get_field('bannerimage', $thisID);
 if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-about.jpg';
 $intro = get_field('introsec', $thisID);
 ?>
-<section class="page-banner page-bnr-rgt-con page-bnr-about" style="overflow: hidden;">
+<section class="page-banner page-bnr-rgt-con page-bnr-about designThree" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>

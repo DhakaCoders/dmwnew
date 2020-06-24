@@ -262,9 +262,11 @@ ol li::before {
 .page-bnr-top-logo {
     position: absolute;
     top: -4px;
-    left: 3px;
+    right: 3px;
 }
-
+.page-bnr-top-logo img{
+	max-width: 200px;
+}
 .page-bnr-btm-logo{
 	position: absolute;
 	bottom: -40px;

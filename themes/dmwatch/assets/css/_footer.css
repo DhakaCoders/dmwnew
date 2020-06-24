@@ -149,7 +149,7 @@
 }
 
 .ftr-top-title{
-	font-size: 50px;
+	font-size: 40px;
 	line-height: 1;
 	display: block;
 	font-weight: normal;
@@ -157,6 +157,7 @@
 	margin-bottom: 0;
 	padding-right: 20px;
 	font-family: 'FranklinGothic-Book';
+	text-transform: uppercase;
 }
 
 .ftr-top-sec-link a{
@@ -170,7 +171,6 @@
 	justify-content: center;
 	background: #fff;
 	border: 2px solid #fff;
-	border-radius: 8px;
 	font-size: 34px;
 	color: #88bc41;
 	font-family: 'Franklin-Gothic-Regular';
@@ -199,6 +199,7 @@
 .ftr-cpwrt span p {
     margin: 0;
     padding: 0;
+    font-size: 14px;
 }
 .copyright-text {
     background: #fcfcfc;

@@ -136,9 +136,6 @@ get_header();
               </div>
             </li>
           </ul>
-          <div class="reset-filter-btn">
-            <button class="clearnow" type="reset">Reset Filter</button>
-          </div>
           </form>
         </div>
       </div>
@@ -153,7 +150,10 @@ get_header();
       <div class="col-md-12">
         <div class="filter-result-innr">
           <div class="filter-result-hedding">
-            <h2 class="opfhdr-title">FILTER RESULT</h2>
+            <h2 class="opfhdr-title">Filter Result</h2>
+            <div class="reset-filter-btn backTopage">
+              <button class="clearnow" type="reset">Reset Filter</button>
+            </div>
           </div>
           <span id="filter" data-type="<?php echo $ptype; ?>" data-year="<?php echo $pyears; ?>" style="display: none;"></span>
           <div class="filter-result-items-wrap">

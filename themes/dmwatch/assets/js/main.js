@@ -418,6 +418,23 @@ $('.hdr-search input').on('focusout', function(){
 
 $('.dm-tp-useful-grd-item ul li').prepend('<span></span>');
 
+
+if($('.ad-back-to-top').length){
+  $('.ad-back-to-top').hide();
+  $(document).scroll(function() {
+      if ($(document).scrollTop() >= 95) {
+        $('.ad-back-to-top').fadeIn(); 
+      }
+      else {
+          $('.ad-back-to-top').fadeOut();
+      }
+  });
+  $(".ad-back-to-top").click(function () {
+    $("html, body").animate({scrollTop: 0}, 1000);
+  });  
+
+}
+
     new WOW().init();
 
 })(jQuery);

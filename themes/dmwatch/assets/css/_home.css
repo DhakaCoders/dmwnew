@@ -258,7 +258,7 @@
 }
 
 .hmFeaServicesModal .hmFeaServicesSlideItem{
-	width: 25%;
+	width: 20%;
 }
 .dm-modal-con-wrap.hmFeaServicesModal .modal-dialog{
 	max-width: 1200px;
@@ -313,7 +313,8 @@
 	background: #81b33d;
 	right: -33px;
 }
-.hm-projects-tabs .tab-link.current{
+.hm-projects-tabs .tab-link.current,
+.hm-projects-tabs .tab-link:hover{
 	color: #81b33d;
 }
 .hm-projects-section{
@@ -445,11 +446,14 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
     justify-content: center;
     padding: 0 20px;
     box-shadow: 0px 0px 10px #ddd;
+    overflow: hidden;
 }
 .clientsPartnersLogosSlideItem img{
 	max-height: 150px;
 }
-
+.clientsPartnersLogosSlideItem > div.hpcLogo:hover{
+	background: #fff;
+}
 
 
 

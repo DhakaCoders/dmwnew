@@ -387,6 +387,21 @@ ol li::before {
 .notFoundMems{
 	text-align: center;
 }
+
+/*to- top*/
+.ad-back-to-top {
+    position: fixed;
+    right: 33px;
+    bottom: 30px;
+    max-width: 35px;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+    font-size: 30px;
+}
+.ad-back-to-top:hover{
+	color: #88bc41;
+}
 @media(max-width: 1499px){
 
 }

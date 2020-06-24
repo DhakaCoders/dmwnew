@@ -53,6 +53,10 @@
     -webkit-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
     -moz-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
     box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
+    overflow: hidden;
+}
+.client-partners-items:hover{
+	background: #fff;
 }
 .client-partners-items a{
 	display: inline-block;

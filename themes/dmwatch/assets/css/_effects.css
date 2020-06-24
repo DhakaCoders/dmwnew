@@ -12,7 +12,8 @@ a,input,img,textarea,button,svg,select,
 .annualReports .publicatons-page-top-sec-img img,
 .dm-pa-service-wrp ul li .dm-pa-service-innr:hover img,
 .blog-page-all-blog-item-img,
-.ad-back-to-top i{
+.ad-back-to-top i,.client-partners-items,.crkmts-grd-item,
+.clientsPartnersLogosSlideItem > div.hpcLogo{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -27,6 +28,13 @@ a,input,img,textarea,button,svg,select,
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	-o-transform: scale(1.1);
+}
+.client-partners-items:hover img,
+.clientsPartnersLogosSlideItem > div.hpcLogo:hover img{
+	transform: scale(1.02);
+	-ms-transform: scale(1.02);
+	-webkit-transform: scale(1.02);
+	-o-transform: scale(1.02);
 }
 
 /**

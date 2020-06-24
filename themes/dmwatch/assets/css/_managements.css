@@ -915,6 +915,9 @@ body{
 .team-single-btm-des p:last-child{
 	margin-bottom: 0;
 }
+.backTopage{
+	padding-top: 0;
+}
 @media(max-width: 1499px){
 
 }

@@ -185,7 +185,7 @@
 
 .ftr-msg-icon{
 	position: fixed;
-	bottom: 70px;
+	bottom: 30px;
 	right: 10px;
 	cursor: pointer;
 	transition: all 0.4s;

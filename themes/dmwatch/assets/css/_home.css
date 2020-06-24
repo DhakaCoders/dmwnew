@@ -590,11 +590,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.main-slider-des {
 		max-width: 448px;
 	}
-	.dmwsd-title,
-	.hmfsshdr-title,
-	.hmcpshdr-title{
-		font-size: 40px;
-	}
 	.dm-watch-section {
 	    padding: 60px 0 50px;
 	}
@@ -642,12 +637,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 @media(max-width: 575px){
 	.main-slide-des-title {
 	    font-size: 30px;
-	}
-	.dmwsd-title,
-	.hmfsshdr-title,
-	.hmcpshdr-title{
-		font-size: 38px;
-		margin-bottom: 20px;
 	}
 	.dm-watch-sec-des p{
 		font-size: 19px;

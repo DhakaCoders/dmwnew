@@ -301,6 +301,9 @@
 
 .filter-results-grd-cntlr ul{
 	margin: 0 -15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .filter-results-grd-cntlr ul li{
 	float: left;
@@ -988,6 +991,14 @@ body{
 	.crkmts-grd-item-title{
 		font-size: 17px;
 	}
+	.our-project-filter-btns ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.our-project-filter-btns ul li{
+		width: 25%;
+	}
 }
 
 @media(max-width: 991px){
@@ -1104,6 +1115,10 @@ body{
 	.team-single-avater{
 		max-width: 200px;
 	}
+	.filter-results-grd-cntlr ul{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 
 @media(max-width: 767px){
@@ -1192,6 +1207,10 @@ body{
 	}
 	.team-single-btm-con-sec{
 		margin-bottom: 80px;
+	}
+	.filter-results-grd-cntlr ul{
+		padding-left: 0;
+		padding-right: 0;
 	}
 }	
 

@@ -113,11 +113,16 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
     padding-left: 0;
     padding-right: 20px;
 }
-
+.annualReports ul{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .annualReports ul li{
     width: 33.33%;
     float: left;
     padding: 0 15px;
+    
 }
 .annualReports .publicatons-page-top-sec-img{
     max-width: 100%;
@@ -304,9 +309,6 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.annualReportsHdr h2{
-		font-size: 35px;
-	}
 }
 
 @media(max-width: 479px){
@@ -318,9 +320,6 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
 	}
 	.page-banner.exSuccessStories h1.page-banner-title{
 		font-size: 35px;
-	}
-	.annualReportsHdr h2 {
-	    font-size: 32px;
 	}
 }
 

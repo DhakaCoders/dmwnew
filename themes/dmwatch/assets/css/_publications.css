@@ -28,8 +28,6 @@
 }
 .publicatons-page-top-sec-des p{
 	padding-left: 188px;
-	font-size: 18px;
-	line-height: 30px;
 }
 .publicatons-page-top-sec-des a{
 	color: #88BE43;
@@ -224,7 +222,9 @@ ul.publicatinList li:nth-child(2n+2) .filter-result-items-des p{
 .event-media-page-tab-con .filter-result-items-img:after{
 	display: none;
 }
-
+.rp-img-wrap{
+	overflow: hidden;
+}
 
 
 @media(max-width: 1499px){

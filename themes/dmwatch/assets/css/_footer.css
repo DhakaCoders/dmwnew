@@ -1,29 +1,29 @@
 .footer-wrp{
-	padding-top: 100px;
+	padding-top: 80px;
 	position: relative;
 	font-family: 'FranklinGothic-Book';
 }
 .footer-inner{
 	padding-bottom: 20px;
 }
-.ftr-logo{
-	float: left;
-	width: 33.7606%;
-	padding-right: 72px;
-	margin-top: -5px;
+.ftr-logo {
+    float: left;
+    width: 30%;
+    padding-right: 72px;
+    margin-top: -5px;
 }
-.ftr-menu{
-	float: left;
-	width:  16.6666%;
+.ftr-menu {
+    float: left;
+    width: 20%;
 }
-.ftr-cnt-menu{
-	float: left;
-	width: 26.0683%;
-	padding-right: 50px;
+.ftr-cnt-menu {
+    float: left;
+    width: 27%;
+    padding-right: 50px;
 }
-.ftr-facebook{
-	float: left;
-	width: 23.5042%;
+.ftr-facebook {
+    float: left;
+    width: 23%;
 }
 .ftr-logo a{
 	display: block;

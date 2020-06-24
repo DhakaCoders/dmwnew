@@ -195,7 +195,7 @@ if( $('#googlemap').length ){
 
 
  if (windowWidth <= 767) {
-  $('.ftr-menu h4, .ftr-cnt-menu h4').on('click', function(){
+  $('.ftr-menu h4, .ftr-cnt-menu h4, .ftr-facebook h4').on('click', function(){
     $(this).toggleClass('active');
     $(this).parent().siblings().find('h4').removeClass('active');
     $(this).parent().find('ul').slideToggle(300);

@@ -417,14 +417,13 @@ ol li::before {
 }
 
 @media(max-width: 1199px){
-	.page-banner.page-bnr-lft-con .page-banner-title {
+	.page-banner.page-bnr-lft-con .page-banner-title,
+	.pcbsd-title,
+	.page-banner-title {
 	    font-size: 55px;
 	}
 	.page-banner.page-bnr-lft-con .page-banner-des {
 	    max-width: 550px;
-	}
-	.page-banner {
-	    margin-bottom: 80px;
 	}
 	.page-banner-des p br{
 		display: none;
@@ -432,8 +431,10 @@ ol li::before {
 	.page-banner.page-bnr-lft-con .page-banner-inr > div{
 		max-width: 800px;
 	}
-	.page-banner.page-bnr-rgt-con .page-banner-title{
-		font-size: 65px;
+	.page-banner.page-bnr-lft-con .page-banner-title,
+	.pcbsd-title,
+	.page-banner-title {
+		font-size: 50px;
 	}
 	.page-banner.page-bnr-rgt-con .page-banner-inr {
 	    bottom: 150px;
@@ -450,11 +451,11 @@ ol li::before {
 	.page-banner-des p br{
 		display: none;
 	}
-	.page-banner.page-bnr-lft-con .page-banner-title {
-	    font-size: 47px;
-	}
+	.page-banner.page-bnr-lft-con .page-banner-title,
+	.pcbsd-title,
+	.page-banner-title,
 	.page-banner.page-bnr-rgt-con .page-banner-title {
-	    font-size: 52px;
+	    font-size: 45px;
 	}
 	.page-bnr-btm-logo{
 		bottom: -80px;
@@ -491,15 +492,15 @@ ol li::before {
 	.page-banner-des {
 	    min-height: 450px;
 	}
-	.page-banner {
-	    margin-bottom: 60px;
-	}
 	.page-banner-des p {
 	    font-size: 18px;
 	    line-height: 1.3;
 	}
+	.page-banner.page-bnr-lft-con .page-banner-title,
+	.pcbsd-title,
+	.page-banner-title,
 	.page-banner.page-bnr-rgt-con .page-banner-title {
-	    font-size: 45px;
+	    font-size: 42px;
 	}
 	.dm-vision-mision-grd-sec {
 	    padding: 35px 0;
@@ -519,8 +520,11 @@ ol li::before {
 	.page-banner-des {
 	    min-height: 436px;
 	}
-	.page-banner.page-bnr-lft-con .page-banner-title {
-	    font-size: 42px;
+	.page-banner.page-bnr-lft-con .page-banner-title,
+	.pcbsd-title,
+	.page-banner-title,
+	.page-banner.page-bnr-rgt-con .page-banner-title {
+	    font-size: 40px;
 	}
 }
 
@@ -532,11 +536,11 @@ ol li::before {
 	.page-banner-des {
 	    min-height: 400px;
 	}
-	.page-banner.page-bnr-lft-con .page-banner-title {
-	    font-size: 38px;
-	}
+	.page-banner.page-bnr-lft-con .page-banner-title,
+	.pcbsd-title,
+	.page-banner-title,
 	.page-banner.page-bnr-rgt-con .page-banner-title {
-	    font-size: 37px;
+	    font-size: 35px;
 	}
 }
 

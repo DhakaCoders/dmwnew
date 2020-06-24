@@ -58,7 +58,7 @@ dm-us-contact-form-sec
 */
 .dm-us-contact-form-sec {
     padding-top: 55px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 }
 .dm-us-contact-form-sec .dm-contact-form-head{
 	padding-bottom: 45px;
@@ -87,6 +87,9 @@ dm-us-contact-form-sec
 .dm-us-contact-form-wrp .wpforms-container .wpforms-field.wpforms-field-payment-checkbox label.wpforms-error{
 	text-align: center;
 	padding-top: 10px;
+}
+.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label.wpforms-error{
+	padding-top: 5px;
 }
 .dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .subjectField{
 	width: 100%;
@@ -414,9 +417,6 @@ dm-us-contact-form-sec
 }
 
 @media(max-width: 1199px){
-	.dm-us-contact-form-sec {
-	    margin-bottom: 90px;
-	}
 	.dm-member-msg span {
 	    font-size: 27px;
 	    line-height: 29px;
@@ -440,27 +440,10 @@ dm-us-contact-form-sec
 	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container{
 		margin: 0 -15px;
 	}
-	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label {
-	    font-size: 18px;
-	    line-height: 20px;
-	    padding-left: 10px;
-	}
-	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input {
-	    height: 60px;
-	    background: transparent;
-	    font-size: 20px;
-	    line-height: 28px;
-	}
 	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label {
 	    font-size: 20px;
 	    line-height: 26px;
 	    padding-left: 65px;
-	}
-	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button {
-	    height: 85px;
-	    font-size: 30px;
-	    line-height: 32px;
-	    padding: 25px 0 27px;
 	}
 	.dm-member-msg span {
 	    font-size: 26px;
@@ -477,9 +460,6 @@ dm-us-contact-form-sec
 @media(max-width: 767px){
 	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field {
 	    width: 100%;
-	}
-	.dm-us-contact-form-sec {
-	    margin-bottom: 60px;
 	}
 	.dm-us-contact-form-wrp{
 		max-width: 500px;
@@ -521,9 +501,6 @@ dm-us-contact-form-sec
 	}
 	.dm-us-contact-form-sec .dm-contact-form-head {
 	    padding-bottom: 30px;
-	}
-	.pcbsd-title {
-	    font-size: 50px;
 	}
 	.participateBnrSlideItem-des p{
 		font-size: 18px;
@@ -568,9 +545,6 @@ dm-us-contact-form-sec
 	}
 	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label{
 		font-size: 17px;
-	}
-	.pcbsd-title {
-	    font-size: 37px;
 	}
 	.participateBnrSlideItem-des p {
     	font-size: 17px;

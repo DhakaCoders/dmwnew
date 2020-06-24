@@ -205,10 +205,6 @@ div.wpforms-container-full .wpforms-form .wpforms-error {
 	#googlemap {
 	    height: 580px;
 	}
-	.dm-contact-form-head-title {
-	    font-size: 48px;
-	    line-height: 50px;
-	}
 	.dm-contact-form-head {
 	    padding-bottom: 100px;
 	}
@@ -226,10 +222,6 @@ div.wpforms-container-full .wpforms-form .wpforms-error {
 	#googlemap {
 	    height: 480px;
 	}
-	.dm-contact-form-head-title {
-	    font-size: 45px;
-	    line-height: 48px;
-	}
 	.dm-contact-form-head {
 	    padding-bottom: 80px;
 	}
@@ -244,10 +236,6 @@ div.wpforms-container-full .wpforms-form .wpforms-error {
 @media(max-width: 767px){
 	#googlemap {
 	    height: 380px;
-	}
-	.dm-contact-form-head-title {
-	    font-size: 42px;
-	    line-height: 45px;
 	}
 	.dm-contact-form-head {
 	    font-size: 22px;
@@ -292,10 +280,6 @@ div.wpforms-container-full .wpforms-form .wpforms-error {
 	    padding-top: 60px;
 	    padding-bottom: 80px;
 	}
-	.dm-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label {
-	    font-size: 20px;
-	    line-height: 22px;
-	}
 	.dm-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input{
 		font-size: 17px;
 		line-height: 19px;
@@ -307,27 +291,13 @@ div.wpforms-container-full .wpforms-form .wpforms-error {
 	#googlemap {
 	    height: 350px;
 	}
-	.dm-contact-form-head-title {
-	    font-size: 38px;
-	    line-height: 42px;
-	}
-	.dm-contact-form-head p{
-		font-size: 19px;
-	}
 	.dm-contact-form-inr p{
 		font-size: 19px;
-	}
-	.dm-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label {
-	    font-size: 18px;
-	    line-height: 22px;
 	}
 }
 
 @media(max-width: 479px){
-	.dm-contact-form-head-title {
-	    font-size: 36px;
-	    line-height: 38px;
-	}
+
 }
 
 @media(max-width: 359px){

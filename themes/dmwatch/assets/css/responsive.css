@@ -50,11 +50,40 @@
 	body{
 		font-size: 17px;
 	}
+	h1{
+		font-size: 33px;
+	}
+	h2{
+		font-size: 28px;
+	}
+	h3{
+		font-size: 23px;
+	}
+	h4{
+		font-size: 20px;
+	}
+	h5{
+		font-size: 18px;
+	}
 
 }
 
 @media(max-width: 479px){
-
+	h1{
+		font-size: 30px;
+	}
+	h2{
+		font-size: 26px;
+	}
+	h3{
+		font-size: 22px;
+	}
+	h4{
+		font-size: 20px;
+	}
+	h5{
+		font-size: 18px;
+	}
 
 }
 

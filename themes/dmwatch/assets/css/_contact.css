@@ -11,9 +11,12 @@ dm-contact-form-sec-wrp
 	padding-top: 100px;
 	padding-bottom: 125px;
 }
+.contact-google-map-wrp iframe{
+	vertical-align: top;
+}
 .dm-contact-form-block {
     background-color: #fff;
-    padding: 35px 0 60px;
+    padding: 50px 0 65px;
     overflow: hidden;
     max-width: 1170px;
     width: 100%;
@@ -30,7 +33,6 @@ dm-contact-form-sec-wrp
 	margin: 0 auto;
 	text-align: center;
 	font-size: 17px;
-	color: #757575;
 	padding-bottom: 120px;
 }
 .dm-contact-form-head-title{
@@ -45,19 +47,16 @@ dm-contact-form-sec-wrp
 	padding-left: 50px;
 }
 .dm-contact-form-inr p{
-	font-size: 19px;
-	line-height: 1.2;
-	color: #9AA59A;
-	margin-bottom: 55px;
+	margin-bottom: 0;
 }
 .dm-contact-form-lft{
 	width: 46%;
 	float: left;
 	padding-right: 25px;
-	padding-left: 10px;
+	padding-left: 0;
 }
 .dm-contact-form-wrp{
-	padding-top: 20px;
+	padding-top: 0;
 }
 .dm-contact-form-img-rgt{
 	float: right;

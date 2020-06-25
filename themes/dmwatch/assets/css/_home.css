@@ -588,7 +588,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	}
 	.hm-fea-services-sec {
 	    padding: 65px 0 45px;
-	    margin-bottom: 75px;
 	}
 	.hmFeaServicesSlideItem {
 	    width: 50%;
@@ -622,7 +621,9 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.hm-clients-partners-sec-hdr p br{
 		display: none;
 	}
-
+	.hm-fea-service-item-img img {
+	    max-width: 100px;
+	}
 }
 
 @media(max-width: 575px){
@@ -652,7 +653,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	}
 	.hm-fea-services-sec {
 	    padding: 55px 0 35px;
-	    margin-bottom: 55px;
 	}
 	.hm-fea-services-sec-hdr {
 	    padding-bottom: 30px;
@@ -665,9 +665,10 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.hm-fea-service-item-img img{
-		max-width: 100px;
+	.hm-fea-service-item-img img {
+	    max-width: 80px;
 	}
+
 	.hm-projects-section {
 	    padding: 50px 0 40px;
 	}

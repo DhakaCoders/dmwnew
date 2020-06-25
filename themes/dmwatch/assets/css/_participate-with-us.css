@@ -488,12 +488,6 @@ dm-us-contact-form-sec
 	    width: 6px;
 	    height: 14px;
 	}
-	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button {
-	    height: 75px;
-	    font-size: 28px;
-	    line-height: 30px;
-	    padding: 21px 0 22px;
-	}
 	.dm-member-msg span {
 	    font-size: 24px;
 	    line-height: 26px;
@@ -505,6 +499,12 @@ dm-us-contact-form-sec
 	.participateBnrSlideItem-des p{
 		font-size: 18px;
 		font-weight: 400;
+	}
+	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button {
+	    height: 55px;
+	    font-size: 21px;
+	    line-height: 1;
+	    padding: 18px 0 17px;
 	}
 }
 
@@ -523,9 +523,6 @@ dm-us-contact-form-sec
 	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
 		padding-left: 0;
 	}
-	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
-		font-size: 17px;
-	}
 	.checkmark {
 	    width: 35px;
 	    height: 35px;
@@ -533,12 +530,6 @@ dm-us-contact-form-sec
 	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label .checkmark:after {
 	    left: 14px;
 	    top: 5px;
-	}
-	.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button {
-	    height: 63px;
-	    font-size: 26px;
-	    line-height: 1;
-	    padding: 18px 0 17px;
 	}
 	.dm-member-msg span {
 	    font-size: 21px;;

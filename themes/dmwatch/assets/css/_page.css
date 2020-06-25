@@ -539,14 +539,19 @@ ol li::before {
 	.page-banner.page-bnr-lft-con .page-banner-title,
 	.pcbsd-title,
 	.page-banner-title,
-	.page-banner.page-bnr-rgt-con .page-banner-title {
-	    font-size: 35px;
+	.page-banner.page-bnr-rgt-con .page-banner-title,
+	.designTwo.page-bnr-an-our-project-details .page-banner-des .page-banner-title {
+	    font-size: 32px;
 	}
 }
 
 @media(max-width: 479px){
-	.page-banner.page-bnr-lft-con .page-banner-title {
-	    font-size: 35px;
+	.page-banner.page-bnr-lft-con .page-banner-title,
+	.pcbsd-title,
+	.page-banner-title,
+	.page-banner.page-bnr-rgt-con .page-banner-title,
+	.designTwo.page-bnr-an-our-project-details .page-banner-des .page-banner-title {
+	    font-size: 27px;
 	}
 	/*.page-banner-des p {
 	    font-size: 17px;

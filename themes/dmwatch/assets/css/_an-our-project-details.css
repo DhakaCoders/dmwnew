@@ -34,7 +34,7 @@ dm-project-info-sec-wrp
 }
 .dm-project-info-rgt-dsc p {
     margin-bottom: 48px;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 .dm-project-info-rgt-dsc span{
 	display: inline-block;
@@ -67,7 +67,6 @@ dm-project-info-sec-wrp
 	text-decoration: none;
 }
 .dm-project-info-btm-dsc p{
-	font-size: 18px;
 	margin-bottom: 45px;
 }
 .dm-project-info-btm-dsc-title{
@@ -200,8 +199,6 @@ dm-project-info-sec-wrp
 @media(max-width: 1199px){
 	.dm-project-info-rgt-dsc p {
 	    margin-bottom: 45px;
-	    line-height: 42px;
-	    font-size: 22px;
 	}
 	.dm-project-info-rgt-dsc p br{
 		display: none;
@@ -253,12 +250,8 @@ dm-project-info-sec-wrp
 	}
 	.dm-project-info-rgt-dsc p {
 	    margin-bottom: 35px;
-	    line-height: 38px;
-	    font-size: 20px;
 	}
 	.dm-project-info-btm-dsc p {
-	    font-size: 20px;
-	    line-height: 42px;
 	    margin-bottom: 35px;
 	}
 	.dm-project-info-btm-dsc {
@@ -276,8 +269,6 @@ dm-project-info-sec-wrp
 		clear: left;
 	}
 	.dm-project-info-btm-dsc p {
-	    font-size: 17px;
-	    line-height: 1.8;
 	    margin-bottom: 35px;
 	}
 	.dm-vacancy-grid-wrp ul{
@@ -302,7 +293,6 @@ dm-project-info-sec-wrp
 	    margin: 80px 0;
 	    padding-bottom: 50px;
 	}
-	.dm-project-info-btm-dsc a,
 	.dm-project-info-btm-dsc-title{
 	    font-size: 20px;
 	    line-height: 22px;
@@ -316,10 +306,6 @@ dm-project-info-sec-wrp
 	.dm-vacancy-grid-sec-wrp {
 	    padding-bottom: 50px;
 	    margin: 60px 0;
-	}
-	.dm-project-info-rgt-dsc p {
-	    line-height: 32px;
-	    font-size: 19px;
 	}
 	.dm-project-info-rgt-dsc span{
 		font-size: 20px;
@@ -345,10 +331,7 @@ dm-project-info-sec-wrp
 	}
 }
 @media(max-width: 575px){
-	.dm-project-info-rgt-dsc p {
-	    line-height: 28px;
-	    font-size: 18px;
-	}
+
 
 }
 

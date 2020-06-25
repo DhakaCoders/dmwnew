@@ -309,6 +309,9 @@ ul.publicatinList.notableEventsList li:nth-child(2n+2) .filter-result-items-des 
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.publicatons-page-top-sec-des{
+		padding-right: 20px;
+	}
 }
 
 @media(max-width: 479px){

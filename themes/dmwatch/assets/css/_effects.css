@@ -14,7 +14,7 @@ a,input,img,textarea,button,svg,select,
 .blog-page-all-blog-item-img,
 .ad-back-to-top i,.client-partners-items,.crkmts-grd-item,
 .clientsPartnersLogosSlideItem > div.hpcLogo,
-.ad-back-to-top{
+.ad-back-to-top,.event-pp-report-page-tab-2-grd{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;

@@ -21,6 +21,7 @@
 	background-position: center center
 }
 
+
 .sitemap{
 	padding: 100px 0;
 }
@@ -134,13 +135,13 @@ ol li::before {
 
 
 .page-banner-des{
-	min-height: 590px;
+	height: 590px;
 }
 .designTwo .page-banner-des{
-	min-height: 350px;
+	height: 350px;
 }
 .designThree .page-banner-des{
-	min-height: 450px;
+	height: 450px;
 }
 .designTwo .page-banner-des .page-banner-title{
 	text-transform: capitalize;
@@ -317,7 +318,7 @@ ol li::before {
     padding: 120px 0;
 }
 .searchBanner .page-banner-des{
-	min-height: 400px;
+	height: 400px;
 }
 .searchBanner.page-banner.page-bnr-lft-con .page-banner-inr {
     bottom: 160px;
@@ -490,7 +491,7 @@ ol li::before {
 		text-align: center;
 	}
 	.page-banner-des {
-	    min-height: 450px;
+	    height: 450px;
 	}
 	.page-banner-des p {
 	    font-size: 18px;
@@ -518,7 +519,7 @@ ol li::before {
 
 @media(max-width: 639px){
 	.page-banner-des {
-	    min-height: 436px;
+	    height: 436px;
 	}
 	.page-banner.page-bnr-lft-con .page-banner-title,
 	.pcbsd-title,
@@ -534,7 +535,7 @@ ol li::before {
 	}
 
 	.page-banner-des {
-	    min-height: 400px;
+	    height: 400px;
 	}
 	.page-banner.page-bnr-lft-con .page-banner-title,
 	.pcbsd-title,

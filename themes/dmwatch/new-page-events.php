@@ -101,7 +101,7 @@ $bcontent = get_field('description', $thisID);
                 </div>
                 <div class="upcoming-event-con-rgt">
                   <strong><?php echo get_the_date('M d, Y'); ?></strong>
-                  <h3 class="uec-title"><?php the_title(); ?></h3>
+                  <h3 class="uec-title"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h3>
                   <?php echo wpautop(cbv_get_excerpt()); ?>
                 </div>
                 <?php endwhile; ?>

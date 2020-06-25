@@ -8,7 +8,7 @@ dm-contact-form-sec-wrp
 }
 .dm-contact-form-sec-wrp{
 	background:#f5f7f6;
-	padding-top: 100px;
+	padding-top: 80px;
 	padding-bottom: 125px;
 }
 .contact-google-map-wrp iframe{
@@ -33,7 +33,7 @@ dm-contact-form-sec-wrp
 	margin: 0 auto;
 	text-align: center;
 	font-size: 17px;
-	padding-bottom: 120px;
+	padding-bottom: 50px;
 }
 .dm-contact-form-head-title{
 	display: block;

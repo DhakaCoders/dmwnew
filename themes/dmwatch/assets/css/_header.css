@@ -258,7 +258,7 @@ nav.main-nav ul.sub-menu li:hover:after {
 	transition: all 0.3s;
 }
 .header .hdr-search.focused{
-	width: 230px;
+	width: 250px;
 	transition: all 0.3s;
 }
 .hdr-search form{

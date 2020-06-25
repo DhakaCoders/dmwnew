@@ -127,6 +127,9 @@
 	line-height: 1;
 	margin: 0 0 20px 0;
 }
+.uec-title a{
+	color: #88BE43;
+}
 .upcoming-event-con-rgt p a{
 	display: inline-block;
 	vertical-align: baseline;

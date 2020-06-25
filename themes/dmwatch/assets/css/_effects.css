@@ -13,7 +13,8 @@ a,input,img,textarea,button,svg,select,
 .dm-pa-service-wrp ul li .dm-pa-service-innr:hover img,
 .blog-page-all-blog-item-img,
 .ad-back-to-top i,.client-partners-items,.crkmts-grd-item,
-.clientsPartnersLogosSlideItem > div.hpcLogo{
+.clientsPartnersLogosSlideItem > div.hpcLogo,
+.ad-back-to-top{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;

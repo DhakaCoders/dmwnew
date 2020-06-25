@@ -108,7 +108,7 @@
   </div>
 </footer>
 <div class="ad-back-to-top">
-  <i class="fas fa-angle-double-up"></i>
+  <img src="<?php echo THEME_URI; ?>/assets/images/up-arrow2.png">
 </div>
 <?php wp_footer(); ?>
 </body>

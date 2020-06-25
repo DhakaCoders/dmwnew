@@ -15,7 +15,7 @@
 .participateBnrSlideItem-des{
 	position: relative;
 	z-index: 2;
-	min-height: 625px;
+	height: 625px;
 	max-width: 1200px;
     width: 100%;
     margin-left: auto;
@@ -70,12 +70,12 @@ dm-us-contact-form-sec
 */
 .dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container:after,
 .dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container:before{
-	content: "";
-	clear: both;
-	display: table;
+	content: ""!important;
+	clear: both!important;
+	display: table!important;
 }
 .dm-us-contact-form-wrp  div.wpforms-container-full .wpforms-form .wpforms-field{
-	clear: initial;
+	clear: none!important;
 }
 .dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
 	width: 50%;
@@ -83,6 +83,10 @@ dm-us-contact-form-sec
 	padding: 0 27px;
 	margin-bottom: 36px;
 	position: relative;
+}
+div.wpforms-container-full .wpforms-form {
+	float: left;
+	width: 100%!important;
 }
 .dm-us-contact-form-wrp .wpforms-container .wpforms-field.wpforms-field-payment-checkbox label.wpforms-error{
 	text-align: center;
@@ -100,7 +104,6 @@ dm-us-contact-form-sec
 .dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
 	display: inline-block;
 	vertical-align: baseline;
-	width: 100%;
 	margin: 0;
 	font-size: 14.5px;
 	line-height: 1.2;
@@ -122,7 +125,7 @@ dm-us-contact-form-sec
 	font-size: 17px;
 	line-height: 1;
 	border-radius: 0;
-
+	float: left;
 }
 .dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input:focus{
 	border-color: #88BE43;
@@ -428,7 +431,7 @@ dm-us-contact-form-sec
 		margin-bottom: 15px;
 	}
 	.participateBnrSlideItem-des{
-		min-height: 550px;
+		height: 550px;
 	}
 }
 
@@ -453,7 +456,7 @@ dm-us-contact-form-sec
 		font-size: 23px;
 	}
 	.participateBnrSlideItem-des{
-		min-height: 450px;
+		height: 450px;
 	}
 }
 
@@ -508,6 +511,9 @@ dm-us-contact-form-sec
 	}
 }
 
+
+
+
 @media(max-width: 575px){
 	.dm-us-contact-form-sec .dm-contact-form-head {
 	    padding-bottom: 20px;
@@ -544,7 +550,7 @@ dm-us-contact-form-sec
 		text-align: center;
 	}
 	.participateBnrSlideItem-des {
-	    min-height: 400px;
+	    height: 400px;
 	}
 }
 

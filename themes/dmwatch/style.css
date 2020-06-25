@@ -12,3 +12,10 @@ Text Domain: dmwatch
 */
 
 @import url('assets/css/main.css');
+
+
+.animation-step2{
+	animation-delay: 0.3s;
+	-ms-animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+}

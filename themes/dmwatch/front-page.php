@@ -44,7 +44,7 @@
     $intro = get_field('introsec', HOMEID);
     if( $intro ):
 ?>
-<section class="dm-watch-section">
+<section class="dm-watch-section wow fadeInUp animation-step2">
   <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -78,7 +78,7 @@
     $practice = get_field('practicearea', HOMEID);
     if( $practice ):
 ?>
-<section class="hm-practice-area-sec">
+<section class="hm-practice-area-sec wow fadeInUp animation-step2">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -136,7 +136,7 @@
     $service = get_field('featuredservices', HOMEID);
     if( $service ):
 ?>
-<section class="hm-fea-services-sec">
+<section class="hm-fea-services-sec wow fadeInUp animation-step2">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -282,7 +282,7 @@
     $client = get_field('clientspartners', HOMEID);
     if( $client ):
 ?>
-<section class="hm-clients-partners-sec">
+<section class="hm-clients-partners-sec wow fadeInUp">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -360,7 +360,7 @@
     if( $counters ):
       $counts = $counters['counterr'];
 ?>
-<section class="hm-counter-sec">
+<section class="hm-counter-sec wow fadeInUp">
   <div class="container">
     <div class="row">
       <div class="col-md-12">

@@ -172,24 +172,29 @@ dm-project-info-sec-wrp
 	color: #0d3a24;
 }
 .dm-thumb-images{
-	margin: 0 -5px;
+	margin: 0 -10px;
 }
 .dm-thumb-img{
 	float: left;
 	width: 20%;
-	padding: 0 5px;
+	padding: 0 10px;
 }
 .dm-thumb-img > div,
 .dm-project-info-lft-img{
 	cursor: pointer;
 }
-.dm-project-info-lft-img{
+.dm-project-info-lft-img .dm-project-info-lft-img{
     -webkit-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
     -moz-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
     box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);	
 }
 .dm-thumb-images{
-	padding: 0 15px 0 5px;
+	padding-top: 15px;
+}
+.dm-thumb-img > div{
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
+    box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
 }
 /*
 ----------------------

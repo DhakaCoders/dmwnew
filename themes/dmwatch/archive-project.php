@@ -182,9 +182,6 @@ $bcontent = get_field('bcontent', $thisID);
               </div>
             </li>
           </ul>
-          <div class="reset-filter-btn">
-            <button class="clearnow" type="reset">Reset Filter</button>
-          </div>
         </form>
         </div>
       </div>
@@ -225,6 +222,9 @@ if($query->have_posts()):
         <?php if( !empty($taxquery) ): ?>
         <div class="filter-results-sec-hdr">
           <h3 class="filter-results-sec-hdr-title">FILTER RESULT</h3>
+          <div class="reset-filter-btn backTopage">
+            <button class="clearnow" type="reset">Reset Filter</button>
+          </div>
         </div>
         <?php endif; ?>
       </div>

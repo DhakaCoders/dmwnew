@@ -424,6 +424,12 @@
     -moz-box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
     box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
 }
+.event-pp-report-page-tab-2-grd:hover,
+.event-pp-report-page-tab-2-grds:hover li:nth-child(2n+2) .event-pp-report-page-tab-2-grd,
+.event-pp-report-page-tab-1-grd:hover .epprpt-grd-des,
+.crkmts-grd-item:hover{
+	border-color: #5aa722;
+}
 .epprpt2-grd-fea-img{
 	position: absolute;
 	left: 0;

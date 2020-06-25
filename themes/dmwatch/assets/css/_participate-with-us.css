@@ -75,7 +75,7 @@ dm-us-contact-form-sec
 	display: table!important;
 }
 .dm-us-contact-form-wrp  div.wpforms-container-full .wpforms-form .wpforms-field{
-	clear: initial;
+	clear: none!important;
 }
 .dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
 	width: 50%;
@@ -86,6 +86,7 @@ dm-us-contact-form-sec
 }
 div.wpforms-container-full .wpforms-form {
 	float: left;
+	width: 100%!important;
 }
 .dm-us-contact-form-wrp .wpforms-container .wpforms-field.wpforms-field-payment-checkbox label.wpforms-error{
 	text-align: center;

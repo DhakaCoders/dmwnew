@@ -12,7 +12,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
 
 $description = get_field('description', $thisID);
 ?>
-<section class="page-banner page-bnr-lft-con page-bnr-our-management" style="overflow: hidden;">
+<section class="page-banner designTwo dtLeft" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>

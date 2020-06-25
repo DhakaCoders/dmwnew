@@ -153,6 +153,9 @@ ol li::before {
 .designTwo.dtLeft .page-banner-des{
 	justify-content: flex-start;
 }
+.designTwo.dtRight .page-banner-des{
+	justify-content: flex-end;
+}
 .page-banner-bg{
 	position: absolute;
 	left: 0;

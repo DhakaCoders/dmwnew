@@ -14,7 +14,7 @@ if(!empty(str_replace(' ', '', $custom_page_title))){
 $standaardbanner = get_field('bannerimage', $pageID);
 if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-team-members.jpg';
 ?>
-<section class="page-banner page-bnr-research-team-members" style="overflow: hidden;">
+<section class="page-banner designTwo" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>

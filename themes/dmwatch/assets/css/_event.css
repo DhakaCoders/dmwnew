@@ -324,14 +324,14 @@
 .epprpt-grd-des{
 	padding: 20px 22px 23px 25px;
 	border-bottom: 8px solid #88BE43;
+	background: #fff;
 }
 
 .epprpt-grd-des span{
 	display: block;
-	font-size: 10px;
+	font-size: 14px;
 	line-height: 1;
 	margin-bottom: 7px;
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
 }
@@ -447,10 +447,9 @@
 
 .epprpt2-grd-des span{
 	display: block;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1;
     margin-bottom: 7px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -485,14 +484,17 @@
 }
 .eventLinksstep1 ul li a{
 	color: #2a2828;
+	border-bottom: 1px solid transparent;
 }
 .eventLinksstep1 ul li:before{
 	content: "";
 	display: none;
 }
 .eventLinksstep1 ul li.active a,
-.eventLinksstep1 ul li.current-menu-item a{
+.eventLinksstep1 ul li.current-menu-item a,
+.eventLinksstep1 ul li a:hover{
 	color: #53bc20;
+	border-color: #53bc20; 
 }
 .singleEvent .dm-bd-grd-sec{ background: #fff; padding-top: 100px; }
 .fl-see-all-btn div.ajaxloading,

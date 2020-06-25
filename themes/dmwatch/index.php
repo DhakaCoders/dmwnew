@@ -12,7 +12,7 @@ if(!empty(str_replace(' ', '', $custom_page_title))){
 }
 $bcontent = get_field('bcontent', $thisID);
 ?>
-<section class="page-banner page-bnr-lft-con page-bnr-blog" style="overflow: hidden;">
+<section class="page-banner designTwo" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>

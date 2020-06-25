@@ -7,7 +7,7 @@
 .publicatons-page-top-sec-innr{
     display: flex;
     align-items: center;
-    padding-bottom: 23px;
+    padding-bottom: 45px;
 }
 .publicatons-page-top-sec-des{
 	max-width: 74.2%;
@@ -35,24 +35,25 @@
 .publicatons-top-title{
 	text-align: left;
 }
-.publicatons-top-title p{
-	font-weight: 700;
-	line-height: 13px;
-	color: #606060;
-	padding-left: 0;
-	position: relative;
+.publicatons-top-title p {
+    font-weight: 700;
+    line-height: 16px;
+    color: #606060;
+    padding-left: 0;
+    position: relative;
+    font-size: 22px;
 }
 .publicatons-top-title:after{
 	position: absolute;
 	content: "";
-	height: 0.5px;
+	height: 1px;
 	width: 197px;
 	background: #606060;
 	left: 0;
 }
 .publicatons-sec-one-title{
 	margin-bottom: 5px;
-	padding-top: 18px;
+	padding-top: 30px;
 }
 .publicatons-sec-one-title a{
     display: block;
@@ -229,7 +230,7 @@ ul.publicatinList li:nth-child(2n+2) .filter-result-items-des p{
     box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
 }
 .our-project-filter-hdr-sec.publicationsFilter{
-	    padding: 75px 0 60px;
+	    padding: 65px 0 70px;
 }
 
 @media(max-width: 1499px){

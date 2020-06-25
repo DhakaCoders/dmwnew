@@ -22,6 +22,9 @@ body {
     line-height: 24px;
     font-family: 'Arial';
     font-weight: normal;
+    text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
  	/*font-family: 'FranklinGothic-Book';*/
    /* font-family: 'Raleway', sans-serif;*/
 }

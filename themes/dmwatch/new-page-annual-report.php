@@ -87,7 +87,10 @@ get_header();
     </div>
   </div>
 </section>
-<?php if( !empty($ptype) OR !empty($pyears) ): 
+<?php
+$showN = true; 
+if( !empty($ptype) OR !empty($pyears) ):
+$showN = false; 
 global $wp;
 ?>
 <section class="recent-publicatons exAnnualReports">
@@ -108,10 +111,10 @@ global $wp;
 </section>
 <?php endif; ?>
 
-<?php 
+<?php  
+if( $showN ):
 $thisID = get_the_ID();
 $bcontent = get_field('description', $thisID);
-
 ?>
 <section class="annualReports">
   <div class="container">
@@ -126,6 +129,7 @@ $bcontent = get_field('description', $thisID);
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <?php 
 get_template_part('templates/footer', 'top');

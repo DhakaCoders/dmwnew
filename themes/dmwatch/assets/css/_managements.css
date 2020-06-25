@@ -6,9 +6,6 @@
 	padding: 60px 0 50px;
 	
 }
-
-
-
 .management-sec-hdr{
 	text-align: center;
 }
@@ -298,14 +295,16 @@
 	text-align: center;
 }
 .filter-results-sec-hdr-title{
-	margin-bottom: 65px;
+	margin-bottom: 45px;
 }
 .our-project-filter-results-sec{
 	background: #f5f7f6;
 	padding: 60px 0 40px;
 	margin-bottom: 0;
 }
-
+.our-project-filter-results-sec .filter-results-sec-hdr{
+	margin-bottom: 40px;
+}
 
 .filter-results-grd-cntlr ul{
 	margin: 0 -15px;
@@ -593,9 +592,8 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
     border-radius: 3px;
     color: #fff;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1;
-    font-family: 'HelveticaNeueBold';
     -webkit-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     -moz-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
@@ -612,9 +610,8 @@ box-shadow: 4px 2px 5px -1px rgba(93,93,93,1);
     border-radius: 3px;
     color: #fff;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1;
-    font-family: 'HelveticaNeueBold';
     -webkit-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     -moz-box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);
     box-shadow: 2px 2px 4px 0px rgba(189,191,190,1);

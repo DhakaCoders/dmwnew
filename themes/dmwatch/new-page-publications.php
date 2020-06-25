@@ -143,7 +143,10 @@ get_header();
   </div>
 </section>
 
-<?php if( !empty($ptype) OR !empty($pyears) ): ?>
+<?php 
+if( !empty($ptype) OR !empty($pyears) ): 
+global $wp;
+?>
 <section class="filter-result-sec-four">
   <div class="container">
     <div class="row">
@@ -152,7 +155,7 @@ get_header();
           <div class="filter-result-hedding">
             <h2 class="opfhdr-title">Filter Result</h2>
             <div class="reset-filter-btn backTopage">
-              <button class="clearnow" type="reset">Reset Filter</button>
+              <button data-url="<?php echo home_url($wp->request); ?>/" class="clearnow" type="reset">Reset Filter</button>
             </div>
           </div>
           <span id="filter" data-type="<?php echo $ptype; ?>" data-year="<?php echo $pyears; ?>" style="display: none;"></span>

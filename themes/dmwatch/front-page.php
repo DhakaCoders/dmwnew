@@ -111,7 +111,7 @@
                 endif;
                 ?>
               </div>
-              <div class="hm-practice-area-item-des">
+              <div class="hm-practice-area-item-des mHc1">
                 <?php 
                   if( !empty($pract['title']) ) printf('<h3 class="mHc hm-practice-area-item-title">%s</h3>', $pract['title']);
                   if( !empty($pract['description']) ) echo wpautop( $pract['description'] );

@@ -12,17 +12,17 @@ h1{
 }
 h2{
 	font-size: 30px;
-	font-family: 'HelveticaNeueBold';
+	font-family: 'HelveticaNeueBold'!important;
 	font-weight: normal!important;
 }
 h3{
 	font-size: 23px;
-	font-family: 'Verdana-Bold';
+	font-family: 'Verdana-Bold'!important;
 	font-weight: normal!important;
 }
 h4{
 	font-size: 20px;
-	font-family: 'Verdana-Bold';
+	font-family: 'Verdana-Bold'!important;
 	font-weight: normal!important;
 }
 h5{

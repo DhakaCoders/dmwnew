@@ -163,14 +163,24 @@
 	width: 33.3333%;
 	margin-bottom: 24px;
 }
+
 .hm-practice-area-item-title,
 .hmfsid-title{
 	font-family: 'Verdana';
     font-weight: 700!important;
     display: block;
-    font-size: 19px;
     margin-bottom: 15px;
     line-height: 1.3;
+    font-size: 18px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hm-practice-area-item-title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
 }
 .hm-practice-area-item-des p,
 .hm-fea-service-item-des p{
@@ -487,8 +497,7 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	    padding: 170px 0 150px;
 	    max-width: 594px;
 	}
-	.main-slide-des-title,
-	.hmfsshdr-title{
+	.main-slide-des-title{
 		font-size: 43px;
 	}
 	.dm-watch-sec-cntlr{
@@ -498,22 +507,15 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 		width: 100%;
 		padding-right: 0;
 	}
-	.dm-watch-sec-fea-img{
-		width: 100%;
-
-	}
 	.dm-watch-sec-fea-img {
 	    width: 100%;
 	    padding-left: 0;
 	    text-align: center;
+	    padding-top: 0;
 	    padding-bottom: 30px;
-	}
-	.hmpashdr-title {
-	    margin-bottom: 30px;
-	}
-	.hmcpshdr-title,
-	.hmpashdr-title{
-		font-size: 45px;
+	    max-width: 400px;
+	    margin-left: auto;
+	    margin-right: auto;
 	}
 	.hm-practice-area-sec {
 	    padding: 75px 0 55px;
@@ -527,16 +529,8 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	    width: 50%;
 	}
 	.hm-practice-area-item-des {
-	    padding-left: 10px;
-	    padding-right: 10px;
-	}
-	.hm-fea-services-sec {
-	    padding: 75px 0 55px;
-	    margin-bottom: 70px;
-	}
-	.hm-fea-services-sec {
-	    padding: 65px 0 45px;
-	    margin-bottom: 75px;
+	    padding-left: 15px;
+	    padding-right: 15px;
 	}
 	.hmFeaServicesSlideItem {
 	    width: 33.3333%;
@@ -548,13 +542,9 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.hm-projects-section {
 	    padding: 75px 0 55px;
 	}
-	.hm-clients-partners-sec {
-	    padding: 70px 0 45px;
-	    margin-bottom: 115px;
-	}
 	.hm-projects-tabs .tab-link {
 	    margin: 0 25px;
-	    font-size: 32px;
+	    font-size: 26px;
 	}
 	.hm-projects-tabs .tab-link:not(:last-child):after{
 		right: -28px;
@@ -596,10 +586,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.hm-practice-area-sec {
 	    padding: 65px 0 50px;
 	}
-	.hmpashdr-title {
-	    font-size: 41px;
-	    margin-bottom: 25px;
-	}
 	.hm-fea-services-sec {
 	    padding: 65px 0 45px;
 	    margin-bottom: 75px;
@@ -613,9 +599,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.hm-projects-section {
 	    padding: 65px 0 50px;
 	}
-	.hm-clients-partners-sec {
-	    padding: 65px 0 40px;
-	}
 	.hm-project-tab-short-des{
 		padding-left: 0;
 		padding-right: 0;
@@ -623,7 +606,7 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	}
 	.hm-projects-tabs .tab-link {
 	    margin: 0 20px;
-	    font-size: 24px;
+	    font-size: 20px;
 	}
 	.hm-projects-tabs .tab-link:not(:last-child):after {
 	    right: -24px;
@@ -631,25 +614,26 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.hm-clients-partners-sec-hdr{
 		padding-bottom: 40px;
 	}
-	
+	.main-slider-des{
+		min-height: 520px;
+	}
+	.hm-practice-area-sec-hdr p br,
+	.hm-fea-services-sec-hdr p br,
+	.hm-clients-partners-sec-hdr p br{
+		display: none;
+	}
+
 }
 
 @media(max-width: 575px){
 	.main-slide-des-title {
 	    font-size: 30px;
 	}
-	.dm-watch-sec-des p{
-		font-size: 19px;
-	}
 	.hm-practice-area-sec {
 	    padding: 45px 0 40px;
 	}
 	.hmpashdr-title {
-	    font-size: 35px;
 	    margin-bottom: 20px;
-	}
-	.hm-practice-area-sec-hdr p {
-	    font-size: 18px;
 	}
 	.hmPracticeAreaSlideItem{
 		width: 100%;
@@ -687,10 +671,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.hm-projects-section {
 	    padding: 50px 0 40px;
 	}
-	.hm-clients-partners-sec {
-	    padding: 45px 0 25px;
-	    margin-bottom: 60px;
-	}
 	.hm-counter-sec{
 		padding: 55px 0 45px;
 	}
@@ -711,7 +691,7 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.hm-projects-tabs .tab-link{
 		margin-left: 10px;
 		margin-right: 10px;
-		font-size: 18px;
+		font-size: 15px;
 	}
 	.hm-projects-tabs .tab-link:not(:last-child):after {
 	    right: -14px;
@@ -738,14 +718,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	.main-slider-des{
 		text-align: center;
 	}
-	.hmfsshdr-title,
-	.hmcpshdr-title,
-	.hmpashdr-title{
-		font-size: 30px;
-	}
-	.hmcpshdr-title{
-		font-size: 27px;
-	}
 	.main-slider-des a{
 		margin-left: auto;
 		margin-right: auto;
@@ -757,9 +729,6 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
 	}
 	.mainSlider.slick-slider ul.slick-dots{
 		bottom: 22px;
-	}
-	.dm-watch-sec-des p {
-	    font-size: 18px;
 	}
 	.hm-fea-services-sec-hdr {
 	    padding-bottom: 20px;

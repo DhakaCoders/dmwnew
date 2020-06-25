@@ -427,7 +427,7 @@ body.hasSticky .hdr-topbar{
 	}
 	.hdr-search form{
 		margin-right: 0;
-		max-width: 200px;
+		max-width: 100%;
 	}
 
 	.hdr-humbergur-btn {
@@ -442,11 +442,13 @@ body.hasSticky .hdr-topbar{
 		display: inline-block;
 		line-height: 0;
 		margin-left: 20px;
+		display: none;
 	}
 	.main-nav-menu-bar-xs{
 		display: flex;
 		justify-content: flex-end;
 	}
+
 	.main-nav-menu-bar-xs > div{
 		display: flex;
 		align-items: center;
@@ -542,6 +544,7 @@ body.hasSticky .hdr-topbar{
 	    max-width: 350px;
 	    width: 0;
 	    z-index: -1;
+	    text-indent: -99999px;
 	    opacity: 0;
 	    -ms-transition: all 0.3s;
 	    -webkit-transition: all 0.3s;
@@ -557,9 +560,14 @@ body.hasSticky .hdr-topbar{
 	.xs-nav-inr{
 		position: relative;
 		overflow-y: scroll;
-		padding: 40px 20px 50px;
+		padding: 70px 20px 50px;
 		height: 100%;
 		width: 100%;
+	}
+	.xs-main-nav{
+		transition: all 0.01s;
+	-ms-transition: all 0.01s;
+	-webkit-transition: all 0.01s;
 	}
 	.xs-main-nav ul li{
 		padding: 10px 5px;
@@ -627,6 +635,17 @@ body.hasSticky .hdr-topbar{
 	.hdr-lft{
 		width: 0;
 	}
+	.hdr-topbar{
+		position: static;
+	}
+	.header .hdr-search{
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+	.hdr-search form input[type="search"]:focus{
+		width: 100%;
+	}
 	header.header{
 		padding-top: 0;
 	}
@@ -673,7 +692,20 @@ body.hasSticky .hdr-topbar{
 	    max-width: initial;
 	    width: 100%;
 	}
-
+	.header .hdr-search.focused{
+		width: 100%;
+	}
+	.hasSticky .header-inr {
+	    position: relative;
+	    padding-top: 0;
+	    padding-bottom: 0;
+	}
+	body.hasSticky header.header{
+		padding-bottom: 17px;
+	}
+	body.hasSticky .logo {
+	    padding-top: 30px;
+	}
 }
 
 @media(max-width: 479px){

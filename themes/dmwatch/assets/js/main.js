@@ -439,6 +439,38 @@ $('.backTopage button').on('click', function(){
   window.location.href = url;
 });
 
-    new WOW().init();
+if( $('.hasAnim h1').length ){
+  var textWrapper = document.querySelector('.hasAnim h1');
+  var textWrapper2 = document.querySelector('.hasAnim h1 + p');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  //textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: false})
+    .add({
+      targets: '.hasAnim h1 .letter',
+      //scale: [0.3,1],
+      translateX: [40,0],
+      opacity: [0,1],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 1200,
+      //delay: (el, i) => 70 * (i+1)
+      delay: (el, i) => 300 + 30 * i
+    });
+  anime.timeline({loop: false})
+    .add({
+      targets: '.hasAnim h1 + p',
+      //scale: [0.3,1],
+      translateX: [40,0],
+      opacity: [0,1],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 1200,
+      //delay: (el, i) => 70 * (i+1)
+      delay: (el, i) => 800 + 30 * i
+    });
+  $('.hasAnim h1').css('opacity', 1);
+}
+new WOW().init();
 
 })(jQuery);

@@ -333,23 +333,30 @@ ol li::before {
 }
 .SearchWrap.dm-blog-grd-sec {
     margin: 0;
-    padding: 90px 0 50px;
+    padding: 80px 0 50px;
+}
+.SearchWrap.dm-blog-grd-sec .notfound {
+    margin-bottom: 40px;
+    text-align: center;
 }
 .SearchWrap .dm-blog-grd-item strong {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     text-transform: capitalize;
+    line-height: 1;
 }
 .SearchWrap .dm-blog-grd-item p{
 	font-size: 20px;
 }
-.SearchWrap .dm-blog-grd-item{
-	padding-left: 60px;
+.SearchWrap .dm-blog-grd-item {
+    padding-left: 45px;
+    font-size: 17px;
+    line-height: 27px;
 }
-.SearchWrap .dm-blog-grd-item span{
-	top: 4px;
-	width: 30px;
-	height: 30px;
-	background: #88BE43;
+.SearchWrap .dm-blog-grd-item span {
+    top: 0px;
+    width: 16px;
+    height: 44px;
+    background: #88BE43;
     border: 0;
 }
 .dm-blog-grd-item span:before{

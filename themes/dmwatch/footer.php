@@ -64,22 +64,22 @@
                 <?php if( !empty($sinfo) ): ?>
                 <ul class="reset-list">
                   <?php if( !empty($sinfo['linkedin_url']) ): ?>
-                  <li class="linkedin"><a title="LinkedIn" href="<?php echo $sinfo['linkedin_url']; ?>"><i class="fab fa-linkedin"></i></a></li>
+                  <li class="linkedin"><a target="_blank" title="LinkedIn" href="<?php echo $sinfo['linkedin_url']; ?>"><i class="fab fa-linkedin"></i></a></li>
                   <?php endif; ?>
                   <?php if( !empty($sinfo['facebook_url']) ): ?>
-                  <li class="facebook"><a title="Facebook" href="<?php echo $sinfo['facebook_url']; ?>"><i class="fab fa-facebook"></i></a></li>
+                  <li class="facebook"><a target="_blank" title="Facebook" href="<?php echo $sinfo['facebook_url']; ?>"><i class="fab fa-facebook"></i></a></li>
                   <?php endif; ?>
                   <?php if( !empty($sinfo['twitter_url']) ): ?>
-                  <li class="twitter"><a title="Twitter" href="<?php echo $sinfo['twitter_url']; ?>"><i class="fab fa-twitter"></i></a></li>
+                  <li class="twitter"><a target="_blank" title="Twitter" href="<?php echo $sinfo['twitter_url']; ?>"><i class="fab fa-twitter"></i></a></li>
                   <?php endif; ?>
                   <?php if( !empty($sinfo['instagram_url']) ): ?>
-                  <li class="instagram"><a title="Instagram" href="<?php echo $sinfo['instagram_url']; ?>"><i class="fab fa-instagram"></i></a></li>
+                  <li class="instagram"><a target="_blank" title="Instagram" href="<?php echo $sinfo['instagram_url']; ?>"><i class="fab fa-instagram"></i></a></li>
                   <?php endif; ?>
                   <?php if( !empty($sinfo['instagram_url']) ): ?>
-                  <li class="youtube"><a title="Youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+                  <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fab fa-youtube"></i></a></li>
                   <?php endif; ?>
                   <?php if( !empty($sinfo['instagram_url']) ): ?>
-                  <li class="email"><a title="E-Mail" href="#"><i class="fas fa-envelope"></i></a></li>
+                  <li class="email"><a target="_blank" title="E-Mail" href="#"><i class="fas fa-envelope"></i></a></li>
                   <?php endif; ?>
                 </ul>
                 <?php endif; ?>

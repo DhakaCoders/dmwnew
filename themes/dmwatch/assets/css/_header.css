@@ -615,7 +615,9 @@ body.hasSticky .hdr-topbar{
 	li.menu-item-has-children > a.sub-menu-active:after{
 		content: "\f107"!important;
 	}
-	/*menu end */
+	header.header{
+		padding-bottom: 15px;
+	}
 	
 }
 

@@ -94,6 +94,10 @@ dm-contact-form-sec-wrp
 	margin-bottom: 12px;
 	font-family: 'Verdana-Bold';
 }
+.dm-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label.wpforms-error{
+	text-transform: none;
+	padding-top: 5px;
+}
 .dm-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label span{
 	color: #F3BF00;
 }
@@ -158,7 +162,7 @@ dm-contact-form-sec-wrp
     -webkit-box-shadow: 7px 6px 11px 2px  rgba(188,189,191,0.75);
     -moz-box-shadow: 7px 6px 11px 2px  rgba(188,189,191,0.75);
     box-shadow: 7px 6px 11px 2px rgba(188,189,191,0.75);
-    letter-spacing: 1px;
+    letter-spacing: 3px;
 }
 .dm-contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
 	background: #5aa722;

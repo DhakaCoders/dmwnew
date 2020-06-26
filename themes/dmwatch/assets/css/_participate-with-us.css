@@ -58,7 +58,7 @@ dm-us-contact-form-sec
 */
 .dm-us-contact-form-sec {
     padding-top: 55px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
 }
 .dm-us-contact-form-sec .dm-contact-form-head{
 	padding-bottom: 45px;
@@ -92,8 +92,11 @@ div.wpforms-container-full .wpforms-form {
 	text-align: center;
 	padding-top: 10px;
 }
-.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label.wpforms-error{
-	padding-top: 5px;
+.dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label.wpforms-error {
+    padding-top: 5px;
+    width: 100%;
+    float: left;
+    text-transform: none;
 }
 .dm-us-contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .subjectField{
 	width: 100%;

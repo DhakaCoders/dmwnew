@@ -4,7 +4,7 @@
 	padding: 88px 0 25px;
 }
 .dm-blog-grd-sec-inr ul li{
-	padding-bottom: 35px;
+	padding-bottom: 45px;
 }
 
 
@@ -165,7 +165,8 @@
     font-size: 14px;
     font-weight: 600;
 }
-.dm-blog-pagi-ctlr ul li a.page-numbers:hover{
+.dm-blog-pagi-ctlr ul li a.page-numbers:hover,
+.dm-blog-pagi-ctlr ul li span.page-numbers.current{
 	background: #88BE43;
 }
 

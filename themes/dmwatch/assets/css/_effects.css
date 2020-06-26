@@ -52,6 +52,10 @@ nav.main-nav ul li.current-menu-item a{
 	color: #53bc20;
 }
 
-li.current-menu-item > a{
-	color: #000!important;
+li.current-menu-item > a,
+nav.main-nav ul li a:hover{
+	color: #2a2828!important;
+}
+button.close:hover{
+	color: red!important;
 }

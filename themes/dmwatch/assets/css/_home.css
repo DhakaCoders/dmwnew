@@ -229,8 +229,18 @@
 .hm-fea-service-item-img{
 	padding-bottom: 7px;
 }
-.hm-fea-service-item{
-	text-align: center;
+.hm-fea-services-sec.viewTwo .hm-fea-service-item {
+    text-align: center;
+    padding-top: 35px;
+    background: #f8fcfc;
+    border-radius: 10px;
+}
+.hm-fea-services-sec.viewTwo .hm-fea-service-item-des p{
+	display: none;
+}
+.hm-fea-services-sec.viewTwo .hm-fea-service-item-des .hmfsid-title{
+	margin-bottom: 5px;
+	padding: 0 10px;
 }
 .hmFeaServicesSlideItem{
 	width: 20%;
@@ -457,6 +467,7 @@ box-shadow: 3px 3px 6px 0px rgba(155,155,155,1);
     padding: 0 20px;
     box-shadow: 0px 0px 10px #ddd;
     overflow: hidden;
+    background: #fff;
 }
 .clientsPartnersLogosSlideItem img{
 	max-height: 150px;

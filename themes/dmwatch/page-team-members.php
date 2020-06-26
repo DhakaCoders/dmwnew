@@ -61,14 +61,16 @@ if( $tmQuery->have_posts() ):
         <div class="individual-team-mambers-grd-cntlr">
           <ul class="reset-list clearfix">
 <?php 
+$i = 1;
 while( $tmQuery->have_posts() ): $tmQuery->the_post();
   $profile_image = get_field('profile_image');
   $full_name = get_field('full_name');
   $position = get_field('position');
+  $aboutcont = get_field('description', get_the_ID());
 ?>
             <li>
               <div class="crkmts-grd-item">
-                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                <a id="quickViewOpener" data-toggle="modal" data-target="#quickViewModal<?php echo $i; ?>" href="#" class="popup-btn"></a>
                 <div class="itm-grd-img-bx">
                   <?php  
                     if( !empty($profile_image) ):
@@ -88,8 +90,65 @@ while( $tmQuery->have_posts() ): $tmQuery->the_post();
                   <span><?php echo $position; ?></span>
                 </div>
               </div>
+              <!-- Modal -->
+              <div class="modal fade dm-modal-con-wrap" id="quickViewModal<?php echo $i; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <button type="button" class="close popup-close" data-dismiss="modal" aria-label="Close">
+                      <i class="far fa-times-circle"></i>
+                    </button>
+                    <div class="info-popup-container">
+                      <div class="info-popup-cntlr-inr clearfix">
+                        <div class="info-popup-sidebar">
+                          <div class="crkmts-grd-item">
+                            <div class="itm-grd-img-bx">
+                    <?php if( !empty($profile_image) ): echo cbv_get_image_tag( $profile_image ); else: ?>
+                    <img src="<?php echo THEME_URI; ?>/assets/images/our-management-grd-img-bx-02.jpg">
+                    <?php endif; ?>
+                            </div>
+                            <div class="itm-short-des">
+                              <strong>
+                                <?php 
+                                  if( !empty($fullname) ) 
+                                    printf('%s', $fullname);
+                                  else
+                                    printf('%s', get_the_title(get_the_ID()));
+                                ?>
+                              </strong>
+                              <?php if( !empty($position) ) printf('<span>%s</span>', $position); ?>
+                            </div>
+                          </div>
+                          <?php $sinfo = get_field('socialinfo', get_the_ID()); ?>
+                          <div class="popup-social">
+                            <label>Social Media</label>
+                            <?php if( !empty($sinfo) ): ?>
+                            <ul class="reset-list">
+                              <?php if( !empty($sinfo['linkedin_url']) ): ?>
+                              <li><a target="_blank" href="<?php echo $sinfo['linkedin_url']; ?>"><i class="fab fa-linkedin"></i></a></li>
+                              <?php endif; ?>
+                              <?php if( !empty($sinfo['facebook_url']) ): ?>
+                              <li><a target="_blank" href="<?php echo $sinfo['facebook_url']; ?>"><i class="fab fa-facebook"></i></a></li>
+                              <?php endif; ?>
+                              <?php if( !empty($sinfo['twitter_url']) ): ?>
+                              <li><a target="_blank" href="<?php echo $sinfo['twitter_url']; ?>"><i class="fab fa-twitter"></i></a></li>
+                              <?php endif; ?>
+                              <?php if( !empty($sinfo['instagram_url']) ): ?>
+                              <li><a target="_blank" href="<?php echo $sinfo['instagram_url']; ?>"><i class="fab fa-instagram"></i></a></li>
+                              <?php endif; ?>
+                            </ul>
+                            <?php endif; ?>
+                          </div>
+                        </div>
+                        <div class="info-popup-des">
+                          <?php if( !empty($aboutcont) ) echo wpautop( $aboutcont ); ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-<?php endwhile; ?>            
+<?php $i++; endwhile; ?>            
           </ul>
         </div>
 <?php endif; ?>

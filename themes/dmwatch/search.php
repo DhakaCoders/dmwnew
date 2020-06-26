@@ -42,9 +42,9 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
             <li>
               <div class="dm-blog-grd-item">
                 <div>
-                  <h2 class="dm-blog-grd-item-title">
+                  <h3 class="dm-blog-grd-item-title">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                  </h2>
+                  </h3>
                   <?php if(!empty( $postType )): ?><strong><?php echo $postType; ?></strong><?php endif; ?>
                   <?php echo get_the_excerpt(''); ?>
                   <a class="readmore" href="<?php the_permalink(); ?>">Read More</a>
@@ -81,7 +81,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
             </div>
           </div>
           <?php else: ?>
-            <div class="notfound">No result!</div>
+            <div class="notfound">No result! Please try a different keyword.</div>
           <?php endif; ?>
         </div>
       </div>

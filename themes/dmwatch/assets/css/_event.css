@@ -13,7 +13,7 @@
 }
 
 .event-media-page-tab-sec{
-	padding: 35px 0 70px;
+	padding: 60px 0 70px;
 }
 
 .fl-tabs-2 .tab-link{
@@ -49,7 +49,17 @@
 .event-page-sec-tab-con{
 	padding: 105px 0 0;
 }
-
+.event-page-sec-tab-con #tab-1 .upcoming-event-con{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.event-page-sec-tab-con #tab-1 .upcoming-event-con .upcoming-event-con-rgt{
+	order: 1;
+}
+.event-page-sec-tab-con #tab-1 .upcoming-event-con .upcoming-event-con-lft{
+	order: 2;
+}
 .upcoming-event-con-rgt{
 	float: left;
 	width: 52%;
@@ -129,6 +139,9 @@
 }
 .uec-title a{
 	color: #88BE43;
+}
+.uec-title a:hover {
+    color: #5b9316;
 }
 .upcoming-event-con-rgt p a{
 	display: inline-block;
@@ -428,8 +441,9 @@
     box-shadow: 0px 0px 5px 0px rgba(189,191,190,1);
 }
 .event-pp-report-page-tab-2-grd:hover,
-.event-pp-report-page-tab-2-grds:hover li:nth-child(2n+2) .event-pp-report-page-tab-2-grd,
-.event-pp-report-page-tab-1-grd:hover .epprpt-grd-des,
+.event-pp-report-page-tab-2-grds li:nth-child(2n+2) .event-pp-report-page-tab-2-grd:hover,
+.event-pp-report-page-tab-2-grds:hover > li:nth-child(2n+2) .event-pp-report-page-tab-2-grd,
+.event-pp-report-page-tab-1-grd:hover > .epprpt-grd-des,
 .crkmts-grd-item:hover{
 	border-color: #5aa722;
 }

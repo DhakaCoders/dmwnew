@@ -136,7 +136,7 @@
     $service = get_field('featuredservices', HOMEID);
     if( $service ):
 ?>
-<section class="hm-fea-services-sec">
+<section class="hm-fea-services-sec viewTwo">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -214,7 +214,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <button type="button" class="close popup-close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true"><img src="<?php echo THEME_URI; ?>/assets/images/close-icon.jpg"></span>
+        <i class="far fa-times-circle"></i>
       </button>
 
       <div class="info-popup-container">

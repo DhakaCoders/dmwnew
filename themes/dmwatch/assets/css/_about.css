@@ -167,6 +167,21 @@
 .continue-reading-desc{
 	display: none;
 }
+.hasAnim h1,
+.hasAnim h1 + p{
+	position: relative;
+	opacity: 0;
+}
+.hasAnim h1 .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
+}
+.hasAnim h1 + p .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
+}
 @media(max-width: 1399px){
 	.dm-vision-mision-grd-sec-inr ul {
 	    margin: 0 -40px;

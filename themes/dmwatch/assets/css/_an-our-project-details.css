@@ -83,7 +83,7 @@ dm-project-info-sec-wrp
 */
 .dm-vacancy-grid-sec-wrp{
 	padding-bottom: 80px;
-	margin: 70px 0;
+	margin: 60px 0;
 }
 .dm-vacancy-grid-head{
 	text-align: center;
@@ -295,7 +295,6 @@ dm-project-info-sec-wrp
 	}
 	.dm-project-info-sec-wrp {
 	    padding-top: 60px;
-	    margin: 80px 0;
 	    padding-bottom: 50px;
 	}
 	.dm-project-info-btm-dsc-title{

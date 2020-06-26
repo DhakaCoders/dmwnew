@@ -167,21 +167,6 @@
 .continue-reading-desc{
 	display: none;
 }
-.hasAnim h1,
-.hasAnim h1 + p{
-	position: relative;
-	opacity: 0;
-}
-.hasAnim h1 .letter {
-  display: inline-block;
-  line-height: 1em;
-  opacity: 0;
-}
-.hasAnim h1 + p .letter {
-  display: inline-block;
-  line-height: 1em;
-  opacity: 0;
-}
 @media(max-width: 1399px){
 	.dm-vision-mision-grd-sec-inr ul {
 	    margin: 0 -40px;
@@ -218,9 +203,6 @@
 	}
 	.dm-vm-grd-item {
 	    padding: 115px 60px 40px 40px;
-	}
-	.dm-about-value-sec {
-	    margin-bottom: 90px;
 	}
 	.dm-about-value-sec-inr ul {
 	    padding-left: 126px;
@@ -261,7 +243,6 @@
 	    padding: 115px 25px 40px 30px;
 	}
 	.dm-about-value-sec {
-	    margin-bottom: 75px;
 	    padding: 45px 0 40px;
 	}
 	.dm-about-value-sec-inr ul li {
@@ -300,7 +281,6 @@
 		margin: 0 auto;
 	}
 	.dm-about-value-sec {
-	    margin-bottom: 60px;
 	    padding: 45px 0 40px;
 	}
 	.dm-about-value-sec-inr ul li {
@@ -351,7 +331,6 @@
 		padding-bottom: 30px;
 	}
 	.dm-about-value-sec {
-	    margin-bottom: 50px;
 	    padding: 40px 0 30px;
 	}
 	.dm-about-sec-inr{

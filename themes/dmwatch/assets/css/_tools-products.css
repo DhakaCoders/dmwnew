@@ -75,9 +75,6 @@
 
 .dm-tp-entry-hdr-inr p{
 	text-align: center;
-	font-size: 23px;
-	color: #606060;
-	line-height: 34px;
 }
 .dm-tp-focus-area-sec{
 	padding: 55px 0 30px;
@@ -87,12 +84,10 @@
 
 .dm-tp-fa-title{
 	display: block;
-	font-size: 49px;
 	line-height: 1;
 	margin-bottom: 55px;
 	font-weight: 700;
 	text-transform: capitalize;
-	color: #606060;
 	text-align: center;
 }
 
@@ -149,18 +144,15 @@
 }
 
 .dm-tp-fancybox-sec{
-	padding: 60px 0 85px;
-	background: #F5F7F7;
+	padding: 0 0 0;
 	margin-bottom: 90px;
 }
 .dm-tp-fancybox-title{
 	display: block;
-	font-size: 49px;
 	line-height: 1;
 	font-weight: 700;
 	margin-bottom: 40px;
 	text-transform: capitalize;
-	color: #606060;
 	text-align: center;
 }
 .dm-tp-fancybox-sec-inr ul{
@@ -193,29 +185,22 @@
 }
 .dm-tp-report-title{
 	display: block;
-	font-size: 49px;
 	line-height: 1;
 	margin-bottom: 48px;
-	font-weight: 700;
 	text-transform: capitalize;
-	color: #606060;
 	text-align: center;
 }
 
 .dm-tp-report-des-left{
 	float: left;
-	width:  62.3931%;
+	width:  50%;
 	padding-right: 85px;
 }
 .dm-tp-report-des-img{
 	float: right;
-	width:  37.6068%;
+	width:  50%;
 }
 
-.dm-tp-report-des-left p{
-	font-size: 20px;
-	line-height: 32px;
-}
 
 
 .dm-tp-useful-sec{
@@ -274,17 +259,12 @@
 
 .dm-tp-des-title{
 	display: block;
-	font-size: 49px;
 	line-height: 1;
 	margin-bottom: 35px;
 	font-weight: 700;
 	text-align: center;
-	color: #606060;
 }
 .dm-tp-des-sec-inr p{
-	font-size: 23px;
-	line-height: 35px;
-	color: #606060;
 	text-align: center;
 }
 .dm-tp-des-sec-inr p br,
@@ -305,29 +285,31 @@
 }
 
 @media(max-width: 1199px){
-	.dm-tp-report-title{
-		font-size: 45px;
+	.dm-tp-focus-area-sec{
+		margin-bottom: 80px;
 	}
-
 }
 
 @media(max-width: 991px){
 	.dm-tp-des-title{
-		font-size: 45px;
 		margin-bottom: 25px;
 	}
 	.dm-tp-report-sec{
 		margin-bottom: 80px;
 	}
-	.dm-tp-report-des-left p{
-		font-size: 18px;
-		line-height: 1.5;
-	}
-	.dm-tp-report-title {
-	    font-size: 40px;
-	}
 	.dm-tp-report-des-left{
 		padding-right: 40px;
+	}
+	.dm-tp-focus-area-sec{
+		margin-bottom: 70px;
+	}
+	.dm-tp-fancybox-sec-inr ul {
+	    margin-left: -15px;
+	    margin-right: -15px;
+	}
+	.dm-tp-fancybox-sec-inr ul li{
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
@@ -342,12 +324,7 @@
 		margin-bottom: 25px;
 	}
 	.dm-tp-des-title{
-		font-size: 40px;
 		margin-bottom: 20px;
-	}
-	.dm-tp-des-sec-inr p{
-		font-size: 21px;
-		line-height: 1.4;
 	}
 	.dm-tp-useful-sec{
 		padding-bottom: 10px;
@@ -367,7 +344,6 @@
 		padding-right: 0;
 	}
 	.dm-tp-report-title {
-	    font-size: 35px;
 	    margin-bottom: 30px;
 	}
 	.dm-tp-fancybox-sec{
@@ -377,45 +353,26 @@
 		width: 100%;
 		
 	}
-	.dm-tp-fa-title,
-	.dm-tp-fancybox-title{
-		font-size: 45px;
-	}
-	.dm-tp-entry-hdr-inr p{
-		font-size: 21px;
-		line-height: 1.5;
-	}
 	.dm-tp-entry-hdr{
 		padding-top: 60px;
+	}
+	.dm-tp-fancybox{
+		max-width: 450px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 @media(max-width: 575px){
-	.dm-tp-des-sec-inr p{
-		font-size: 19px;
-	}
-	.dm-tp-des-title,
-	.dm-tp-fancybox-title{
-		font-size: 35px;
-	}
 	.dm-tp-report-title {
-	    font-size: 30px;
 	    margin-bottom: 25px;
 	}
-	.dm-tp-fa-title{
-		font-size: 40px;
-	}
-	.dm-tp-entry-hdr-inr p{
-		font-size: 19px;
-	}
+
 }
 
 @media(max-width: 479px){
-	.dm-tp-des-sec-inr p{
-		font-size: 18px;
-	}
 	.dm-tp-report-title {
-	    font-size: 27px;
 	    margin-bottom: 20px;
 	}
 

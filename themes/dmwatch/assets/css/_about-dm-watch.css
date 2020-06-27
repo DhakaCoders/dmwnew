@@ -1,0 +1,252 @@
+
+.about-dmwatch-vision{
+	min-height: 510px;
+	margin-bottom: 100px;
+	display: flex;
+	align-items: center;
+	-webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+}
+.about-dmwatch-vision-cntlr,
+.about-dmwatch-mission-cntlr{
+	width: 100%;
+	height:100%; 
+	align-items: center;
+	display:flex;
+}
+.about-dmwatch-vision:after,
+.about-dmwatch-mission:after{
+	content: "";
+	display: block;
+	min-height: inherit;
+	font-size: 0;
+}
+
+
+.about-dmwatch-vision-innr{
+	max-width: 710px;
+	width: 100%;
+	padding: 30px 15px;
+}
+.about-dmwatch-vision-hedding h2{
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 35px;
+	font-size: 50px;
+	line-height: 1.2;
+}
+.about-dmwatch-vision-hedding-top-icon{
+	position: absolute;
+	top: 0;
+	left: 30px;
+	margin-top: -42px;
+}
+.about-dmwatch-vision-hedding-top-icon span{
+	display: inline-block;
+}
+.about-dmwatch-vision-desc{
+
+}
+.about-dmwatch-vision-desc p{
+	color: #fff;
+}
+.about-dmwatch-mission{
+	min-height: 510px;
+	margin-bottom: 100px;
+	display: flex;
+	align-items: center;
+	text-align: right;
+	-webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+}
+.about-dmwatch-mission-innr{
+	max-width: 710px;
+	width: 100%;
+	padding: 30px 15px;
+	float: right;
+}
+.about-dmwatch-mission-hedding h2{
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 35px;
+	font-size: 50px;
+	line-height: 1.2;
+}
+.about-dmwatch-mission-hedding-top-icon{
+	position: absolute;
+	top: 0;
+	right: 30px;
+	margin-top: -42px;
+}
+.about-dmwatch-mission-hedding-top-icon span{
+	display: inline-block;
+}
+.about-dmwatch-mission-desc p{
+	color: #fff;
+}
+.about-dmwatch-values{
+	background: #f5f7f6;
+	margin-bottom: 20px;
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+}
+.about-dmwatch-values-innr{
+	padding: 0 60px;
+}
+.about-dmwatch-values-hedding{
+	padding-top: 55px;
+	padding-bottom: 35px;
+}
+.about-dmwatch-values-hedding h3{
+	color: #88be42;
+	text-transform: uppercase;
+	font-size: 40px;
+	line-height: 1.2;
+	text-align: center;
+}
+.about-dmwatch-values-items-cntlr{
+	padding-top: 18px;
+}
+.about-dmwatch-values-items-cntlr >ul{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.about-dmwatch-values-items-cntlr > ul >li{
+	padding: 0 15px;
+	width: 33.33%;
+	margin-bottom: 60px;
+}
+.about-dmwatch-values-items-cntlr > ul >li:nth-child(3n+1){
+	clear: left;
+}
+.about-dmwatch-values-items{
+
+}
+.about-dmwatch-values-items-desc{
+	padding: 0 20px;
+}
+.about-dmwatch-values-items-desc h3{
+	position: relative;
+	padding-left: 22px;
+	padding-right: 22px;
+	display: inline-block;
+	margin-top: 30px;
+	margin-bottom: 13px;
+	font-weight: normal!important;
+	font-family: 'Verdana'!important;
+	color: #606060;
+}
+.about-dmwatch-values-items-desc h3:after{
+	position: absolute;
+	content: "";
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	width: 13px;
+	height: 13px;
+	background: #88be42;
+}
+.about-dmwatch-values-items-desc h3:before{
+	position: absolute;
+	content: "";
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 13px;
+	height: 13px;
+	background: #88be42;
+}
+.about-dmwatch-values-items-desc p{
+	color: #606060;
+	
+}
+/* responsive */
+@media (max-width: 1199px){
+
+}
+@media (max-width: 991px){
+	.about-dmwatch-vision,
+	.about-dmwatch-mission{
+		margin-bottom: 70px;
+	}
+	.about-dmwatch-vision-hedding h2,
+	.about-dmwatch-mission-hedding h2{
+		font-size: 44px;
+		margin-bottom: 32px;
+	}
+	.about-dmwatch-vision-hedding-top-icon,
+	.about-dmwatch-mission-hedding-top-icon{
+		margin-top: -35px;
+	}
+	.about-dmwatch-vision-hedding-top-icon span,
+	.about-dmwatch-mission-hedding-top-icon span{
+		width: 75px;
+	}
+	.about-dmwatch-values-innr{
+		padding: 0 0;
+	}
+	.about-dmwatch-values-hedding{
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+	.about-dmwatch-values-hedding h3{
+		font-size: 36px;
+	}
+	.about-dmwatch-values-items-cntlr > ul >li{
+		width: 50%;
+	}
+	.about-dmwatch-values-items-cntlr > ul >li:nth-child(2n+1){
+		clear: left;
+	}
+	.about-dmwatch-values-items-cntlr > ul >li:nth-child(3n+1){
+		clear: none;
+	}
+}
+@media (max-width: 767px){
+	.about-dmwatch-vision,
+	.about-dmwatch-mission{
+		margin-bottom: 50px;
+	}
+	.about-dmwatch-vision-hedding h2,
+	.about-dmwatch-mission-hedding h2{
+		font-size: 40px;
+		margin-bottom: 28px;
+	}
+	.about-dmwatch-vision-hedding-top-icon,
+	.about-dmwatch-mission-hedding-top-icon{
+		margin-top: -22px;
+	}
+	.about-dmwatch-vision-hedding-top-icon span,
+	.about-dmwatch-mission-hedding-top-icon span{
+		width: 55px;
+	}
+	.about-dmwatch-values-hedding{
+		padding-top: 45px;
+		padding-bottom: 25px;
+	}
+	.about-dmwatch-values-items-desc{
+		padding: 0 0;
+	}
+	.about-dmwatch-values-hedding h3{
+		font-size: 32px;
+	}
+	.about-dmwatch-values-items-desc h3{
+	    margin-top: 20px;
+    	margin-bottom: 10px;
+	}
+}
+@media (max-width: 600px){
+	.about-dmwatch-values-items-cntlr > ul >li{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+}

@@ -54,7 +54,7 @@ get_header();
     <div class="row">
       <div class="col-md-12">
         <div class="dm-tp-fa-sec-inr">
-          <h1 class="dm-tp-fa-title">Focus Areas</h1>
+          <h2 class="dm-tp-fa-title">Focus Areas</h2>
           <div class="hm-fea-services-cntlr">
             <div class="hm-fea-services hmFeaServicesSlider">
               <div class="hmFeaServicesSlideItem">
@@ -126,7 +126,7 @@ get_header();
     <div class="row">
       <div class="col-md-12">
         <div class="dm-tp-fancybox-sec-inr">
-          <h1 class="dm-tp-fancybox-title">Lorem Ipsum</h1>
+          <h2 class="dm-tp-fancybox-title">Lorem Ipsum</h2>
           <ul class="reset-list clearfix">
             <li>
               <div class="dm-tp-fancybox">
@@ -150,7 +150,7 @@ get_header();
     <div class="row">
       <div class="col-md-12">
         <div class="dm-tp-report-sec-inr">
-          <h1 class="dm-tp-report-title">Lorem Ipsum Adaptation Reports</h1>
+          <h2 class="dm-tp-report-title">Lorem Ipsum Adaptation Reports</h2>
           <div class="dm-tp-report-des clearfix">
             <div class="dm-tp-report-des-img">
               <img src="<?php echo THEME_URI; ?>/assets/images/dm-tp-bd-map.png">
@@ -209,7 +209,7 @@ get_header();
     <div class="row">
       <div class="col-md-12">
         <div class="dm-tp-des-sec-inr">
-          <h1 class="dm-tp-des-title">Lorem ipsum</h1>
+          <h2 class="dm-tp-des-title">Lorem ipsum</h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
         </div>
       </div>

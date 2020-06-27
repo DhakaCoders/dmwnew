@@ -19,8 +19,8 @@ get_header();
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="our-project-filter-hdr">
-          <h2 class="opfhdr-title">Filter Annual Reports</h2>
+        <div class="our-project-filter-hdr hasAnim">
+          <h2 class="opfhdr-title doAnim">Filter Annual Reports</h2>
         </div>
         <div class="our-project-filter-btns">
           <form action="" method="get">

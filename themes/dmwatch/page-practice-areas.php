@@ -29,7 +29,7 @@ $intro = get_field('introsec', $thisID);
         ?>
       </div>
       <?php endif; ?>
-      <div class="page-banner-inr">
+      <div class="page-banner-inr hasAnim">
         <div>
           <h1 class="page-banner-title"><?php echo $pageTitle; ?></h1>
         </div>

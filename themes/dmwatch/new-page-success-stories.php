@@ -10,11 +10,10 @@ get_header();
     <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/success-stories.png);">
     </div>
     <div class="page-banner-des">
-      <div class="page-banner-inr">
+      <div class="page-banner-inr hasAnim">
         <div>
           <div class="topLine"><img src="<?php echo THEME_URI; ?>/assets/images/sc-top-bar.png"></div>
           <h1 class="page-banner-title">SUCCESS STORIES</h1>
-          <p>Water, sanitation and hygiene are at the very core of sustainable development,<br> crucial for survival of people and the planet.</p>
         </div>
       </div>
     </div>

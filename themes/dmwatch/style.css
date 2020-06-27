@@ -12,10 +12,33 @@ Text Domain: dmwatch
 */
 
 @import url('assets/css/main.css');
-
-
 .animation-step2{
 	animation-delay: 0.3s;
 	-ms-animation-delay: 0.3s;
 	-webkit-animation-delay: 0.3s;
 }
+/*.hasAnim h1,
+.hasAnim h1 + p,
+.doAnim{
+	position: relative;
+	opacity: 0;
+}
+.hasAnim h1 .letter,
+.doAnim .letter{
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
+}
+.hasAnim h1 + p .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
+}
+body span.letter{
+    width: initial;
+    padding-bottom: 0;
+    font-size: inherit;
+    border-bottom: 0;
+    display: inline-block;
+    margin-bottom: 0;
+}*/

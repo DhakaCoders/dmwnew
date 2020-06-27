@@ -20,7 +20,7 @@ if (!empty($custom_title)) {
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="client-partners-innr">
+        <div class="client-partners-innr hasAnim">
           <div class="client-partners-hedding">
             <h1><?php echo $page_title; ?> »</h1>
           </div>

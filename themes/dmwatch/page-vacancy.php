@@ -4,20 +4,24 @@
 */
 get_header(); 
 $thisID = get_the_ID();
-
+$pageTitle = get_the_title($thisID);
+$custom_page_title = get_field('custom_page_title', $thisID);
+if(!empty(str_replace(' ', '', $custom_page_title))){
+  $pageTitle = $custom_page_title;
+}
 $standaardbanner = get_field('bannerimage', $thisID);
 if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-bnr-vacancy.jpg';
 
 $intro = get_field('introsec', $thisID);
 ?>
-<section class="page-banner designTwo page-bnr-vacancy" style="overflow: hidden;">
+<section class="page-banner designTwo" style="overflow: hidden;">
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
       <img src="<?php echo $standaardbanner; ?>" alt="banner">
     </div>
-    <div class="page-banner-des">
+    <div class="page-banner-des hasAnim">
       <div class="page-banner-inr">
-
+        <h1 class="page-banner-title"><?php echo $pageTitle; ?></h1>
       </div>
     </div>
   </div>

@@ -18,7 +18,7 @@ $intro = get_field('introsec', $thisID);
   <div class="page-banner-controller">
     <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
-    <div class="page-banner-des">
+    <div class="page-banner-des hasAnim">
       <div class="page-banner-inr">
         <div>
           <h1 class="page-banner-title"><?php echo $pageTitle; ?></h1>

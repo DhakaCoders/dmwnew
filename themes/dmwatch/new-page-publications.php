@@ -42,8 +42,8 @@ get_header();
                 </div>
               </div>
               <div class="publicatons-page-top-sec-des">
-                <div class="publicatons-top-title">
-                  <p>Recent Publication <?php echo get_the_date('Y'); ?></p>
+                <div class="publicatons-top-title hasAnim">
+                  <p class="doAnim">Recent Publication <?php echo get_the_date('Y'); ?></p>
                 </div>
                 <h3 class="publicatons-sec-one-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <span><?php echo get_the_date('Y'); ?> | Policy Brief</span>
